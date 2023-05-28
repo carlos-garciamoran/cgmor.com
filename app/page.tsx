@@ -15,8 +15,8 @@ export default function Home() {
           className="rounded-full shadow-2xl h-auto w-52 sm:w-80 2xl:w-96"
           src="/img/me.webp"
           alt="Just a pic of me"
-          width={200}
-          height={200}
+          width={300}
+          height={300}
         />
         <div className="font-thin text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-4 sm:mt-0 sm:ml-10">
           <h2 className="mb-4 inline-block">Hello,</h2>
