@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export const metadata = {
   title: 'Home',
   description: 'Home page',
@@ -11,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-grow sm:justify-center">
       <div className="flex items-center justify-center flex-col sm:flex-row">
-        <Image
+        <img
           className="rounded-full shadow-2xl h-auto w-52 sm:w-80 2xl:w-96"
           src="/img/me.webp"
           alt="Just a pic of me"
