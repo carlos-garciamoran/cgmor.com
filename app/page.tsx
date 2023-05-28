@@ -13,7 +13,7 @@ export default function Home() {
       <div className="flex items-center justify-center flex-col sm:flex-row">
         <Image
           className="rounded-full shadow-2xl h-auto w-52 sm:w-80 2xl:w-96"
-          src="/img/me.jpeg"
+          src="/img/me.webp"
           alt="Just a pic of me"
           width={200}
           height={200}
