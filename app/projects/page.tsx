@@ -69,7 +69,12 @@ export default function Page() {
   return (
     <div className="grid md:grid-cols-2 md:gap-x-6 gap-y-6 md:mt-8">
       {projects.map(project => (
-        <a href={`${project.url}/`} target="_blank" rel="noreferrer">
+        <a
+          key={project.name}
+          href={`${project.url}/`}
+          target="_blank"
+          rel="noreferrer"
+        >
           <div
             className={clsx({
               'transition ease-in-out delay-75 bg-gradient-to-tl from-zinc-800 hover:to-zinc-800 hover:-translate-y-1 hover:scale-105 duration-300 md:h-52 rounded-3xl px-8 py-8 shadow-lg':
@@ -91,6 +96,7 @@ export default function Page() {
             <div className="flex flex-row mt-2 space-x-1">
               {project.tech.map(language => (
                 <div
+                  key={language}
                   className={clsx({
                     'bg-zinc-800 rounded-full px-3 py-1': true,
                     // 'from-sky-600 to-cyan-600': language === 'swift',
