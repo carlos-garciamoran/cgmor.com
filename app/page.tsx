@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Home',
-  description: 'Home page',
+  title: 'Home - Carlos García Morán',
+  description: 'Software | Design',
 };
 
 // NOTE: make this interactive (e.g., rotate/animate image on hover)
@@ -10,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col flex-grow sm:justify-center">
       <div className="flex items-center justify-center flex-col sm:flex-row">
         <img
-          className="rounded-full shadow-2xl h-auto w-52 sm:w-80 2xl:w-96"
+          className="rounded-full shadow-2xl h-auto w-48 sm:w-60 md:w-72 lg:w-80"
           src="/img/me.webp"
           alt="Just a pic of me"
           width={300}
@@ -20,7 +20,8 @@ export default function Home() {
           <h2 className="mb-4 inline-block">Hello,</h2>
           {/* DESIGN: underline name with an animation, as if it was handwritten. */}
           <h2 className="sm:mt-4">
-            my name is <span className="font-medium">Carlos</span>.
+            {/* TODO: rotate name 360 on click (nice animation) */}
+            my name is <span className="font-medium">Carlos</span>
           </h2>
         </div>
       </div>
@@ -29,10 +30,10 @@ export default function Home() {
       {/* DESIGN: animate words and move them around randomly, then have them come back. */}
       {/* DESIGN: make border color a linear gradient. */}
       <div className="animate-mutate border-4 border-cyan-500 mt-8 sm:mt-12 p-5 mx-auto">
-        <h3 className="text-xl text-center">
+        <h3 className="text-center">
           I am a software <span className="italic">tinkerer</span> who enjoys{' '}
-          <span className="underline">designing</span> &{' '}
-          <span className="underline">building</span>
+          <span className="font-semibold">design</span> &{' '}
+          <span className="font-semibold">building</span>
         </h3>
       </div>
     </div>

@@ -6,6 +6,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import Link from 'next/link';
 
 const socials = {
   GitHub: 'carlos-garciamoran',
@@ -19,37 +20,40 @@ export const metadata = {
 };
 
 // TODO: set up markdown/MDX
+// DESIGN: try using close-up of J. Pollock's painting as background (repeat pattern)
 // DESIGN: make chronology with achievements/places (add years in left column or something)
 export default function Page() {
   return (
-    <div>
+    <div className="xl:mt-8">
       <div className="text-justify space-y-4 sm:mx-8 md:mx-12 lg:mx-20 xl:mx-48">
         <p>
-          Since an early age, I have been tinkering with computers. High school
-          was boring, so I began learning programming and security out of
-          curiosity. As a test of my self-taught approach, I took the CCENT test
-          when I was 14. OverTheWire and Hack The Box became my go-to hobby
-          during late nights. Windows restricted most of my learning (i.e., it
-          made it hard to break and fix things), so I started using Linux.
+          Since middle school, I have been tinkering with computers and reading{' '}
+          <Link href="/muses" className="underline">
+            books
+          </Link>
+          . High school was boring, so I began learning programming and security
+          to satisfy my curiosity. OverTheWire, CTFs, and DEF CON talks became
+          my go-to hobby during late nights. Windows restricted most of my
+          learning (i.e., made it hard to break and fix things), so I started
+          using Linux.
           {/* Around 2014, I built my father's website for his tea shop business. */}
         </p>
         <p>
           At 16, I received a scholarship to study abroad at UWC ISAK Japan,
           completing the IBDP program. Seeing how time-consuming and frustrating
           many of my school's processes were, I built{' '}
-          <a href="/projects#Matrix" className="underline">
+          <Link href="/projects#Matrix" className="underline">
             Matrix
-          </a>
-          , ISAK's first student information system. This web application
-          handled tasks like sign-in/sign-out, professor absences, and a
-          newsletter.
+          </Link>{' '}
+          —ISAK's first student information system. The web application handled
+          tasks like sign-in/sign-out, professor absences, and a newsletter.
         </p>
         <p>
           In 2020, I moved to the US to pursue a Computer Science degree at a
           liberal arts school —Lewis & Clark College. In the Summer of 2022, I
           interned at LinkedIn as an SRE (Site Reliability Engineer). My project
-          focused on rebalancing traffic between data centers during "load
-          tests" (infrastructure stress testing).
+          focused on rebalancing traffic between data centers during scheduled
+          load tests.
         </p>
         <p>
           During the Fall of 2022, I traveled to 11 countries through the

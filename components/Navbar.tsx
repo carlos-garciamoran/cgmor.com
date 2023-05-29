@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 
 import { HamburgerIcon, XIcon } from './Icons';
 
-const pages = ['home', 'about', 'projects', 'random'];
+const pages = ['home', 'about', 'projects', 'muses'];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -17,11 +17,11 @@ export default function Navbar() {
 
   return (
     <nav className="flex flex-row-reverse sm:block">
-      {/* DESIGN: animate opening menu (ul) on mobile. */}
+      {/* DESIGN: animate opening mobile menu (<ul>). */}
       {/* TODO: remove button outline when tapping it. */}
       <button
         aria-label="Open nav menu"
-        className="inline-flex bg-transparent p-2 text-slate-200 mt-2 mr-2 sm:hidden"
+        className="inline-flex bg-transparent p-2 text-neutral-100 mt-2 mr-2 sm:hidden"
         onClick={() => setMenuOpen(prevState => !prevState)}
       >
         {hasMenuOpen ? <XIcon /> : <HamburgerIcon />}

@@ -77,7 +77,7 @@ export default function Page() {
         >
           <div
             className={clsx({
-              'transition ease-in-out delay-75 bg-gradient-to-tl from-zinc-800 hover:to-zinc-800 hover:-translate-y-1 hover:scale-105 duration-300 md:h-52 rounded-3xl px-8 py-8 shadow-lg':
+              'transition ease-in-out delay-50 bg-gradient-to-tl from-zinc-800 hover:to-zinc-800 hover:-translate-y-1 hover:scale-105 duration-300 md:h-52 rounded-3xl px-8 py-8 shadow-lg':
                 true,
               'to-emerald-600 hover:from-emerald-600':
                 project.bg === 'emerald-700',
