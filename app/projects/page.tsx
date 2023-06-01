@@ -67,7 +67,7 @@ const projects: Project[] = [
 // TODO: change colors more smoothly: https://stackoverflow.com/a/67853821
 export default function Page() {
   return (
-    <div className="grid md:grid-cols-2 md:gap-x-6 gap-y-6 md:mt-8">
+    <div className="grid lg:grid-cols-2 lg:gap-x-6 gap-y-6 lg:mt-8">
       {projects.map(project => (
         <a
           key={project.name}
@@ -77,7 +77,7 @@ export default function Page() {
         >
           <div
             className={clsx({
-              'transition ease-in-out delay-50 bg-gradient-to-tl from-zinc-800 hover:to-zinc-800 hover:-translate-y-1 hover:scale-105 duration-300 md:h-52 rounded-3xl px-8 py-8 shadow-lg':
+              'transition ease-in-out delay-50 bg-gradient-to-tl from-zinc-800 hover:to-zinc-900 hover:-translate-y-1 hover:scale-105 duration-300 md:h-52 rounded-3xl px-8 py-8 shadow-lg':
                 true,
               'to-emerald-600 hover:from-emerald-600':
                 project.bg === 'emerald-700',

@@ -7,13 +7,15 @@ export const metadata: Metadata = { title: 'Muses' };
 export default function Page() {
   return (
     <div>
-      <h2 className="text-3xl mb-3 font-light">
+      <h2 className="font-light italic sm:not-italic mb-3 text-2xl md:text-3xl">
         Some works that have inspired me...
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 space-y-4 lg:space-x-8 lg:space-y-0">
         <div>
-          <h2 className="text-2xl uppercase font-light">Books</h2>
-          <div className="ml-4 lg:ml-0 space-y-2">
+          <h2 className="font-light text-2xl underline sm:no-underline uppercase">
+            Books
+          </h2>
+          <div className="space-y-2">
             <div>
               <h3>Philosophy</h3>
               <ul className="list-disc ml-8">
@@ -80,8 +82,10 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <h2 className="text-2xl uppercase font-light">Films</h2>
-          <div className="ml-4 lg:ml-0">
+          <h2 className="text-2xl font-light underline sm:no-underline uppercase">
+            Films
+          </h2>
+          <div>
             <div>
               <h3>Movies</h3>
               <ul className="list-disc ml-8">

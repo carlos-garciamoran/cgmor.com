@@ -50,7 +50,7 @@ export default function Navbar() {
                 'flex justify-center h-full w-full': true,
                 'py-3': !hasMenuOpen,
                 'flex-col text-center': hasMenuOpen,
-                uppercase: page === currentPage,
+                underline: page === currentPage,
               })}
               onClick={() => setMenuOpen(false)}
             >

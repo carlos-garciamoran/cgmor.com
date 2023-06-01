@@ -16,7 +16,7 @@ export default function Home() {
           width={300}
           height={300}
         />
-        <div className="font-thin text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-4 sm:mt-0 sm:ml-10">
+        <div className="font-thin tracking-tighter text-5xl sm:text-6xl md:text-7xl lg:text-8xl mt-4 sm:mt-0 sm:ml-10">
           <h2 className="mb-4 inline-block">Hello,</h2>
           {/* DESIGN: underline name with an animation, as if it was handwritten. */}
           <h2 className="sm:mt-4">
