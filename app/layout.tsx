@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-gradient-to-b from-cyan-800 to-black flex flex-col min-h-screen text-white">
+        <div className="bg-gradient-to-b sm:bg-gradient-to-br from-slate-500 to-black flex flex-col min-h-screen text-white">
           <Navbar />
           <main className="flex flex-col flex-grow mx-6 sm:mx-16 lg:mx-36 xl:mx-48 my-4 sm:my-8">
             {children}

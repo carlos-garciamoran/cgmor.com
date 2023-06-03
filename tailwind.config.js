@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        mutate: 'mutate 20s ease-in-out alternate infinite',
+        mutate: 'mutate 16s ease-in-out infinite',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -15,11 +15,12 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       keyframes: {
-        // IDEA: mutate each border corner independently.
+        // IDEA: mutate each border corner independently (alternate between tr-bl <-> tl-br).
         mutate: {
-          '0%': { borderRadius: '0px' },
-          '50%': { borderRadius: '30px' },
-          '100%': { borderRadius: '60px' },
+          '0%': { borderRadius: 0 },
+          '30%': { borderRadius: '50px' },
+          '70%': { borderRadius: '50px' },
+          '100%': { borderRadius: 0 },
         },
       },
     },
