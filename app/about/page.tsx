@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -6,13 +7,27 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import Link from 'next/link';
 
-const socials = {
-  GitHub: 'carlos-garciamoran',
-  LinkedIn: 'carlos-garcia-moran',
-  Twitter: 'cgarciamoran',
-};
+const socials = [
+  {
+    name: 'LinkedIn',
+    icon: faLinkedin,
+    url: `https://linkedin.com/in/carlos-garcia-moran`,
+    hoverColor: 'sky-700',
+  },
+  {
+    name: 'GitHub',
+    icon: faGithub,
+    url: `https://github.com/carlos-garciamoran`,
+    hoverColor: 'zinc-700',
+  },
+  {
+    name: 'Twitter',
+    icon: faTwitter,
+    url: `https://twitter.com/cgarciamoran`,
+    hoverColor: 'sky-400',
+  },
+];
 
 export const metadata = {
   title: 'About',
@@ -27,15 +42,16 @@ export default function Page() {
     <div className="xl:mt-8">
       <div className="text-justify space-y-4 sm:mx-8 md:mx-12 lg:mx-20 xl:mx-48">
         <p>
-          Since middle school, I have been tinkering with computers and reading{' '}
+          I'm a software engineer originally from Madrid, Spain. Since middle
+          school, I have been tinkering with computers and reading{' '}
           <Link href="/muses" className="underline">
             books
           </Link>
           . High school was boring, so I began learning programming and security
-          to satisfy my curiosity. OverTheWire, CTFs, and DEF CON talks became
-          my go-to hobby during late nights. Windows made it hard to break and
-          fix things, so I started using Linux.
-          {/* Around 2014, I built my father's website for his tea shop business. */}
+          to satisfy my curiosity. OverTheWire, CTFs, and writing Python became
+          my go-to hobby during late nights. I started using Linux and getting
+          familiarized with the CLI (Windows made it hard to break and fix
+          things).
         </p>
         <p>
           At 16, I received a scholarship to study abroad at UWC ISAK Japan.
@@ -75,13 +91,13 @@ export default function Page() {
             className="underline"
           >
             The Concept Project
-          </a>
-          , a platform created by a fellow voyager and friend.
+          </a>{' '}
+          —a platform created by a fellow voyager and friend.
         </p>
         <p>
           This summer, I am interning at LinkedIn's NYENG-SRE org working on
           tooling to help developers identify application issues faster. During
-          my spare time, I am building{' '}
+          my spare time, I'm building{' '}
           <a
             href="https://www.getcolive.com"
             target="_blank"
@@ -90,44 +106,24 @@ export default function Page() {
           >
             CoLive
           </a>
-          , a platform to help college students and new grads find sublets
-          easily.
+          : a hub to help college students and new grads find sublets easily.
         </p>
       </div>
       <div className="flex justify-center mt-6 lg:mt-8 space-x-6">
-        <a
-          href={`https://www.linkedin.com/in/${socials.LinkedIn}/`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            size="2x"
-            className="hover:text-sky-700"
-          />
-        </a>
-        <a
-          href={`https://github.com/${socials.GitHub}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon
-            icon={faGithub}
-            size="2x"
-            className="hover:text-zinc-700"
-          />
-        </a>
-        <a
-          href={`https://twitter.com/${socials.Twitter}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FontAwesomeIcon
-            icon={faTwitter}
-            size="2x"
-            className="hover:text-sky-400"
-          />
-        </a>
+        {socials.map(social => (
+          <a
+            key={social.name}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              className={`hover:text-${social.hoverColor}`}
+              icon={social.icon}
+              size="2x"
+            />
+          </a>
+        ))}
       </div>
     </div>
   );

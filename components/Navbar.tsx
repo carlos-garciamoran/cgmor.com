@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 
@@ -11,36 +10,20 @@ export default function Navbar() {
   const pathname = usePathname();
   const currentPage = pathname === '/' ? 'home' : pathname.split('/')[1];
 
-  const [hasMenuOpen, setMenuOpen] = useState(false);
-
   return (
-    <nav>
-      <ul
-        className={clsx({
-          'border-b justify-evenly': true,
-          'flex divide-x flex-row': !hasMenuOpen,
-          'absolute inset-0 flex flex-col divide-y bg-gradient-to-br from-slate-800 to-neutral-900 mt-14 top-0':
-            hasMenuOpen,
-        })}
-      >
+    <nav className="select-none">
+      <ul className="border-b divide-x flex justify-evenly">
         {pages.map(page => (
           <li
             key={page}
-            className={clsx({
-              'flex-grow hover:text-black hover:bg-white ': true,
-              'transition ease-in-out duration-300': !hasMenuOpen,
-              'flex flex-col justify-center': hasMenuOpen,
-            })}
+            className="flex-grow transition ease-in-out duration-300 hover:text-black hover:bg-white"
           >
             <Link
               href={page === 'home' ? '/' : '/' + page}
               className={clsx({
-                'flex justify-center h-full w-full': true,
-                'py-3': !hasMenuOpen,
-                'flex-col text-center': hasMenuOpen,
+                'flex justify-center h-full w-full py-3': true,
                 'font-bold': page === currentPage,
               })}
-              onClick={() => setMenuOpen(false)}
             >
               {page}
             </Link>

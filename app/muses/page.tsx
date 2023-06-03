@@ -1,13 +1,16 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = { title: 'Muses' };
+export const metadata: Metadata = {
+  title: 'Inspiration - Carlos García Morán',
+  description: 'Books | Movies',
+};
 
 // TODO: add countries visited?
 // TODO: set up markdown/MDX
 export default function Page() {
   return (
     <div>
-      <h2 className="font-light border-l-2 pl-2 italic sm:not-italic mb-3 text-2xl md:text-3xl">
+      <h2 className="font-light border-l-2 pl-2 italic sm:not-italic mb-3 text-xl sm:text-2xl md:text-3xl">
         Some works that have inspired me...
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 space-y-4 lg:space-x-8 lg:space-y-0">
@@ -29,7 +32,6 @@ export default function Page() {
             </div>
             <div>
               <h3>Meditation / Spirituality</h3>
-              {/* TODO: add letter from Native Americans to Invader Americans */}
               <ul className="list-disc ml-8">
                 <li>Biografía del silencio, Pablo d'Ors</li>
                 <li>Siddhartha, Herman Hesse</li>
@@ -46,6 +48,7 @@ export default function Page() {
               <h3>Makes you think</h3>
               <ul className="list-disc ml-8">
                 <li>Ensayo sobre la ceguera, José Saramago</li>
+                <li>Nosotros somos una parte de la Tierra, Chief Seattle</li>
                 <li>The Art of War, Sun Tzu</li>
                 <li>Beneath the Wheel, Herman Hesse</li>
                 <li>Brave New World, Aldous Huxley</li>

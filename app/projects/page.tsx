@@ -20,46 +20,45 @@ const projects: Project[] = [
     bg: 'sky-600',
     description: 'Glance at tweets from your home screen',
     url: 'https://apps.apple.com/us/app/tweetwidget/id1671704240',
-    tech: ['swift', 'SwiftUI', 'supabase'],
+    tech: ['Swift', 'SwiftUI', 'Supabase'],
   },
   {
     name: 'CoLive',
     bg: 'violet-600',
     description: 'Find sublets and roommates easily',
     url: 'https://www.getcolive.com',
-    tech: ['next.js', 'typescript', 'tailwindcss'],
+    tech: ['Next.js', 'Typescript', 'TailwindCSS'],
   },
   {
     name: 'Hermes',
     bg: 'cyan-600',
     description: 'Binance USD-M Futures trading bot',
     url: 'https://github.com/carlos-garciamoran/hermes',
-    tech: ['go', 'websockets'],
+    tech: ['Go', 'WebSockets'],
   },
   {
     name: 'Delfos',
     bg: 'fuchsia-700',
     description: 'Cryptocurrency trading bot',
     url: 'https://github.com/carlos-garciamoran/delfos',
-    tech: ['python', 'numpy', 'ta-lib'],
+    tech: ['Python', 'TA-Lib'],
   },
   {
     name: 'Matrix',
     bg: 'emerald-700',
     description: 'Student information system built for UWC ISAK Japan',
     url: 'https://github.com/carlos-garciamoran/matrix',
-    tech: ['laravel', 'bootstrap', 'php'],
+    tech: ['PHP', 'Laravel', 'Bootstrap'],
   },
   {
     name: 'CNCPT',
     bg: 'pink-600',
     description: 'Connecting media with social good',
     url: 'https://apps.apple.com/us/app/cncpt/id1662094973',
-    tech: ['react-native', 'typescript', 'firebase'],
+    tech: ['React Native', 'Typescript', 'Firebase'],
   },
 ];
 
-// TODO: display language with FA icons or style badges accordingly (see GitHub)
 // TODO: add dates to projects
 // TODO: on page load, display projects with fade in
 // TODO: swap colors on hover smoothly > https://stackoverflow.com/a/67853821
@@ -73,6 +72,10 @@ export default function Page() {
           href={`${project.url}/`}
           target="_blank"
           rel="noreferrer"
+          className={clsx({
+            'order-first lg:order-none': project.name === 'CoLive',
+            'order-last lg:order-none': project.name === 'Matrix',
+          })}
         >
           <div
             className={clsx({
@@ -84,7 +87,7 @@ export default function Page() {
               'to-sky-600 sm:hover:from-sky-600': project.bg === 'sky-600',
               'to-violet-600 sm:hover:from-violet-600':
                 project.bg === 'violet-600',
-              'to-fuchsia-700 sm:hover:from-fuchsia-700':
+              'to-fuchsia-700 sm:hover:from-fuchsia-700 order-1 sm:order-none':
                 project.bg === 'fuchsia-700',
               'to-pink-600 sm:hover:from-pink-600': project.bg === 'pink-600',
             })}
@@ -92,14 +95,30 @@ export default function Page() {
             <h2 className="font-extralight text-4xl underline underline-offset-4 decoration-2">
               {project.name}
             </h2>
-            <div className="flex flex-row mt-2 lg:mt-3 space-x-1">
+            <div className="flex flex-row mt-2 lg:mt-3 space-x-1 lg:space-x-2">
               {project.tech.map(language => (
                 <div
                   key={language}
                   className={clsx({
-                    'bg-zinc-800 rounded-lg px-3 py-1': true,
-                    // 'from-sky-600 to-cyan-600': language === 'swift',
-                    // 'from-purple-700 to-purple-800': language === 'python',
+                    'bg-gradient-to-r from-sky-500 to-sky-600':
+                      language === 'Go',
+                    'bg-gradient-to-r from-zinc-400 to-zinc-900':
+                      language === 'Next.js',
+                    'bg-gradient-to-r from-purple-600 to-purple-800':
+                      language === 'Php',
+                    'bg-gradient-to-r from-yellow-500 to-yellow-600':
+                      language === 'Python',
+                    'bg-gradient-to-r from-[#4fc7e8] to-[#3493ae]':
+                      language === 'React Native',
+                    'bg-gradient-to-r from-orange-600 to-orange-700':
+                      language === 'Swift',
+                    'bg-gradient-to-r from-cyan-500 to-cyan-600':
+                      language === 'SwiftUI',
+                    'bg-gradient-to-r from-[#3fcf8e] to-[#2b825b]':
+                      language === 'Supabase',
+                    'bg-gradient-to-r from-[#378be5] to-[#195ea9]':
+                      language === 'Typescript',
+                    'bg-zinc-800 rounded-md px-3 py-1': true,
                   })}
                 >
                   <span className="text-sm">{language}</span>
