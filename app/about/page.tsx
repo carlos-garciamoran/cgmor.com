@@ -95,7 +95,7 @@ export default function Page() {
           easily.
         </p>
       </div>
-      <div className="flex justify-center mt-4 lg:mt-8 space-x-6">
+      <div className="flex justify-center mt-6 lg:mt-8 space-x-6">
         <a
           href={`https://www.linkedin.com/in/${socials.LinkedIn}/`}
           target="_blank"

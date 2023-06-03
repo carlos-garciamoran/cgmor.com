@@ -7,7 +7,7 @@ export const metadata = {
 export default function Home() {
   // className={`transition-colors duration-500 bg-gradient-to-b from-[${hexCodes[currentColorIndex]}] to-black flex flex-col min-h-screen text-white`}
   return (
-    <div className="flex flex-col flex-grow mt-6 sm:mt-0 mx-3 sm:mx-0 sm:justify-center">
+    <div className="flex flex-col flex-grow mt-2 sm:mt-0 mx-3 sm:mx-0 sm:justify-center">
       <div className="flex items-center justify-center flex-col sm:flex-row">
         <img
           className="border-4 border-black rounded-full shadow-2xl h-auto w-44 sm:w-56 md:w-72 lg:w-80"

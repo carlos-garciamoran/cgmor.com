@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: 'Muses' };
 export default function Page() {
   return (
     <div>
-      <h2 className="font-light italic sm:not-italic mb-3 text-2xl md:text-3xl">
+      <h2 className="font-light border-l-2 pl-2 italic sm:not-italic mb-3 text-2xl md:text-3xl">
         Some works that have inspired me...
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 space-y-4 lg:space-x-8 lg:space-y-0">
