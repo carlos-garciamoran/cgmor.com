@@ -18,8 +18,8 @@ module.exports = {
         // IDEA: mutate each border corner independently (alternate between tr-bl <-> tl-br).
         mutate: {
           '0%': { borderRadius: 0 },
-          '30%': { borderRadius: '50px' },
-          '70%': { borderRadius: '50px' },
+          '40%': { borderRadius: '50px' },
+          '60%': { borderRadius: '50px' },
           '100%': { borderRadius: 0 },
         },
       },

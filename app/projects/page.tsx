@@ -67,7 +67,7 @@ const projects: Project[] = [
 // TODO: change colors more smoothly: https://stackoverflow.com/a/67853821
 export default function Page() {
   return (
-    <div className="grid lg:grid-cols-2 lg:gap-x-6 gap-y-6 lg:mt-8">
+    <div className="grid lg:grid-cols-2 lg:gap-x-6 xl:gap-x-28 gap-y-6 xl:gap-y-10 lg:mt-8">
       {projects.map(project => (
         <a
           key={project.name}
@@ -77,7 +77,7 @@ export default function Page() {
         >
           <div
             className={clsx({
-              'transition ease-in-out delay-50 bg-gradient-to-tl from-zinc-800 hover:to-zinc-900 hover:-translate-y-1 hover:scale-105 duration-300 md:h-52 rounded-3xl px-8 py-8 shadow-lg':
+              'flex flex-grow flex-col justify-center transition ease-in-out delay-50 bg-gradient-to-tl from-zinc-800 hover:to-zinc-900 hover:-translate-y-1 hover:scale-105 duration-300 lg:h-56 rounded-3xl px-6 sm:px-8 lg:px-12 py-7 sm:py-8 lg:py-10 shadow-sm sm:shadow-lg':
                 true,
               'to-emerald-600 hover:from-emerald-600':
                 project.bg === 'emerald-700',
@@ -90,15 +90,15 @@ export default function Page() {
               'to-pink-600 hover:from-pink-600': project.bg === 'pink-600',
             })}
           >
-            <h2 className="text-4xl font-extralight hover:underline underline-offset-4 decoration-2">
+            <h2 className="font-extralight text-4xl underline underline-offset-4 decoration-2">
               {project.name}
             </h2>
-            <div className="flex flex-row mt-2 space-x-1">
+            <div className="flex flex-row mt-2 lg:mt-3 space-x-1">
               {project.tech.map(language => (
                 <div
                   key={language}
                   className={clsx({
-                    'bg-zinc-800 rounded-full px-3 py-1': true,
+                    'bg-zinc-800 rounded-lg px-3 py-1': true,
                     // 'from-sky-600 to-cyan-600': language === 'swift',
                     // 'from-purple-700 to-purple-800': language === 'python',
                   })}
@@ -107,7 +107,7 @@ export default function Page() {
                 </div>
               ))}
             </div>
-            <p className="mt-2">{project.description}</p>
+            <p className="mt-2 lg:mt-4">{project.description}</p>
           </div>
         </a>
       ))}

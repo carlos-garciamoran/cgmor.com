@@ -22,12 +22,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-gradient-to-b sm:bg-gradient-to-br from-slate-500 to-black flex flex-col min-h-screen text-white">
+        <div className="bg-gradient-to-b sm:bg-gradient-to-br from-slate-600 to-black flex flex-col min-h-screen text-white">
           <Navbar />
           <main className="flex flex-col flex-grow mx-6 sm:mx-16 lg:mx-36 xl:mx-48 my-4 sm:my-8">
             {children}
           </main>
-          <footer className="text-center text-xs pb-4 lg:pb-6">
+          <footer className="text-center text-xs py-6">
             © {new Date().getFullYear()} Carlos García Morán
           </footer>
         </div>
