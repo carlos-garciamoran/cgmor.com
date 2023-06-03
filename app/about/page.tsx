@@ -33,15 +33,14 @@ export default function Page() {
           </Link>
           . High school was boring, so I began learning programming and security
           to satisfy my curiosity. OverTheWire, CTFs, and DEF CON talks became
-          my go-to hobby during late nights. Windows restricted most of my
-          learning (i.e., made it hard to break and fix things), so I started
-          using Linux.
+          my go-to hobby during late nights. Windows made it hard to break and
+          fix things, so I started using Linux.
           {/* Around 2014, I built my father's website for his tea shop business. */}
         </p>
         <p>
-          At 16, I received a scholarship to study abroad at UWC ISAK Japan,
-          completing the IBDP program. Seeing how time-consuming and frustrating
-          many of my school's processes were, I built{' '}
+          At 16, I received a scholarship to study abroad at UWC ISAK Japan.
+          Seeing how time-consuming and frustrating many of my school's
+          processes were, I built{' '}
           <Link href="/projects#Matrix" className="underline">
             Matrix
           </Link>{' '}
