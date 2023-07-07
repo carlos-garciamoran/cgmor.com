@@ -19,7 +19,7 @@ const projects: Project[] = [
     name: 'TweetWidget',
     bg: 'sky-600',
     description: 'Glance at tweets from your home screen',
-    url: 'https://apps.apple.com/us/app/tweetwidget/id1671704240',
+    url: 'https://github.com/carlos-garciamoran/tweetwidget',
     tech: ['Swift', 'SwiftUI', 'Supabase'],
   },
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
     bg: 'fuchsia-700',
     description: 'Cryptocurrency trading bot',
     url: 'https://github.com/carlos-garciamoran/delfos',
-    tech: ['Python', 'TA-Lib'],
+    tech: ['Python', 'Binance API'],
   },
   {
     name: 'Matrix',
@@ -59,9 +59,11 @@ const projects: Project[] = [
   },
 ];
 
-// TODO: add dates to projects
-// TODO: on page load, display projects with fade in
 // TODO: swap colors on hover smoothly > https://stackoverflow.com/a/67853821
+// TODO: add KLOC
+// TODO: on xl, animate floating (scale-95 - scale-105, maybe translate-y-1)
+// TODO: add dates to projects
+// TODO: on page load, display projects with fade in (Framer Motion?)
 // NOTE: it'd be cool if the cards `were draggable and could be rearranged` (thx Copilot)
 export default function Page() {
   return (
@@ -79,7 +81,7 @@ export default function Page() {
         >
           <div
             className={clsx({
-              'flex flex-grow flex-col justify-center transition ease-in-out delay-50 bg-gradient-to-tl from-zinc-800 sm:hover:to-zinc-900 hover:-translate-y-1 hover:scale-105 duration-300 lg:h-56 rounded-3xl px-6 sm:px-8 lg:px-12 py-7 sm:py-8 lg:py-10 shadow-sm sm:shadow-lg':
+              'bg-gradient-to-tl from-zinc-800 flex flex-col flex-grow group justify-center rounded-3xl px-6 sm:px-8 lg:px-12 py-7 sm:py-8 lg:py-10 shadow-sm sm:shadow-lg transition ease-in-out delay-50 sm:hover:to-zinc-900 hover:-translate-y-1 hover:scale-110 duration-500 lg:h-56':
                 true,
               'to-emerald-600 sm:hover:from-emerald-600':
                 project.bg === 'emerald-700',
@@ -95,30 +97,28 @@ export default function Page() {
             <h2 className="font-extralight text-4xl underline underline-offset-4 decoration-2">
               {project.name}
             </h2>
-            <div className="flex flex-row mt-2 lg:mt-3 space-x-1 lg:space-x-2">
+            <div className="flex mt-2 lg:mt-3 space-x-1">
               {project.tech.map(language => (
                 <div
                   key={language}
                   className={clsx({
-                    'bg-gradient-to-r from-sky-500 to-sky-600':
-                      language === 'Go',
-                    'bg-gradient-to-r from-zinc-400 to-zinc-900':
-                      language === 'Next.js',
-                    'bg-gradient-to-r from-purple-600 to-purple-800':
-                      language === 'Php',
-                    'bg-gradient-to-r from-yellow-500 to-yellow-600':
-                      language === 'Python',
-                    'bg-gradient-to-r from-[#4fc7e8] to-[#3493ae]':
-                      language === 'React Native',
-                    'bg-gradient-to-r from-orange-600 to-orange-700':
-                      language === 'Swift',
-                    'bg-gradient-to-r from-cyan-500 to-cyan-600':
-                      language === 'SwiftUI',
-                    'bg-gradient-to-r from-[#3fcf8e] to-[#2b825b]':
-                      language === 'Supabase',
-                    'bg-gradient-to-r from-[#378be5] to-[#195ea9]':
-                      language === 'Typescript',
-                    'bg-zinc-800 rounded-md px-3 py-1': true,
+                    'bg-zinc-800 rounded-lg px-3 md:px-4 py-1 group-hover:bg-gradient-to-r':
+                      true,
+                    'from-amber-400 to-amber-600': language === 'Binance API',
+                    'from-purple-600 to-purple-800': language === 'Bootstrap',
+                    'from-amber-500 to-amber-600': language === 'Firebase',
+                    'from-sky-400 to-sky-500': language === 'Go',
+                    'from-zinc-300 to-zinc-900': language === 'Next.js',
+                    'from-red-400 to-red-500': language === 'Laravel',
+                    'from-violet-600 to-violet-800': language === 'PHP',
+                    'from-yellow-500 to-yellow-600': language === 'Python',
+                    'from-[#4fc7e8] to-[#3493ae]': language === 'React Native',
+                    'from-orange-600 to-orange-700': language === 'Swift',
+                    'from-cyan-500 to-cyan-600': language === 'SwiftUI',
+                    'from-[#3fcf8e] to-[#2b825b]': language === 'Supabase',
+                    'from-sky-500 to-cyan-600': language === 'TailwindCSS',
+                    'from-[#378be5] to-[#195ea9]': language === 'Typescript',
+                    'from-zinc-900 to-zinc-300': language === 'WebSockets',
                   })}
                 >
                   <span className="text-sm">{language}</span>

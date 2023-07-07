@@ -31,7 +31,7 @@ const socials = [
 
 export const metadata = {
   title: 'About',
-  description: 'About me',
+  description: 'Software | Design',
 };
 
 // TODO: set up markdown/MDX
