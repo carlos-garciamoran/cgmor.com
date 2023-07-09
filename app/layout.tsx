@@ -11,7 +11,8 @@ export const metadata: Metadata = {
     absolute: 'Carlos García Morán',
     template: '%s | Carlos García Morán',
   },
-  description: 'Software Engineer',
+  description: 'Personal website | Software | Design',
+  themeColor: '#475569', // Slate 600
 };
 
 export default function RootLayout({

@@ -5,19 +5,19 @@ export const metadata: Metadata = {
   description: 'Books | Movies',
 };
 
+const titleClasses = 'font-semibold text-2xl xl:text-3xl uppercase';
+
 // TODO: add countries visited?
 // TODO: set up markdown/MDX
 export default function Page() {
   return (
     <div>
-      <h2 className="font-light border-l-2 pl-2 italic sm:not-italic mb-3 text-xl sm:text-2xl md:text-3xl">
+      <h2 className="font-extralight border-l-2 pl-2 italic mb-3 text-lg sm:text-2xl">
         Some works that have inspired me...
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 space-y-4 lg:space-x-8 lg:space-y-0">
         <div>
-          <h2 className="font-light text-2xl underline sm:no-underline uppercase">
-            Books
-          </h2>
+          <h2 className={titleClasses}>Books 📖</h2>
           <div className="space-y-2">
             <div>
               <h3>Philosophy</h3>
@@ -48,6 +48,7 @@ export default function Page() {
               <h3>Makes you think</h3>
               <ul className="list-disc ml-8">
                 <li>Ensayo sobre la ceguera, José Saramago</li>
+                <li>Momo, Michael Ende</li>
                 <li>Nosotros somos una parte de la Tierra, Chief Seattle</li>
                 <li>The Art of War, Sun Tzu</li>
                 <li>Beneath the Wheel, Herman Hesse</li>
@@ -85,9 +86,7 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <h2 className="text-2xl font-light underline sm:no-underline uppercase">
-            Films
-          </h2>
+          <h2 className={titleClasses}>Films 🎬</h2>
           <div>
             <div>
               <h3>Movies</h3>
@@ -100,6 +99,7 @@ export default function Page() {
                 <li>Interstellar</li>
                 <li>Mulholland Drive</li>
                 <li>The Big Short</li>
+                <li>Eyes Wide Shut</li>
               </ul>
             </div>
             <div className="mt-2">

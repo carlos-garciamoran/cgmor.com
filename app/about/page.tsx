@@ -12,20 +12,20 @@ const socials = [
   {
     name: 'LinkedIn',
     icon: faLinkedin,
-    url: `https://linkedin.com/in/carlos-garcia-moran`,
-    hoverColor: 'sky-700',
+    hoverColor: 'hover:text-[#0a66c2]',
+    url: 'https://linkedin.com/in/carlos-garcia-moran',
   },
   {
     name: 'GitHub',
     icon: faGithub,
-    url: `https://github.com/carlos-garciamoran`,
-    hoverColor: 'zinc-700',
+    hoverColor: 'hover:text-black',
+    url: 'https://github.com/carlos-garciamoran',
   },
   {
     name: 'Twitter',
     icon: faTwitter,
-    url: `https://twitter.com/cgarciamoran`,
-    hoverColor: 'sky-400',
+    hoverColor: 'hover:text-[#1da1f2]',
+    url: 'https://twitter.com/cgarciamoran',
   },
 ];
 
@@ -39,8 +39,8 @@ export const metadata = {
 // DESIGN: make chronology with achievements/places (add years in left column or something)
 export default function Page() {
   return (
-    <div className="xl:mt-8">
-      <div className="text-justify space-y-4 sm:mx-8 md:mx-12 lg:mx-20 xl:mx-48">
+    <div className="flex flex-col items-center lg:mt-4">
+      <div className="text-justify space-y-4 w-full sm:w-5/6 lg:w-3/4 xl:w-1/2">
         <p>
           I'm a software engineer originally from Madrid, Spain. Since middle
           school, I have been tinkering with computers and reading{' '}
@@ -49,7 +49,7 @@ export default function Page() {
           </Link>
           . High school was boring, so I began learning programming and security
           to satisfy my curiosity. OverTheWire, CTFs, and writing Python became
-          my go-to hobby during late nights. I started using Linux and getting
+          my go-to hobbies during late nights. I started using Linux and getting
           familiarized with the CLI (Windows made it hard to break and fix
           things).
         </p>
@@ -71,10 +71,10 @@ export default function Page() {
           load tests.
         </p>
         <p>
-          During the Fall of 2022, I traveled to 11 countries through the
-          Semester at Sea study abroad program. Throughout the voyage, I learned
-          how to develop mobile applications using React Native and TypeScript.
-          To put it into practice, I built the{' '}
+          During Fall 2022, I traveled to 11 countries through the Semester at
+          Sea study abroad program. Throughout the voyage, I learned how to
+          develop mobile applications using React Native and TypeScript. To put
+          it into practice, I built the{' '}
           <a
             href="https://apps.apple.com/us/app/cncpt/id1662094973"
             target="_blank"
@@ -118,7 +118,7 @@ export default function Page() {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              className={`hover:text-${social.hoverColor}`}
+              className={`${social.hoverColor} transition-colors duration-300 ease-in-out`}
               icon={social.icon}
               size="2x"
             />

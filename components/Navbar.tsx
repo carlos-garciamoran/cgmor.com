@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="select-none">
-      <ul className="border-b divide-x flex justify-evenly">
+      <ul className="flex justify-evenly sm:border-b sm:divide-x">
         {pages.map(page => (
           <li
             key={page}
@@ -21,8 +21,10 @@ export default function Navbar() {
             <Link
               href={page === 'home' ? '/' : '/' + page}
               className={clsx({
-                'flex justify-center h-full w-full py-3': true,
-                'font-bold': page === currentPage,
+                'flex justify-center h-full w-full py-3 underline sm:no-underline':
+                  true,
+                'bg-white text-black no-underline sm:bg-transparent sm:font-bold sm:text-inherit':
+                  page === currentPage,
               })}
             >
               {page}
