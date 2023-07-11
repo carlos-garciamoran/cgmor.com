@@ -1,19 +1,18 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Inspiration - Carlos García Morán',
+  title: 'Inspiration',
   description: 'Books | Movies',
 };
 
 const titleClasses = 'font-semibold text-2xl xl:text-3xl uppercase';
 
-// TODO: add countries visited?
 // TODO: set up markdown/MDX
 export default function Page() {
   return (
     <div>
-      <h2 className="font-extralight border-l-2 pl-2 italic mb-3 text-lg sm:text-2xl">
-        Some works that have inspired me...
+      <h2 className="border-l-2 pl-2 font-extralight italic mb-3 lg:mb-5 text-lg sm:text-2xl">
+        A non-exhaustive list of some works that have inspired me...
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 space-y-4 lg:space-x-8 lg:space-y-0">
         <div>
@@ -42,6 +41,7 @@ export default function Page() {
                 <li>Steppenwolf, Herman Hesse</li>
                 <li>The Untethered Soul, Michael Alan Singer</li>
                 <li>The Alchemist, Paulo Coelho</li>
+                <li>Think on These Things, Jiddu Krishnamurti</li>
               </ul>
             </div>
             <div>
@@ -97,6 +97,7 @@ export default function Page() {
                 <li>Ex Machina</li>
                 <li>Memento</li>
                 <li>Interstellar</li>
+                <li>La grande bellezza</li>
                 <li>Mulholland Drive</li>
                 <li>The Big Short</li>
                 <li>Eyes Wide Shut</li>
@@ -106,13 +107,14 @@ export default function Page() {
               <h3>TV Shows</h3>
               <ul className="list-disc ml-8">
                 <li>Black Mirror</li>
-                <li>Westworld</li>
+                <li>Westworld (S1)</li>
                 <li>Mr. Robot</li>
                 <li>WeCrashed</li>
                 <li>The White Lotus</li>
                 <li>Ozark</li>
                 <li>True Detective (S1)</li>
                 <li>House of Cards</li>
+                <li>Succession</li>
               </ul>
             </div>
           </div>

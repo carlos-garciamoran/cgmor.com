@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: {
     absolute: 'Carlos García Morán',
-    template: '%s | Carlos García Morán',
+    template: '%s - Carlos García Morán',
   },
   description: 'Personal website | Software | Design',
   themeColor: '#475569', // Slate 600

@@ -67,7 +67,7 @@ const projects: Project[] = [
 // NOTE: it'd be cool if the cards `were draggable and could be rearranged` (thx Copilot)
 export default function Page() {
   return (
-    <div className="grid lg:grid-cols-2 lg:gap-x-6 xl:gap-x-28 gap-y-5 sm:gap-y-6 xl:gap-y-10 lg:mt-8">
+    <div className="grid lg:grid-cols-2 lg:gap-x-6 xl:gap-x-28 gap-y-3 sm:gap-y-6 md:gap-y-8 xl:gap-y-10 lg:mt-8">
       {projects.map(project => (
         <a
           key={project.name}
