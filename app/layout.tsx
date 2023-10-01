@@ -3,7 +3,9 @@ import { Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
-import Navbar from '@/components/Navbar';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,16 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-gradient-to-b sm:bg-gradient-to-br from-slate-600 to-black flex flex-col min-h-screen text-white">
-          <Navbar />
-          <main className="flex flex-col flex-grow mx-6 sm:mx-16 lg:mx-36 xl:mx-48 mt-6 sm:my-6 md:my-8">
-            {children}
-          </main>
-          <footer className="text-center text-xs py-6 xl:py-8">
-            © {new Date().getFullYear()} Carlos García Morán
-          </footer>
-        </div>
-        <Analytics />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="bg-gradient-to-b sm:bg-gradient-to-br from-slate-300 dark:from-slate-600 to-slate-300 dark:to-black flex flex-col min-h-screen text-black dark:text-white">
+            {/* 2xl:max-w-screen-xl mx-auto  */}
+            <Header />
+            <main className="flex flex-col flex-grow mx-6 sm:mx-16 lg:mx-36 xl:mx-48 xl:max-w-screen-xl mt-6 sm:my-6 md:my-8">
+              {children}
+            </main>
+            <Footer />
+            <Analytics />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
