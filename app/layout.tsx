@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
 import Navbar from '@/components/Navbar';
@@ -32,6 +33,7 @@ export default function RootLayout({
             © {new Date().getFullYear()} Carlos García Morán
           </footer>
         </div>
+        <Analytics />
       </body>
     </html>
   );

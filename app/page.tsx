@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Home - Carlos García Morán',
@@ -9,10 +10,10 @@ export default function Home() {
   return (
     <div className="flex flex-col flex-grow mt-4 sm:mt-0 mx-2 sm:mx-0 sm:justify-center select-none">
       <div className="flex items-center justify-center flex-col sm:flex-row">
-        <img
-          className="border-4 border-black rounded-full shadow-2xl h-auto w-40 sm:w-56 md:w-64 lg:w-72 hover:scale-110 hover:rotate-3 transition-transform duration-500 ease-in"
+        <Image
+          className="border-4 border-black rounded-full shadow-2xl h-auto w-36 sm:w-52 md:w-60 lg:w-64 hover:scale-110 hover:rotate-3 transition-transform duration-500 ease-in"
           src="/img/me.webp"
-          alt="Just a pic of me"
+          alt="Me"
           width={300}
           height={300}
         />
