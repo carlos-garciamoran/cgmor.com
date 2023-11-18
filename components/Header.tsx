@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import clsx from 'clsx';
-import { usePathname } from 'next/navigation';
+import Link from "next/link";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
-import { ThemeToggle } from './theme-toggle';
+import { ThemeToggle } from "./theme-toggle";
 
-const pages = ['home', 'about', 'projects', 'muses'];
+const pages = ["home", "about", "projects", "muses"];
 
 export function Header() {
   const pathname = usePathname();
-  const currentPage = pathname === '/' ? 'home' : pathname.split('/')[1];
+  const currentPage = pathname === "/" ? "home" : pathname.split("/")[1];
 
   return (
     <header>
@@ -22,11 +22,11 @@ export function Header() {
               className="flex-grow transition ease-in-out duration-300 hover:text-black hover:bg-white"
             >
               <Link
-                href={page === 'home' ? '/' : '/' + page}
+                href={page === "home" ? "/" : "/" + page}
                 className={clsx({
-                  'flex justify-center h-full w-full py-3 underline sm:no-underline':
+                  "flex justify-center h-full w-full py-3 underline sm:no-underline":
                     true,
-                  'bg-white text-black no-underline sm:bg-transparent sm:font-bold sm:text-inherit':
+                  "bg-white text-black no-underline sm:bg-transparent sm:font-bold sm:text-inherit":
                     page === currentPage,
                 })}
               >
