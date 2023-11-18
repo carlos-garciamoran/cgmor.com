@@ -11,13 +11,13 @@ export default function Home() {
     <div className="flex flex-col flex-grow mt-4 sm:mt-0 mx-2 sm:mx-0 sm:justify-center select-none">
       <div className="flex items-center justify-center flex-row">
         <Image
-          className="border-4 border-black rounded-full shadow-2xl h-auto w-20 sm:w-40 2xl:w-44 hover:scale-105 transition-transform duration-500 ease-in"
+          className="border-4 border-black rounded-full shadow-2xl h-auto w-20 sm:w-32 2xl:w-44 hover:scale-105 transition-transform duration-500 ease-in"
           src="/img/me.webp"
           alt="Me"
           width={300}
           height={300}
         />
-        <div className="font-thin tracking-tighter text-3xl xl:text-4xl 2xl:text-7xl ml-4 sm:ml-8 md:ml-10 lg:ml-12">
+        <div className="font-thin tracking-tighter text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl ml-4 sm:ml-8 md:ml-8 xl:ml-12">
           <p className="mb-3 xl:mb-8">Hello,</p>
           {/* DESIGN: underline name with an animation, as if it was handwritten. */}
           <p>
