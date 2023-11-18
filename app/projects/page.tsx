@@ -67,8 +67,8 @@ const projects: Project[] = [
 // NOTE: it'd be cool if the cards `were draggable and could be rearranged` (thx Copilot)
 export default function Page() {
   return (
-    <div className="grid lg:grid-cols-2 lg:gap-x-6 xl:gap-x-28 gap-y-3 sm:gap-y-6 md:gap-y-8 xl:gap-y-10 lg:mt-8">
-      {projects.map(project => (
+    <div className="grid gap-y-3 sm:gap-y-6 md:gap-y-8 lg:mt-8 lg:grid-cols-2 lg:gap-x-6 xl:gap-x-28 xl:gap-y-10">
+      {projects.map((project) => (
         <a
           key={project.name}
           href={`${project.url}/`}
@@ -81,7 +81,7 @@ export default function Page() {
         >
           <div
             className={clsx({
-              'bg-gradient-to-tl from-zinc-800 flex flex-col flex-grow group justify-center rounded-3xl px-6 sm:px-8 lg:px-12 py-7 sm:py-8 lg:py-10 shadow-sm sm:shadow-lg transition ease-in-out delay-50 sm:hover:to-zinc-900 hover:-translate-y-1 hover:scale-110 duration-500 lg:h-56':
+              'delay-50 group flex flex-grow flex-col justify-center rounded-3xl bg-gradient-to-tl from-zinc-800 px-6 py-7 shadow-sm transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110 sm:px-8 sm:py-8 sm:shadow-lg sm:hover:to-zinc-900 lg:h-56 lg:px-12 lg:py-10':
                 true,
               'to-emerald-600 sm:hover:from-emerald-600':
                 project.bg === 'emerald-700',
@@ -89,20 +89,20 @@ export default function Page() {
               'to-sky-600 sm:hover:from-sky-600': project.bg === 'sky-600',
               'to-violet-600 sm:hover:from-violet-600':
                 project.bg === 'violet-600',
-              'to-fuchsia-700 sm:hover:from-fuchsia-700 order-1 sm:order-none':
+              'order-1 to-fuchsia-700 sm:order-none sm:hover:from-fuchsia-700':
                 project.bg === 'fuchsia-700',
               'to-pink-600 sm:hover:from-pink-600': project.bg === 'pink-600',
             })}
           >
-            <h2 className="font-extralight text-4xl underline underline-offset-4 decoration-2">
+            <h2 className="text-4xl font-extralight underline decoration-2 underline-offset-4">
               {project.name}
             </h2>
-            <div className="flex mt-2 lg:mt-3 space-x-1">
-              {project.tech.map(language => (
+            <div className="mt-2 flex space-x-1 lg:mt-3">
+              {project.tech.map((language) => (
                 <div
                   key={language}
                   className={clsx({
-                    'bg-zinc-800 rounded-lg px-3 md:px-4 py-1 group-hover:bg-gradient-to-r':
+                    'rounded-lg bg-zinc-800 px-3 py-1 group-hover:bg-gradient-to-r md:px-4':
                       true,
                     'from-amber-400 to-amber-600': language === 'Binance API',
                     'from-purple-600 to-purple-800': language === 'Bootstrap',

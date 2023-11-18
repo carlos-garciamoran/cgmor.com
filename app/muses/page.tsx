@@ -11,16 +11,16 @@ const titleClasses = 'font-semibold text-2xl xl:text-3xl uppercase';
 export default function Page() {
   return (
     <div>
-      <h2 className="border-l-2 pl-2 font-extralight italic mb-3 lg:mb-5 text-lg sm:text-2xl">
+      <h2 className="mb-3 border-l-2 pl-2 text-lg font-extralight italic sm:text-2xl lg:mb-5">
         A non-exhaustive list of some works that have inspired me...
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 space-y-4 lg:space-x-8 lg:space-y-0">
+      <div className="grid grid-cols-1 space-y-4 lg:grid-cols-2 lg:space-x-8 lg:space-y-0">
         <div>
           <h2 className={titleClasses}>Books 📖</h2>
           <div className="space-y-2">
             <div>
               <h3>Philosophy</h3>
-              <ul className="list-disc ml-8">
+              <ul className="ml-8 list-disc">
                 <li>Thus Spoke Zarathustra, Friedrich Nietzsche</li>
                 <li>Sophie's World, Jostein Gaarder</li>
                 <li>Meditations, Marcus Aurelius</li>
@@ -31,7 +31,7 @@ export default function Page() {
             </div>
             <div>
               <h3>Meditation / Spirituality</h3>
-              <ul className="list-disc ml-8">
+              <ul className="ml-8 list-disc">
                 <li>Biografía del silencio, Pablo d'Ors</li>
                 <li>Siddhartha, Herman Hesse</li>
                 <li>
@@ -46,7 +46,7 @@ export default function Page() {
             </div>
             <div>
               <h3>Makes you think</h3>
-              <ul className="list-disc ml-8">
+              <ul className="ml-8 list-disc">
                 <li>Ensayo sobre la ceguera, José Saramago</li>
                 <li>Momo, Michael Ende</li>
                 <li>Nosotros somos una parte de la Tierra, Chief Seattle</li>
@@ -59,7 +59,7 @@ export default function Page() {
             </div>
             <div>
               <h3>Building</h3>
-              <ul className="list-disc ml-8">
+              <ul className="ml-8 list-disc">
                 <li>Zero to One, Peter Thiel</li>
                 <li>Hackers & Painters, Paul Graham</li>
                 <li>Shoe Dog, Phil Knight</li>
@@ -67,7 +67,7 @@ export default function Page() {
             </div>
             <div>
               <h3>Science / Engineering</h3>
-              <ul className="list-disc ml-8">
+              <ul className="ml-8 list-disc">
                 <li>
                   Superintelligence. Paths, dangers, strategies, Nick Bostrom
                 </li>
@@ -77,7 +77,7 @@ export default function Page() {
             </div>
             <div>
               <h3>Misc</h3>
-              <ul className="list-disc ml-8">
+              <ul className="ml-8 list-disc">
                 <li>Sapiens: A Brief History of Humankind, Yuval Harari</li>
                 <li>Atomic Habits, James Clear</li>
                 <li>The Lessons of History, Ariel & Will Durant</li>
@@ -90,7 +90,7 @@ export default function Page() {
           <div>
             <div>
               <h3>Movies</h3>
-              <ul className="list-disc ml-8">
+              <ul className="ml-8 list-disc">
                 <li>The Matrix</li>
                 <li>Fight Club</li>
                 <li>Shutter Island</li>
@@ -105,7 +105,7 @@ export default function Page() {
             </div>
             <div className="mt-2">
               <h3>TV Shows</h3>
-              <ul className="list-disc ml-8">
+              <ul className="ml-8 list-disc">
                 <li>Black Mirror</li>
                 <li>Westworld (S1)</li>
                 <li>Mr. Robot</li>
