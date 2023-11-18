@@ -24,3 +24,9 @@ body {
     @apply text-xl;
   }
 }
+
+@media (min-width: 640px) {
+  .animate-mutate-border-tl {
+    border-top-left-radius: 9999px !important;
+  }
+}

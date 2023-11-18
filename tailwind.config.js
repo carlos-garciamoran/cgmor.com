@@ -8,15 +8,21 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        mutate: "mutate 16s ease-in-out infinite",
+        "mutate-border": "mutate-border 18s ease-in-out infinite",
+        "mutate-border-tl": "mutate-border-tl 18s ease-in-out infinite",
       },
       keyframes: {
-        // IDEA: mutate each border corner independently (alternate between tr-bl <-> tl-br).
-        mutate: {
+        "mutate-border": {
           "0%": { borderRadius: 0 },
           "40%": { borderRadius: "50px" },
           "60%": { borderRadius: "50px" },
           "100%": { borderRadius: 0 },
+        },
+        "mutate-border-tl": {
+          "0%": { borderTopLeftRadius: 0 },
+          "40%": { borderTopLeftRadius: "50px" },
+          "60%": { borderTopLeftRadius: "50px" },
+          "100%": { borderTopLeftRadius: 0 },
         },
       },
       fontFamily: {

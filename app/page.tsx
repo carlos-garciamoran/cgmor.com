@@ -6,35 +6,48 @@ export const metadata: Metadata = {
   description: "Software | Design",
 };
 
+/**
+ * To-do:
+ * - make border color a linear gradient
+ * - add quick intro + projects
+ *
+ * Ideas:
+ * - animate words and move them around randomly, then have them come back
+ * - make underline animation on name, as if it was handwritten
+ */
+
 export default function Home() {
   return (
-    <div className="flex flex-col flex-grow mt-4 sm:mt-0 mx-2 sm:mx-0 sm:justify-center select-none">
-      <div className="flex items-center justify-center flex-row">
+    <div className="flex flex-col flex-grow justify-center select-none">
+      {/* Card container */}
+      <div className="animate-mutate-border 2xl:text-xl border-2 sm:border-none border-neutral-200 pr-2 flex items-start justify-center flex-row">
         <Image
-          className="border-4 border-black rounded-full shadow-2xl h-auto w-20 sm:w-32 2xl:w-44 hover:scale-105 transition-transform duration-500 ease-in"
+          className="border-4 border-black animate-mutate-border-tl sm:rounded-full sm:rounded-tl-full shadow-2xl h-auto w-20 sm:w-32 xl:w-36 2xl:w-40 transition-transform duration-500 ease-in"
           src="/img/me.webp"
           alt="Me"
           width={300}
           height={300}
         />
-        <div className="font-thin tracking-tighter text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl ml-4 sm:ml-8 md:ml-8 xl:ml-12">
-          <p className="mb-3 xl:mb-8">Hello,</p>
-          {/* DESIGN: underline name with an animation, as if it was handwritten. */}
-          <p>
-            My name is{" "}
-            <span className="font-normal tracking-tight">Carlos</span>
+        {/* Text container */}
+        <div className="pb-2 sm:pb-0 pt-[0.35rem] sm:pt-0 ml-5 sm:ml-8 md:ml-8 xl:ml-14">
+          <div className="text-[34px] leading-tight md:text-4xl lg:text-5xl 2xl:text-7xl tracking-tighter font-thin">
+            <p>Hello, my name</p>
+            <p className="xl:mt-4">
+              is <span className="font-normal tracking-tight">Carlos</span>
+            </p>
+          </div>
+          <p className="font-extralight xl:tracking-wide text-base xl:text-lg mt-2 xl:mt-6">
+            I am a software <span className="font-medium">tinkerer</span> who
+            enjoys <span className="font-medium">design</span> &{" "}
+            <span className="font-medium">building</span>...
           </p>
+          {/* <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br /> */}
         </div>
-      </div>
-      {/* TODO: align with text (img | text) */}
-      {/* DESIGN: animate words and move them around randomly, then have them come back. */}
-      {/* DESIGN: make border color a linear gradient. */}
-      <div className="animate-mutate 2xl:text-xl border-4 border-slate-400 mx-auto mt-6 sm:mt-12 px-4 py-6 sm:px-6 lg:p-8">
-        <p className="text-center sm:text-left">
-          I am a software <span className="underline">tinkerer</span> who enjoys{" "}
-          <span className="font-medium">design</span> &{" "}
-          <span className="font-medium">building</span>
-        </p>
       </div>
     </div>
   );
