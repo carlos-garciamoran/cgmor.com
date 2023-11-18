@@ -8,15 +8,12 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 
-// const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: {
     absolute: "Carlos García Morán",
     template: "%s - Carlos García Morán",
   },
   description: "Software | Design | Reads",
-  themeColor: "#475569", // Slate 600
 };
 
 export default function RootLayout({
