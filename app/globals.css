@@ -21,7 +21,7 @@ body {
 
 @layer base {
   h3 {
-    @apply text-xl;
+    @apply text-xl font-medium;
   }
 }
 

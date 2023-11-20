@@ -5,16 +5,17 @@ export const metadata: Metadata = {
   description: 'Books | Movies',
 };
 
-const titleClasses = 'font-semibold text-2xl xl:text-3xl uppercase';
+const titleClasses = 'font-bold text-3xl xl:text-4xl uppercase xl:mb-3';
 
-// TODO: set up markdown/MDX
 export default function Page() {
   return (
     <div>
-      <h2 className="mb-3 border-l-2 pl-2 text-lg font-extralight italic sm:text-2xl lg:mb-5">
-        A non-exhaustive list of some works that have inspired me...
-      </h2>
-      <div className="grid grid-cols-1 space-y-4 lg:grid-cols-2 lg:space-x-8 lg:space-y-0">
+      <div className="mb-3 flex h-fit border-l-2 border-neutral-700 dark:border-neutral-300 xl:h-14 xl:border-l-4">
+        <h2 className="pl-2 text-lg font-extralight italic dark:border-neutral-300 lg:text-2xl lg:leading-none">
+          A non-exhaustive list of works that have inspired me...
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 space-y-4 lg:grid-cols-2 lg:space-x-16 lg:space-y-0">
         <div>
           <h2 className={titleClasses}>Books 📖</h2>
           <div className="space-y-2">
@@ -38,9 +39,9 @@ export default function Page() {
                   Los Cuatro Acuerdos (Un libro de la sabiduría tolteca), Don
                   Miguel Ruiz
                 </li>
-                <li>Steppenwolf, Herman Hesse</li>
+                <li>El Lobo Estepario, Herman Hesse</li>
                 <li>The Untethered Soul, Michael Alan Singer</li>
-                <li>The Alchemist, Paulo Coelho</li>
+                <li>El Alquimista, Paulo Coelho</li>
                 <li>Think on These Things, Jiddu Krishnamurti</li>
               </ul>
             </div>
@@ -51,7 +52,7 @@ export default function Page() {
                 <li>Momo, Michael Ende</li>
                 <li>Nosotros somos una parte de la Tierra, Chief Seattle</li>
                 <li>The Art of War, Sun Tzu</li>
-                <li>Beneath the Wheel, Herman Hesse</li>
+                <li>Bajo las Ruedas, Herman Hesse</li>
                 <li>Brave New World, Aldous Huxley</li>
                 <li>Island, Aldous Huxley</li>
                 <li>Slaughterhouse-Five, Kurt Vonnegut</li>
@@ -72,7 +73,8 @@ export default function Page() {
                   Superintelligence. Paths, dangers, strategies, Nick Bostrom
                 </li>
                 <li>Hacking: The Art of Exploitation, Jon Erickson</li>
-                <li>Silence on the Wire, Michael Zalewski</li>
+                <li>Silence on the Wire, Michael Zalewski*</li>
+                <li>The Pragmatic Programmer, Andy Hunt & Dave Thomas*</li>
               </ul>
             </div>
             <div>

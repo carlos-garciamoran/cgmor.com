@@ -60,14 +60,13 @@ const projects: Project[] = [
 ];
 
 // TODO: swap colors on hover smoothly > https://stackoverflow.com/a/67853821
-// TODO: add KLOC
 // TODO: on xl, animate floating (scale-95 - scale-105, maybe translate-y-1)
 // TODO: add dates to projects
 // TODO: on page load, display projects with fade in (Framer Motion?)
 // NOTE: it'd be cool if the cards `were draggable and could be rearranged` (thx Copilot)
 export default function Page() {
   return (
-    <div className="grid gap-y-3 sm:gap-y-6 md:gap-y-8 lg:mt-8 lg:grid-cols-2 lg:gap-x-6 xl:gap-x-28 xl:gap-y-10">
+    <div className="grid h-full gap-y-2 text-white lg:grid-cols-2 lg:gap-x-6 xl:mt-6 xl:gap-x-16 xl:gap-y-10">
       {projects.map((project) => (
         <a
           key={project.name}
@@ -81,7 +80,7 @@ export default function Page() {
         >
           <div
             className={clsx({
-              'delay-50 group flex flex-grow flex-col justify-center rounded-3xl bg-gradient-to-tl from-zinc-800 px-6 py-7 shadow-sm transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110 sm:px-8 sm:py-8 sm:shadow-lg sm:hover:to-zinc-900 lg:h-56 lg:px-12 lg:py-10':
+              'delay-50 group flex grow flex-col justify-center rounded-3xl bg-gradient-to-tl from-neutral-800 px-6 py-7 shadow-sm transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110 sm:px-8 sm:py-8 sm:shadow-lg sm:hover:to-neutral-900 lg:h-56 lg:px-10 lg:py-10 xl:px-14':
                 true,
               'to-emerald-600 sm:hover:from-emerald-600':
                 project.bg === 'emerald-700',
@@ -94,7 +93,7 @@ export default function Page() {
               'to-pink-600 sm:hover:from-pink-600': project.bg === 'pink-600',
             })}
           >
-            <h2 className="text-4xl font-extralight underline decoration-2 underline-offset-4">
+            <h2 className="text-3xl font-extralight underline decoration-2 underline-offset-4 sm:text-4xl sm:font-light sm:no-underline sm:group-hover:underline">
               {project.name}
             </h2>
             <div className="mt-2 flex space-x-1 lg:mt-3">
@@ -102,13 +101,13 @@ export default function Page() {
                 <div
                   key={language}
                   className={clsx({
-                    'rounded-lg bg-zinc-800 px-3 py-1 group-hover:bg-gradient-to-r md:px-4':
+                    'rounded-full bg-neutral-800 px-2 py-1 group-hover:bg-gradient-to-r sm:px-3 md:px-4':
                       true,
                     'from-amber-400 to-amber-600': language === 'Binance API',
                     'from-purple-600 to-purple-800': language === 'Bootstrap',
                     'from-amber-500 to-amber-600': language === 'Firebase',
                     'from-sky-400 to-sky-500': language === 'Go',
-                    'from-zinc-300 to-zinc-900': language === 'Next.js',
+                    'from-neutral-300 to-neutral-900': language === 'Next.js',
                     'from-red-400 to-red-500': language === 'Laravel',
                     'from-violet-600 to-violet-800': language === 'PHP',
                     'from-yellow-500 to-yellow-600': language === 'Python',
@@ -118,10 +117,11 @@ export default function Page() {
                     'from-[#3fcf8e] to-[#2b825b]': language === 'Supabase',
                     'from-sky-500 to-cyan-600': language === 'TailwindCSS',
                     'from-[#378be5] to-[#195ea9]': language === 'Typescript',
-                    'from-zinc-900 to-zinc-300': language === 'WebSockets',
+                    'from-neutral-900 to-neutral-300':
+                      language === 'WebSockets',
                   })}
                 >
-                  <span className="text-sm">{language}</span>
+                  <span className="text-xs sm:text-sm">{language}</span>
                 </div>
               ))}
             </div>

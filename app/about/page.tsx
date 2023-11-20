@@ -15,10 +15,14 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="flex flex-col items-center lg:mt-4">
-      <div className="xl: w-full space-y-4 text-justify sm:w-5/6 lg:w-3/4 xl:w-1/2">
+      <div className="w-full space-y-4 text-justify sm:w-5/6 lg:w-3/4 xl:w-1/2">
         <p>
           I'm a software engineer originally from Madrid, Spain. Since middle
-          school, I have been tinkering with computers and reading{' '}
+          school, I have been{' '}
+          <Link href="/projects" className="underline">
+            tinkering
+          </Link>{' '}
+          with computers and reading{' '}
           <Link href="/muses" className="underline">
             books
           </Link>
