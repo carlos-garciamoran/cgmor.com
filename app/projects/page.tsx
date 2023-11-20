@@ -80,7 +80,7 @@ export default function Page() {
         >
           <div
             className={clsx({
-              'delay-50 group flex grow flex-col justify-center rounded-3xl bg-gradient-to-tl from-neutral-800 px-6 py-7 shadow-sm transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110 sm:px-8 sm:py-8 sm:shadow-lg sm:hover:to-neutral-900 lg:h-56 lg:px-10 lg:py-10 xl:px-14':
+              'delay-50 group flex grow flex-col justify-center rounded-3xl bg-gradient-to-tl from-neutral-800 px-6 py-7 shadow-sm transition duration-500 ease-in-out sm:px-8 sm:py-8 sm:shadow-lg sm:hover:-translate-y-1 sm:hover:scale-110 sm:hover:to-neutral-900 lg:h-56 lg:px-10 lg:py-10 xl:px-14':
                 true,
               'to-emerald-600 sm:hover:from-emerald-600':
                 project.bg === 'emerald-700',

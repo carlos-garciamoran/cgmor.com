@@ -5,7 +5,8 @@ export const metadata: Metadata = {
   description: 'Books | Movies',
 };
 
-const titleClasses = 'font-bold text-3xl xl:text-4xl uppercase xl:mb-3';
+const titleClasses =
+  'font-bold tracking-tight text-3xl xl:text-4xl uppercase xl:mb-3';
 
 export default function Page() {
   return (
@@ -17,8 +18,8 @@ export default function Page() {
       </div>
       <div className="grid grid-cols-1 space-y-4 lg:grid-cols-2 lg:space-x-16 lg:space-y-0">
         <div>
-          <h2 className={titleClasses}>Books 📖</h2>
-          <div className="space-y-2">
+          <h2 className={titleClasses}>Books</h2>
+          <div className="space-y-3 sm:space-y-2">
             <div>
               <h3>Philosophy</h3>
               <ul className="ml-8 list-disc">
@@ -88,7 +89,7 @@ export default function Page() {
           </div>
         </div>
         <div>
-          <h2 className={titleClasses}>Films 🎬</h2>
+          <h2 className={titleClasses}>Films</h2>
           <div>
             <div>
               <h3>Movies</h3>
