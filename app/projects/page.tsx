@@ -81,8 +81,8 @@ export default function Page() {
       {projects.map((project) => (
         <a
           key={project.name}
-          href={`${project.url}/`}
-          target="_blank"
+          href={project.url}
+          target={project.url === '#' ? '_self' : '_blank'}
           rel="noreferrer"
         >
           <div

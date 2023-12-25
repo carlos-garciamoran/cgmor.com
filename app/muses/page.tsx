@@ -39,7 +39,7 @@ export default function Page() {
           <div className="sm:flex sm:w-full sm:justify-between">
             <div>
               <h3>Movies</h3>
-              <ul className="ml-8 list-[square]">
+              <ul className="ml-8 list-[square] text-sm">
                 {films.movies.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
@@ -47,7 +47,7 @@ export default function Page() {
             </div>
             <div className="mt-2">
               <h3>Shows</h3>
-              <ul className="ml-8 list-[square]">
+              <ul className="ml-8 list-[square] text-sm">
                 {films.tv.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
@@ -74,7 +74,7 @@ function BookSection({
   return (
     <div>
       <h3 className="font-extralight tracking-wide">{title}</h3>
-      <ul className="ml-8 list-disc">
+      <ul className="ml-8 list-disc text-sm">
         {books.map((item, i) => (
           <li key={i}>
             {item.title}, {item.author}

@@ -35,7 +35,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex h-[100dvh] flex-col overflow-hidden bg-gradient-to-b from-neutral-100 to-neutral-300 text-black dark:from-neutral-800 dark:to-black dark:text-white sm:bg-gradient-to-br xl:from-neutral-300">
             <Header />
-            <main className="mt-6 flex h-full grow flex-col overflow-y-auto px-8 sm:px-8 md:px-16 lg:py-4 xl:mx-auto xl:max-w-screen-xl 2xl:px-6">
+            <main className="mt-6 flex h-full grow flex-col overflow-y-auto px-6 sm:px-8 md:px-16 lg:py-4 xl:mx-auto xl:max-w-screen-xl 2xl:px-6">
               {children}
             </main>
             <Footer />
