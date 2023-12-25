@@ -1,5 +1,5 @@
+import type { Metadata } from 'next';
 import clsx from 'clsx';
-import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -8,120 +8,115 @@ export const metadata: Metadata = {
 
 type Project = {
   name: string;
-  bg: string;
   description: string;
   url: string;
-  tech: string[];
+  tags: string[];
 };
 
 const projects: Project[] = [
   {
-    name: 'TweetWidget',
-    bg: 'sky-600',
-    description: 'Glance at tweets from your home screen',
-    url: 'https://github.com/carlos-garciamoran/tweetwidget',
-    tech: ['Swift', 'SwiftUI', 'Supabase'],
+    name: 'stealth',
+    description: '...',
+    url: '#',
+    tags: ['React', 'Next.js', 'Supabase'],
+  },
+  {
+    name: 'nativecn-ui',
+    description: 'shadcn/ui for React Native',
+    url: 'https://github.com/Mobilecn-UI/nativecn-ui',
+    tags: ['shadcn/ui', 'React Native', 'Typescript'],
+  },
+  {
+    name: 'swiftcn-ui',
+    description: 'Beautiful mobile UI components',
+    url: 'https://github.com/Mobilecn-UI/swiftcn-ui',
+    tags: ['shadcn/ui', 'Swift', 'SwiftUI'],
   },
   {
     name: 'CoLive',
-    bg: 'violet-600',
     description: 'Find sublets and roommates easily',
     url: 'https://www.getcolive.com',
-    tech: ['Next.js', 'Typescript', 'TailwindCSS'],
+    tags: ['Next.js', 'Typescript', 'TailwindCSS'],
   },
   {
     name: 'Hermes',
-    bg: 'cyan-600',
     description: 'Binance USD-M Futures trading bot',
     url: 'https://github.com/carlos-garciamoran/hermes',
-    tech: ['Go', 'WebSockets'],
+    tags: ['Go', 'WebSockets'],
+  },
+  {
+    name: 'TweetWidget',
+    description: 'Glance at tweets from your home screen',
+    url: 'https://github.com/carlos-garciamoran/tweetwidget',
+    tags: ['Swift', 'SwiftUI', 'Supabase'],
   },
   {
     name: 'Delfos',
-    bg: 'fuchsia-700',
     description: 'Cryptocurrency trading bot',
     url: 'https://github.com/carlos-garciamoran/delfos',
-    tech: ['Python', 'Binance API'],
-  },
-  {
-    name: 'Matrix',
-    bg: 'emerald-700',
-    description: 'Student information system built for UWC ISAK Japan',
-    url: 'https://github.com/carlos-garciamoran/matrix',
-    tech: ['PHP', 'Laravel', 'Bootstrap'],
+    tags: ['Python', 'Binance API'],
   },
   {
     name: 'CNCPT',
-    bg: 'pink-600',
     description: 'Connecting media with social good',
     url: 'https://apps.apple.com/us/app/cncpt/id1662094973',
-    tech: ['React Native', 'Typescript', 'Firebase'],
+    tags: ['React Native', 'Typescript', 'Firebase'],
+  },
+  {
+    name: 'Matrix',
+    description: 'Student information system built for UWC ISAK Japan',
+    url: 'https://github.com/carlos-garciamoran/matrix',
+    tags: ['PHP', 'Laravel', 'Bootstrap'],
   },
 ];
 
+// TODO: add github icon for repo links
+// TODO: categorize by current / past
 // TODO: swap colors on hover smoothly > https://stackoverflow.com/a/67853821
-// TODO: on xl, animate floating (scale-95 - scale-105, maybe translate-y-1)
-// TODO: add dates to projects
+// TODO: on xl, animate floating (scale-95 to scale-105, maybe translate-y-1)
 // TODO: on page load, display projects with fade in (Framer Motion?)
-// NOTE: it'd be cool if the cards `were draggable and could be rearranged` (thx Copilot)
 export default function Page() {
   return (
-    <div className="grid h-full gap-y-2 text-white lg:grid-cols-2 lg:gap-x-6 xl:mt-6 xl:gap-x-16 xl:gap-y-10">
+    <div className="grid grid-cols-1 items-start gap-2 pb-4 md:grid-cols-2 md:gap-6 md:pt-4 lg:h-full xl:gap-10 xl:pt-6 2xl:grid-cols-3">
       {projects.map((project) => (
         <a
           key={project.name}
           href={`${project.url}/`}
           target="_blank"
           rel="noreferrer"
-          className={clsx({
-            'order-first lg:order-none': project.name === 'CoLive',
-            'order-last lg:order-none': project.name === 'Matrix',
-          })}
         >
           <div
             className={clsx({
-              'delay-50 group flex grow flex-col justify-center rounded-3xl bg-gradient-to-tl from-neutral-800 px-6 py-7 shadow-sm transition duration-500 ease-in-out sm:px-8 sm:py-8 sm:shadow-lg sm:hover:-translate-y-1 sm:hover:scale-110 sm:hover:to-neutral-900 lg:h-56 lg:px-10 lg:py-10 xl:px-14':
+              'group flex grow flex-col justify-center rounded-3xl border border-neutral-100 bg-gradient-to-tl from-neutral-200 px-6 py-7 shadow-sm transition duration-500 ease-in-out dark:border-neutral-900 dark:from-neutral-800 sm:px-8 sm:py-8 sm:shadow-lg sm:hover:scale-105 sm:hover:to-neutral-200 dark:sm:hover:to-neutral-900 md:hover:-translate-y-1 md:hover:scale-110 lg:h-56 lg:px-10 lg:py-10 xl:px-12 2xl:pr-6':
                 true,
-              'to-emerald-600 sm:hover:from-emerald-600':
-                project.bg === 'emerald-700',
-              'to-cyan-600 sm:hover:from-cyan-600': project.bg === 'cyan-600',
-              'to-sky-600 sm:hover:from-sky-600': project.bg === 'sky-600',
-              'to-violet-600 sm:hover:from-violet-600':
-                project.bg === 'violet-600',
-              'order-1 to-fuchsia-700 sm:order-none sm:hover:from-fuchsia-700':
-                project.bg === 'fuchsia-700',
-              'to-pink-600 sm:hover:from-pink-600': project.bg === 'pink-600',
+              'to-slate-200 dark:to-slate-400 sm:hover:from-slate-200 dark:sm:hover:from-slate-400':
+                project.name === 'nativecn-ui',
+              'to-indigo-200 dark:to-indigo-400 sm:hover:from-indigo-200 dark:sm:hover:from-indigo-400':
+                project.name === 'swiftcn-ui',
+              'to-orange-200 dark:to-orange-700 sm:order-none sm:hover:from-orange-200 dark:sm:hover:from-orange-700':
+                project.name === 'Delfos',
+              'to-cyan-200 dark:to-cyan-600 sm:hover:from-cyan-200 dark:sm:hover:from-cyan-600':
+                project.name === 'Hermes',
+              'to-sky-200 dark:to-sky-600 sm:hover:from-sky-200 dark:sm:hover:from-sky-600':
+                project.name === 'TweetWidget',
+              'to-violet-200 dark:to-violet-600 sm:hover:from-violet-200 dark:sm:hover:from-violet-600':
+                project.name === 'CoLive',
+              'to-pink-200 dark:to-pink-600 sm:hover:from-pink-200 dark:sm:hover:from-pink-600':
+                project.name === 'CNCPT',
+              'to-emerald-200 dark:to-emerald-600 sm:hover:from-emerald-200 dark:sm:hover:from-emerald-600':
+                project.name === 'Matrix',
             })}
           >
-            <h2 className="text-3xl font-extralight underline decoration-2 underline-offset-4 sm:text-4xl sm:font-light sm:no-underline sm:group-hover:underline">
+            <h2 className="text-3xl font-extralight underline decoration-2 underline-offset-4 sm:text-4xl">
               {project.name}
             </h2>
-            <div className="mt-2 flex space-x-1 lg:mt-3">
-              {project.tech.map((language) => (
+            <div className="mt-2 flex gap-x-1 lg:mt-3">
+              {project.tags.map((language) => (
                 <div
                   key={language}
-                  className={clsx({
-                    'rounded-full bg-neutral-800 px-2 py-1 group-hover:bg-gradient-to-r sm:px-3 md:px-4':
-                      true,
-                    'from-amber-400 to-amber-600': language === 'Binance API',
-                    'from-purple-600 to-purple-800': language === 'Bootstrap',
-                    'from-amber-500 to-amber-600': language === 'Firebase',
-                    'from-sky-400 to-sky-500': language === 'Go',
-                    'from-neutral-300 to-neutral-900': language === 'Next.js',
-                    'from-red-400 to-red-500': language === 'Laravel',
-                    'from-violet-600 to-violet-800': language === 'PHP',
-                    'from-yellow-500 to-yellow-600': language === 'Python',
-                    'from-[#4fc7e8] to-[#3493ae]': language === 'React Native',
-                    'from-orange-600 to-orange-700': language === 'Swift',
-                    'from-cyan-500 to-cyan-600': language === 'SwiftUI',
-                    'from-[#3fcf8e] to-[#2b825b]': language === 'Supabase',
-                    'from-sky-500 to-cyan-600': language === 'TailwindCSS',
-                    'from-[#378be5] to-[#195ea9]': language === 'Typescript',
-                    'from-neutral-900 to-neutral-300':
-                      language === 'WebSockets',
-                  })}
+                  className="flex items-center rounded-full bg-gradient-to-tr from-transparent to-neutral-100 px-2 py-1 text-center dark:to-neutral-900 sm:px-3 md:px-4"
                 >
-                  <span className="text-xs sm:text-sm">{language}</span>
+                  <span className="text-xs">{language}</span>
                 </div>
               ))}
             </div>

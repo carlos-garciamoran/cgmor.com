@@ -26,15 +26,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // TODO: move socials to about (no footer -> cleaner UI)
   // TODO: on mobile, position menu (<Header />) at the bottom of the screen
   // TODO: fix height/bg-gradient bug on pages where height exceeds screen height (/muses)
   return (
     <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex h-[100dvh] flex-col overflow-hidden bg-gradient-to-b from-neutral-100 to-neutral-300 text-black dark:from-neutral-700 dark:to-black dark:text-white sm:bg-gradient-to-br xl:from-neutral-300">
+          <div className="flex h-[100dvh] flex-col overflow-hidden bg-gradient-to-b from-neutral-100 to-neutral-300 text-black dark:from-neutral-800 dark:to-black dark:text-white sm:bg-gradient-to-br xl:from-neutral-300">
             <Header />
-            <main className="mt-6 flex h-full grow flex-col overflow-y-auto px-8 sm:px-16 lg:px-32 lg:py-4 xl:mx-auto xl:max-w-screen-xl">
+            <main className="mt-6 flex h-full grow flex-col overflow-y-auto px-8 sm:px-8 md:px-16 lg:py-4 xl:mx-auto xl:max-w-screen-xl 2xl:px-6">
               {children}
             </main>
             <Footer />
