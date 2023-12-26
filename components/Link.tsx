@@ -1,9 +1,9 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
 export function ExternalLink({
   href,
   title,
-  alwaysUnderline = false,
+  alwaysUnderline = true,
 }: {
   href: string;
   title: string;
@@ -11,12 +11,12 @@ export function ExternalLink({
 }) {
   return (
     <a
-      className={clsx("underline", {
-        "sm:no-underline sm:hover:underline": !alwaysUnderline,
-      })}
       href={href}
       target="_blank"
       rel="noopener noreferrer"
+      className={clsx('underline', {
+        'sm:no-underline sm:hover:underline': !alwaysUnderline,
+      })}
     >
       {title}
     </a>

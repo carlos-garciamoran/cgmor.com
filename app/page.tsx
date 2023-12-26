@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex grow select-none flex-col justify-center">
+    <div className="flex flex-1 grow select-none flex-col items-center justify-center">
       {/* Card container */}
       <div className="flex animate-mutate-border flex-row items-start justify-center border-2 border-neutral-800 pr-2 dark:border-neutral-200 sm:border-none 2xl:text-xl">
         <Image

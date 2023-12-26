@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-}
-
 @layer base {
+  :root {
+    --background: 255, 255, 255;
+    --foreground: 0, 0, 0;
+  }
+  .dark {
+    --background: 0, 0, 0;
+    --foreground: 255, 255, 255;
+  }
+  body {
+    background: rgb(var(--background));
+    color: rgb(var(--foreground));
+  }
   h3 {
-    @apply text-xl font-medium;
+    @apply text-xl;
   }
 }
 

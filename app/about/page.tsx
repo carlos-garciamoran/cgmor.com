@@ -14,8 +14,8 @@ export const metadata = {
 // DESIGN: make chronology with achievements/places (add years in left column or something)
 export default function Page() {
   return (
-    <div className="flex flex-col items-center lg:mt-4">
-      <div className="w-full space-y-4 text-justify sm:w-5/6 lg:w-3/4 xl:w-1/2">
+    <div className="flex flex-col items-center md:pt-4">
+      <div className="flex w-full flex-col gap-y-4 text-justify sm:w-5/6 lg:w-3/4 xl:w-1/2">
         <p>
           I'm a software engineer originally from Madrid, Spain. Since middle
           school, I have been{' '}
@@ -68,32 +68,20 @@ export default function Page() {
           Last summer, I lived in NYC while working at LinkedIn's NYENG org on
           internal tooling to help developers identify and monitor incidents
           faster and more easily. In my spare time, I'm building{' '}
-          <ExternalLink
-            alwaysUnderline
-            href="https://mobilecn.lol"
-            title="mobilecn UI"
-          />
+          <ExternalLink href="https://mobilecn.lol" title="mobilecn UI" />
           . Inspired by shadcn/ui, we are crafting opinionated-yet-customizable
           components for React Native (
           <ExternalLink
-            alwaysUnderline
             href="https://github.com/Mobilecn-UI/nativecn-ui"
             title="nativecn-ui"
           />
           ) and SwiftUI (
           <ExternalLink
-            alwaysUnderline
             href="https://github.com/Mobilecn-UI/swiftcn-ui"
             title="swiftcn-ui"
           />
           ).
         </p>
-      </div>
-      <div className="mt-6 text-center text-sm font-light">
-        <ExternalLink
-          href="https://linkedin.com/in/carlos-garcia-moran"
-          title="LinkedIn"
-        />
       </div>
     </div>
   );

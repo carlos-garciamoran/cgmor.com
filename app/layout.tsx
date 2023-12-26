@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import { Analytics } from '@vercel/analytics/react';
@@ -26,21 +26,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // TODO: move socials to about (no footer -> cleaner UI)
   // TODO: on mobile, position menu (<Header />) at the bottom of the screen
-  // TODO: fix height/bg-gradient bug on pages where height exceeds screen height (/muses)
   return (
-    <html className={`${GeistSans.variable} ${GeistMono.variable}`} lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex h-[100dvh] flex-col overflow-hidden bg-gradient-to-b from-neutral-100 to-neutral-300 text-black dark:from-neutral-800 dark:to-black dark:text-white sm:bg-gradient-to-br xl:from-neutral-300">
+          <div className="flex h-[100dvh] flex-col bg-gradient-to-b from-neutral-50 to-neutral-200 dark:from-neutral-800 dark:to-black sm:h-full sm:min-h-screen sm:bg-gradient-to-br">
             <Header />
-            <main className="mt-6 flex h-full grow flex-col overflow-y-auto px-6 sm:px-8 md:px-16 lg:py-4 xl:mx-auto xl:max-w-screen-xl 2xl:px-6">
+            <main className="flex flex-1 px-6 pt-4 sm:px-8 md:px-16 lg:py-4 xl:mx-auto xl:max-w-screen-xl 2xl:px-6">
               {children}
             </main>
             <Footer />
             <Analytics />
-            <div className="fixed bottom-1 right-2 pb-2 lg:bottom-2 lg:right-4">
+            <div className="fixed bottom-2 right-1 sm:bottom-2 sm:right-2 lg:bottom-4 lg:right-4 xl:right-6">
               <ThemeToggle />
             </div>
           </div>

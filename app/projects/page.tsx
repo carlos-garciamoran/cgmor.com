@@ -84,6 +84,7 @@ export default function Page() {
           href={project.url}
           target={project.url === '#' ? '_self' : '_blank'}
           rel="noreferrer"
+          className="flex h-full"
         >
           <div
             className={clsx({
