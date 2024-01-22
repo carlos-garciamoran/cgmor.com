@@ -21,9 +21,9 @@ export default function Home() {
   return (
     <div className="flex flex-1 grow select-none flex-col items-center justify-center">
       {/* Card container */}
-      <div className="flex animate-mutate-border flex-row items-start justify-center border-2 border-neutral-800 pr-2 dark:border-neutral-200 sm:border-none 2xl:text-xl">
+      <div className="flex animate-mutate-border items-start justify-center border-2 border-neutral-800 pr-2 dark:border-neutral-200 sm:border-none 2xl:text-xl">
         <Image
-          className="h-auto w-20 animate-mutate-border-tl border-2 border-black shadow-2xl transition-transform duration-500 ease-in dark:shadow-none sm:w-32 sm:rounded-full sm:border-[8px] xl:w-36 2xl:w-40"
+          className="h-auto w-20 animate-mutate-border-tl shadow-2xl transition-transform duration-500 ease-in dark:shadow-none sm:w-32 sm:rounded-full xl:w-36 2xl:w-40"
           src="/img/me.webp"
           alt="Me"
           width={300}

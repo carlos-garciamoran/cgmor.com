@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex h-[100dvh] flex-col bg-gradient-to-b from-neutral-50 to-neutral-200 dark:from-neutral-800 dark:to-black sm:h-full sm:min-h-screen sm:bg-gradient-to-br">
+          <div className="flex h-[100dvh] flex-col bg-gradient-to-b from-neutral-50 to-neutral-200 dark:from-neutral-900 dark:to-black sm:h-full sm:min-h-screen sm:bg-gradient-to-br">
             <Header />
             <main className="flex flex-1 px-6 pt-4 sm:px-8 md:px-16 lg:py-4 xl:mx-auto xl:max-w-screen-xl 2xl:px-6">
               {children}
