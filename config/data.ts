@@ -1,12 +1,10 @@
-type Project = {
-  name: string;
-  description: string;
-  url: string;
-  tags: string[];
+export type Book = {
+  title: string;
+  author: string;
 };
-
-export const books = {
+export const books: Record<string, Book[]> = {
   now: [
+    { title: 'The Creative Act', author: 'Rick Rubin' },
     { title: 'Thinking in Systems: A Primer', author: 'Donella H. Meadows' },
     {
       title: 'Zero: The Biography of a Dangerous Idea',
@@ -40,6 +38,7 @@ export const books = {
     { title: 'Siddhartha', author: 'Herman Hesse' },
     { title: 'El Lobo Estepario', author: 'Herman Hesse' },
     { title: 'Bajo las Ruedas', author: 'Herman Hesse' },
+    { title: 'El hombre que fue jueves', author: 'G. K. Chesterton' },
     { title: 'Diario de un seductor', author: 'Søren Kierkegaard' },
     { title: 'La isla', author: 'Aldous Huxley' },
     { title: 'Un mundo feliz', author: 'Aldous Huxley' },
@@ -106,6 +105,12 @@ export const films = {
   ],
 };
 
+export type Project = {
+  name: string;
+  description: string;
+  url: string;
+  tags: string[];
+};
 export const projects: Project[] = [
   {
     name: 'stealth',
@@ -144,16 +149,16 @@ export const projects: Project[] = [
     tags: ['Swift', 'SwiftUI', 'Supabase'],
   },
   {
-    name: 'Delfos',
-    description: 'Cryptocurrency trading bot',
-    url: 'https://github.com/carlos-garciamoran/delfos',
-    tags: ['Python', 'Binance API'],
-  },
-  {
     name: 'CNCPT',
     description: 'Connecting media with social good',
     url: 'https://apps.apple.com/us/app/cncpt/id1662094973',
     tags: ['React Native', 'Typescript', 'Firebase'],
+  },
+  {
+    name: 'Delfos',
+    description: 'Cryptocurrency trading bot',
+    url: 'https://github.com/carlos-garciamoran/delfos',
+    tags: ['Python', 'Binance API'],
   },
   {
     name: 'Matrix',

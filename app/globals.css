@@ -6,22 +6,40 @@
   :root {
     --background: 255, 255, 255;
     --foreground: 0, 0, 0;
+    --border: 0, 0, 0;
   }
   .dark {
     --background: 0, 0, 0;
     --foreground: 255, 255, 255;
+    --border: 255, 255, 255;
+  }
+
+  * {
+    border-color: rgb(var(--border));
   }
   body {
+    @apply bg-background text-foreground;
     background: rgb(var(--background));
     color: rgb(var(--foreground));
   }
   h3 {
     @apply text-xl;
   }
-}
 
-@media (min-width: 640px) {
-  .animate-mutate-border-tl {
-    border-top-left-radius: 9999px !important;
+  /* TODO: design gradients for light mode */
+  #root {
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.1) 20%,
+      rgba(255, 255, 255, 0) 95%
+    );
+  }
+  #projects {
+    background: radial-gradient(
+      circle,
+      rgba(94, 234, 212, 0.6) 0%,
+      rgba(20, 184, 166, 0.8) 5%,
+      rgba(0, 0, 0, 0) 85%
+    );
   }
 }

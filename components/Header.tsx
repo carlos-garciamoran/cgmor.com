@@ -13,16 +13,16 @@ export function Header() {
   return (
     <header>
       <nav>
-        <ul className="flex justify-evenly divide-x divide-gray-800 border-b border-gray-800 dark:divide-gray-200 dark:border-gray-200">
+        <ul className="flex justify-evenly divide-x border-b">
           {pages.map((page) => (
             <li
               key={page}
-              className="grow transition duration-300 ease-in-out hover:bg-white hover:text-black"
+              className="grow transition duration-300 ease-in-out hover:bg-foreground hover:text-background"
             >
               <Link
                 href={page === 'home' ? '/' : `/${page}`}
                 className={clsx('flex justify-center py-3', {
-                  'bg-white text-black no-underline sm:bg-transparent sm:font-bold sm:text-inherit':
+                  'bg-foreground text-background no-underline':
                     page === currentPage,
                 })}
               >

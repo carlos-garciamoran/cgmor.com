@@ -11,6 +11,11 @@ module.exports = {
         'mutate-border': 'mutate-border 18s ease-in-out infinite',
         'mutate-border-tl': 'mutate-border-tl 18s ease-in-out infinite',
       },
+      colors: {
+        background: 'rgb(var(--background))',
+        foreground: 'rgb(var(--foreground))',
+        border: 'rgb(var(--border))',
+      },
       // TODO: alternate mutation of diagonal corners
       keyframes: {
         'mutate-border': {
