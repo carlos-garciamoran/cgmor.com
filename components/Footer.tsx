@@ -2,7 +2,7 @@ import { ExternalLink } from './Link';
 
 export function Footer() {
   return (
-    <footer className="flex justify-center gap-x-6 py-3 text-center text-sm font-extralight md:py-6">
+    <footer className="flex justify-center gap-6 py-3 text-center text-sm font-extralight md:pb-6">
       <ExternalLink
         href="https://github.com/carlos-garciamoran"
         title="GitHub"

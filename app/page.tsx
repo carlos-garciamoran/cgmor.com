@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Home - Carlos García Morán',
+  title: 'Carlos García Morán',
   description: 'Software | Design',
 };
 

@@ -37,22 +37,8 @@ export default function Muses() {
         <div>
           <h2 className={titleClasses}>Films</h2>
           <div className="flex flex-col gap-4 sm:w-full sm:flex-row sm:justify-between">
-            <div>
-              <h3 className="mb-0.5 font-extralight">Movies</h3>
-              <ul className="ml-8 list-[square] text-sm">
-                {films.movies.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-0.5 font-extralight">Shows</h3>
-              <ul className="ml-8 list-[square] text-sm">
-                {films.tv.map((item, i) => (
-                  <li key={i}>{item}</li>
-                ))}
-              </ul>
-            </div>
+            <FilmSection title="Movies" items={films.movies} />
+            <FilmSection title="Shows" items={films.tv} />
           </div>
         </div>
       </div>
@@ -70,11 +56,24 @@ function BookSection({
   return (
     <div>
       <h3 className="mb-0.5 font-extralight tracking-wide">{title}</h3>
-      <ul className="ml-8 list-disc text-sm">
+      <ul className="ml-0.5 list-inside list-disc text-sm">
         {books.map((item, i) => (
           <li key={i}>
             {item.title}, {item.author}
           </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function FilmSection({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div>
+      <h3 className="mb-0.5 font-extralight">{title}</h3>
+      <ul className="ml-0.5 list-inside list-[square] text-sm">
+        {items.map((item, i) => (
+          <li key={i}>{item}</li>
         ))}
       </ul>
     </div>

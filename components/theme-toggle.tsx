@@ -1,7 +1,7 @@
 'use client';
 
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { Lightbulb, Moon } from 'lucide-react';
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -12,7 +12,7 @@ export function ThemeToggle() {
     </button>
   ) : (
     <button aria-label="Toggle theme" onClick={() => setTheme('light')}>
-      <Lightbulb className="size-5" />
+      <Sun className="size-5" />
     </button>
   );
 }
