@@ -8,6 +8,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle';
+import { siteUrl } from '@/config/data';
 
 export const metadata: Metadata = {
   title: {
@@ -15,6 +16,20 @@ export const metadata: Metadata = {
     template: '%s - Carlos García Morán',
   },
   description: 'Software | Design | Reads',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: siteUrl,
+    images: [
+      {
+        url: `${siteUrl}/img/og.png`,
+        width: 300,
+        height: 300,
+        alt: 'Carlos García Morán',
+      },
+    ],
+  },
+  metadataBase: new URL(siteUrl),
 };
 
 export const viewport = {

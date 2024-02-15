@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import clsx from 'clsx';
 import { projects } from '@/config/data';
 import { type Project } from '@/config/data';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <div id="projects" className="size-full">
-      <div className="grid flex-1 grid-cols-1 justify-center gap-2 p-5 transition-all duration-200 sm:p-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-1.5">
+      <div className="grid flex-1 grid-cols-1 justify-center gap-2 p-5 px-6 transition-all duration-200 sm:p-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-1.5">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
@@ -61,7 +61,7 @@ function ProjectCard({ project }: { project: Project }) {
           {name}
         </h2>
         {isExternal && (
-          <ExternalLink className="mt-px size-4 stroke-[1.5] transition-all delay-100 duration-500 group-hover:stroke-2 sm:size-5" />
+          <ExternalLinkIcon className="mt-px size-4 stroke-[1.5] transition-all delay-100 duration-500 group-hover:stroke-2 sm:size-5" />
         )}
       </div>
       <div className="mt-3 flex gap-x-1">

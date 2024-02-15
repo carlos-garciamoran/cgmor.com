@@ -1,3 +1,5 @@
+export const siteUrl = 'https://cgmor.com';
+
 export type Book = {
   title: string;
   author: string;

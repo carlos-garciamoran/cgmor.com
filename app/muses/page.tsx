@@ -12,7 +12,7 @@ const titleClasses =
 export default function Muses() {
   return (
     <div className="flex flex-col p-6 sm:py-10 lg:mx-auto lg:max-w-screen-xl xl:px-0">
-      <div className="mb-3 flex min-h-8 border-l-2 border-neutral-700 dark:border-neutral-300">
+      <div className="mb-4 flex min-h-8 border-l-2 border-neutral-700 dark:border-neutral-300">
         <h2 className="pl-2 text-base font-thin italic first-line:leading-none dark:border-neutral-300 sm:text-lg">
           A non-exhaustive list of works that have inspired me...
         </h2>
