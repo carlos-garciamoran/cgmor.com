@@ -33,7 +33,7 @@ export default function Home() {
               is <span className="font-normal tracking-tight">Carlos</span>
             </p>
           </div>
-          <p className="mt-3 text-base font-extralight sm:mt-8 sm:tracking-wide md:text-lg">
+          <p className="mt-3 text-sm font-extralight sm:mt-8 sm:text-base sm:tracking-wide">
             I am a software <span className="font-medium">tinkerer</span> who
             enjoys <span className="font-medium">design</span> &{' '}
             <span className="font-medium">building</span>.

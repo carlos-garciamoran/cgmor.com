@@ -135,7 +135,7 @@ export const projects: Project[] = [
   {
     name: 'CoLive',
     description: 'Find sublets and roommates easily',
-    url: 'https://www.getcolive.com',
+    url: '#',
     tags: ['Next.js', 'Typescript', 'TailwindCSS'],
   },
   {
