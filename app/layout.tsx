@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   },
   description: 'Software | Design | Reads',
   openGraph: {
+    title: 'Carlos García Morán',
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
