@@ -34,17 +34,26 @@ function ProjectCard({ project }: { project: Project }) {
       target={isExternal ? '_blank' : '_self'}
       rel="noreferrer"
       className={clsx(
-        'group flex animate-mutate-border flex-col justify-center border border-neutral-900 bg-transparent p-6 shadow-md transition delay-100 duration-500 ease-in-out dark:border-neutral-200 sm:h-52 sm:p-8 sm:shadow-lg lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 xl:shadow-2xl 2xl:px-14',
+        'group flex animate-mutate-border flex-col justify-center border border-neutral-900 bg-transparent p-6 shadow-md transition delay-75 duration-500 ease-in-out dark:border-neutral-200 sm:h-52 sm:p-8 sm:shadow-lg lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 xl:shadow-2xl 2xl:px-14',
         {
-          'hover:bg-slate-800 xl:order-1': name === 'nativecn-ui',
-          'hover:bg-orange-700 xl:order-2': name === 'swiftcn-ui',
-          'hover:bg-indigo-700 xl:order-3': name === 'CoLive',
-          'hover:bg-yellow-600 xl:order-4': name === 'Hermes',
-          'hover:bg-neutral-800 xl:order-5': name === 'stealth',
-          'hover:bg-sky-700 xl:order-6': name === 'TweetWidget',
-          'hover:bg-cyan-700 xl:order-7': name === 'CNCPT',
-          'hover:bg-fuchsia-800 xl:order-8': name === 'Delfos',
-          'hover:bg-emerald-600 xl:order-9': name === 'Matrix',
+          'hover:bg-slate-300 dark:hover:bg-slate-800 xl:order-1':
+            name === 'nativecn-ui',
+          'hover:bg-orange-300 dark:hover:bg-orange-600 xl:order-2':
+            name === 'swiftcn-ui',
+          'hover:bg-indigo-300 dark:hover:bg-indigo-700 xl:order-3':
+            name === 'CoLive',
+          'hover:bg-yellow-300 dark:hover:bg-yellow-600 xl:order-4':
+            name === 'Hermes',
+          'hover:bg-neutral-100 dark:hover:bg-neutral-800 xl:order-5':
+            name === 'stealth',
+          'hover:bg-sky-300 dark:hover:bg-sky-600 xl:order-6':
+            name === 'TweetWidget',
+          'hover:bg-cyan-300 dark:hover:bg-cyan-600 xl:order-7':
+            name === 'CNCPT',
+          'hover:bg-fuchsia-300 dark:hover:bg-fuchsia-700 xl:order-8':
+            name === 'Delfos',
+          'hover:bg-emerald-300 dark:hover:bg-emerald-600 xl:order-9':
+            name === 'Matrix',
         }
       )}
     >

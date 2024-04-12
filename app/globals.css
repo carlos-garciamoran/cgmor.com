@@ -9,7 +9,7 @@
     --border: 0, 0%, 20%;
     --gradient-start: 0 0% 93%;
     --gradient-end: 0 0% 97%;
-    --accent: 177, 70%, 60%;
+    --accent: 185, 70%, 70%;
   }
   .dark {
     --background: 0, 0%, 0%;
@@ -17,7 +17,7 @@
     --border: 0, 0%, 80%;
     --gradient-start: 0 0% 7%;
     --gradient-end: 0 0% 3%;
-    --accent: 177, 60%, 33%;
+    --accent: 185, 60%, 33%;
   }
 
   * {

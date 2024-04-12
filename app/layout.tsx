@@ -52,10 +52,10 @@ export default function RootLayout({
             id="root"
           >
             <Header />
-            <main className="mx-auto flex flex-1">{children}</main>
+            <main className="flex flex-1">{children}</main>
             <Footer />
             <Analytics />
-            <div className="fixed bottom-1 right-1 sm:bottom-2 sm:right-2 lg:bottom-4 lg:right-6">
+            <div className="fixed bottom-1 right-2 lg:bottom-4 lg:right-6">
               <ThemeToggle />
             </div>
           </div>
