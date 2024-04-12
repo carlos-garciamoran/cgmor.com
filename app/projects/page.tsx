@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import clsx from 'clsx';
-import { projects } from '@/config/data';
-import { type Project } from '@/config/data';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
+
+import { projects, type Project } from '@/config/data';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -27,37 +27,29 @@ export default function Projects() {
 function ProjectCard({ project }: { project: Project }) {
   const { name, tags, description, url } = project;
   const isExternal = url !== '#';
+
   return (
     <a
       href={url}
       target={isExternal ? '_blank' : '_self'}
       rel="noreferrer"
       className={clsx(
-        'group flex animate-mutate-border flex-col justify-center border border-neutral-900 bg-transparent p-6 shadow-md transition delay-100 duration-500 ease-in-out dark:border-neutral-200 sm:h-52 sm:p-8 sm:shadow-lg lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 xl:shadow-2xl xl:hover:scale-110 2xl:px-14',
+        'group flex animate-mutate-border flex-col justify-center border border-neutral-900 bg-transparent p-6 shadow-md transition delay-100 duration-500 ease-in-out dark:border-neutral-200 sm:h-52 sm:p-8 sm:shadow-lg lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 xl:shadow-2xl 2xl:px-14',
         {
-          'hover:bg-slate-800 xl:order-1 xl:hover:translate-x-6 xl:hover:translate-y-5':
-            name === 'nativecn-ui',
-          'hover:bg-orange-700 xl:order-2 xl:hover:translate-y-5':
-            name === 'swiftcn-ui',
-          'hover:bg-indigo-700 xl:order-3 xl:hover:-translate-x-6 xl:hover:translate-y-5':
-            name === 'CoLive',
-          'hover:bg-yellow-600 xl:order-4 xl:hover:translate-x-6':
-            name === 'Hermes',
-          'hover:bg-neutral-800 md:hover:scale-[1.15] xl:order-5':
-            name === 'stealth',
-          'hover:bg-sky-700 xl:order-6 xl:hover:-translate-x-6':
-            name === 'TweetWidget',
-          'hover:bg-cyan-700 xl:order-7 xl:hover:-translate-y-5 xl:hover:translate-x-6':
-            name === 'CNCPT',
-          'hover:bg-fuchsia-800 xl:order-8 xl:hover:-translate-y-5':
-            name === 'Delfos',
-          'hover:bg-emerald-600 xl:order-9 xl:hover:-translate-x-6 xl:hover:-translate-y-5':
-            name === 'Matrix',
+          'hover:bg-slate-800 xl:order-1': name === 'nativecn-ui',
+          'hover:bg-orange-700 xl:order-2': name === 'swiftcn-ui',
+          'hover:bg-indigo-700 xl:order-3': name === 'CoLive',
+          'hover:bg-yellow-600 xl:order-4': name === 'Hermes',
+          'hover:bg-neutral-800 xl:order-5': name === 'stealth',
+          'hover:bg-sky-700 xl:order-6': name === 'TweetWidget',
+          'hover:bg-cyan-700 xl:order-7': name === 'CNCPT',
+          'hover:bg-fuchsia-800 xl:order-8': name === 'Delfos',
+          'hover:bg-emerald-600 xl:order-9': name === 'Matrix',
         }
       )}
     >
       <div className="flex items-start gap-2 sm:gap-3">
-        <h2 className="text-2xl font-extralight underline decoration-2 underline-offset-4 sm:text-3xl md:text-4xl">
+        <h2 className="text-2xl font-extralight decoration-2 underline-offset-4 group-hover:underline sm:text-3xl md:text-4xl">
           {name}
         </h2>
         {isExternal && (

@@ -6,6 +6,7 @@ export type Book = {
 };
 export const books: Record<string, Book[]> = {
   now: [
+    { title: 'Jony Ive', author: 'Leander Kahney' },
     { title: 'The Creative Act', author: 'Rick Rubin' },
     { title: 'Thinking in Systems: A Primer', author: 'Donella H. Meadows' },
     {
@@ -93,15 +94,17 @@ export const films = {
     'Mulholland Drive',
     'The Big Short',
     'Eyes Wide Shut',
+    'The Tree of Life',
   ],
-  tv: [
+  shows: [
+    'Silo',
     'Black Mirror',
-    'Westworld (S1)',
+    'Westworld, S1',
     'Mr. Robot',
     'WeCrashed',
     'The White Lotus',
     'Ozark',
-    'True Detective (S1)',
+    'True Detective, S1',
     'House of Cards',
     'Succession',
   ],
@@ -118,7 +121,7 @@ export const projects: Project[] = [
     name: 'stealth',
     description: '...',
     url: '#',
-    tags: ['React', 'Next.js', 'Supabase'],
+    tags: ['?'],
   },
   {
     name: 'nativecn-ui',

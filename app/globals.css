@@ -26,9 +26,6 @@
   body {
     @apply bg-background text-foreground;
   }
-  h3 {
-    @apply text-xl;
-  }
 
   #root {
     background: radial-gradient(

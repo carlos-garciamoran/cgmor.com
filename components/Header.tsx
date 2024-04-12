@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 const pages = ['home', 'about', 'projects', 'muses'];
 
@@ -17,7 +17,7 @@ export function Header() {
           {pages.map((page) => (
             <li
               key={page}
-              className="grow transition duration-300 ease-in-out hover:bg-foreground hover:text-background"
+              className="grow transition duration-300 hover:bg-foreground hover:text-background"
             >
               <Link
                 href={page === 'home' ? '/' : `/${page}`}

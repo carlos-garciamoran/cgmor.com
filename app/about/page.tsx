@@ -1,8 +1,9 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import { ExternalLink } from '@/components/Link';
+import { ExternalLink } from '@/components/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'About',
   description: 'Software | Design',
 };
@@ -14,8 +15,8 @@ export const metadata = {
 // DESIGN: make chronology with achievements/places (add years in left column or something)
 export default function About() {
   return (
-    <div className="mx-auto flex w-full max-w-screen-sm p-6 transition-all duration-500 sm:pt-14 md:max-w-[810px] md:items-center md:py-0">
-      <div className="flex flex-col gap-4 text-justify text-sm transition-[border-width,border-color,padding] duration-500 sm:text-base md:p-12 lg:border lg:p-16">
+    <div className="mx-auto flex w-full max-w-screen-sm cursor-default p-6 font-light transition-all duration-500 sm:pt-14 md:max-w-[810px] md:items-center md:py-0">
+      <div className="flex flex-col gap-4 hyphens-auto text-justify text-sm transition-[border-width,border-color,padding] duration-500 sm:text-base md:p-12 lg:border lg:p-16">
         <p>
           I am a software engineer originally from Madrid, Spain. Since middle
           school, I have been{' '}

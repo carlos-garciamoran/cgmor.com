@@ -4,8 +4,8 @@ import { GeistMono } from 'geist/font/mono';
 import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { siteUrl } from '@/config/data';
@@ -48,11 +48,11 @@ export default function RootLayout({
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <ThemeProvider attribute="class">
           <div
-            className="flex h-[100dvh] flex-col sm:h-full sm:min-h-screen"
+            className="flex h-dvh flex-col sm:h-full sm:min-h-screen"
             id="root"
           >
             <Header />
-            <main className="flex flex-1">{children}</main>
+            <main className="mx-auto flex flex-1">{children}</main>
             <Footer />
             <Analytics />
             <div className="fixed bottom-1 right-1 sm:bottom-2 sm:right-2 lg:bottom-4 lg:right-6">

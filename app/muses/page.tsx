@@ -13,7 +13,7 @@ export default function Muses() {
   return (
     <div className="flex flex-col p-6 sm:py-10 lg:mx-auto lg:max-w-screen-xl xl:px-0">
       <div className="mb-4 flex min-h-8 border-l-2 border-neutral-700 dark:border-neutral-300">
-        <h2 className="pl-2 text-base font-thin italic first-line:leading-none dark:border-neutral-300 sm:text-lg">
+        <h2 className="pl-2 text-base font-thin italic first-line:leading-none dark:border-neutral-300">
           A non-exhaustive list of works that have inspired me...
         </h2>
       </div>
@@ -38,7 +38,7 @@ export default function Muses() {
           <h2 className={titleClasses}>Films</h2>
           <div className="flex flex-col gap-4 sm:w-full sm:flex-row sm:justify-between">
             <FilmSection title="Movies" items={films.movies} />
-            <FilmSection title="Shows" items={films.tv} />
+            <FilmSection title="Shows" items={films.shows} />
           </div>
         </div>
       </div>
@@ -46,36 +46,32 @@ export default function Muses() {
   );
 }
 
-function BookSection({
+const BookSection = ({
   title,
   items: books,
 }: {
   title: string;
   items: Book[];
-}) {
-  return (
-    <div>
-      <h3 className="mb-0.5 font-extralight tracking-wide">{title}</h3>
-      <ul className="ml-0.5 list-inside list-disc text-sm">
-        {books.map((item, i) => (
-          <li key={i}>
-            {item.title}, {item.author}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+}) => (
+  <div>
+    <h3 className="mb-0.5 text-lg font-extralight tracking-wide">{title}</h3>
+    <ul className="ml-0.5 list-inside list-disc text-sm font-light">
+      {books.map((item, i) => (
+        <li key={i}>
+          <span className="italic">{item.title}</span>, {item.author}
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
-function FilmSection({ title, items }: { title: string; items: string[] }) {
-  return (
-    <div>
-      <h3 className="mb-0.5 font-extralight">{title}</h3>
-      <ul className="ml-0.5 list-inside list-[square] text-sm">
-        {items.map((item, i) => (
-          <li key={i}>{item}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+const FilmSection = ({ title, items }: { title: string; items: string[] }) => (
+  <div>
+    <h3 className="mb-0.5 text-lg font-extralight">{title}</h3>
+    <ul className="ml-0.5 list-inside list-[square] text-sm font-light">
+      {items.map((item, i) => (
+        <li key={i}>{item}</li>
+      ))}
+    </ul>
+  </div>
+);
