@@ -4,11 +4,11 @@ import { GeistMono } from 'geist/font/mono';
 import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
-import { Header } from '@/components/header';
-import { Footer } from '@/components/footer';
-import { ThemeProvider } from '@/components/theme-provider';
-import { ThemeToggle } from '@/components/theme-toggle';
-import { siteUrl } from '@/config/data';
+import { Header } from './_components/header';
+import { Footer } from './_components/footer';
+import { ThemeProvider } from './_components/theme-provider';
+import { ThemeToggle } from './_components/theme-toggle';
+import { siteUrl } from './_lib/data';
 
 export const metadata: Metadata = {
   title: {
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${siteUrl}/img/og.png`,
-        width: 300,
-        height: 300,
+        width: 1200,
+        height: 630,
         alt: 'Carlos García Morán',
       },
     ],

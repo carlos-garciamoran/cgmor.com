@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-import { ExternalLink } from '@/components/link';
+import { ExternalLink } from '@/app/_components/link';
 
 export const metadata: Metadata = {
   title: 'About',

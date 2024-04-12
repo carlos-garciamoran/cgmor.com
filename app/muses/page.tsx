@@ -1,4 +1,4 @@
-import { type Book, books, films } from '@/config/data';
+import { type Book, books, films } from '@/app/_lib/data';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import clsx from 'clsx';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 
-import { projects, type Project } from '@/config/data';
+import { projects, type Project } from '@/app/_lib/data';
 
 export const metadata: Metadata = {
   title: 'Projects',
