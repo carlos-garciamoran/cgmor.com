@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <div id="projects" className="size-full">
-      <div className="grid flex-1 grid-cols-1 justify-center gap-2 p-5 px-6 transition-all duration-200 sm:p-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-1.5">
+      <div className="grid flex-1 grid-cols-1 justify-center gap-2 p-4 transition-all duration-200 sm:p-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-1.5">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
@@ -68,7 +68,7 @@ function ProjectCard({ project }: { project: Project }) {
         {tags.map((tag) => (
           <div
             key={tag}
-            className="flex items-center rounded-full bg-gradient-to-tr from-transparent to-neutral-100 px-2 py-1 text-center font-mono dark:to-neutral-900 sm:px-3"
+            className="flex items-center rounded-full bg-gradient-to-tr from-transparent to-neutral-100 px-2 py-1 text-center font-mono dark:to-neutral-700 sm:px-3"
           >
             <span className="text-xs">{tag}</span>
           </div>

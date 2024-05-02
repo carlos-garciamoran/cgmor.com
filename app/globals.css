@@ -35,14 +35,16 @@
     );
   }
 
-  #projects:hover .project-card:not(:hover) {
-    filter: blur(2px);
-    opacity: 0.7;
-  }
+  @media (min-width: 640px) {
+    #projects:hover .project-card:not(:hover) {
+      filter: blur(2px);
+      opacity: 0.7;
+    }
 
-  .project-card {
-    transition:
-      filter 0.3s ease,
-      opacity 0.3s ease;
+    .project-card {
+      transition:
+        filter 0.3s ease,
+        opacity 0.3s ease;
+    }
   }
 }
