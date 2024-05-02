@@ -34,11 +34,15 @@
       hsl(var(--gradient-end)) 55%
     );
   }
-  #projects {
-    background: radial-gradient(
-      circle,
-      hsl(var(--accent)) 3%,
-      hsl(var(--gradient-end)) 90%
-    );
+
+  #projects:hover .project-card:not(:hover) {
+    filter: blur(2px);
+    opacity: 0.7;
+  }
+
+  .project-card {
+    transition:
+      filter 0.3s ease,
+      opacity 0.3s ease;
   }
 }

@@ -55,7 +55,7 @@ const BookSection = ({
 }) => (
   <div>
     <h3 className="mb-0.5 text-lg font-extralight tracking-wide">{title}</h3>
-    <ul className="ml-0.5 list-inside list-disc text-sm font-light">
+    <ul className="ml-0.5 list-inside list-disc font-serif text-sm font-light">
       {books.map((item, i) => (
         <li key={i}>
           <span className="italic">{item.title}</span>, {item.author}
@@ -68,7 +68,7 @@ const BookSection = ({
 const FilmSection = ({ title, items }: { title: string; items: string[] }) => (
   <div>
     <h3 className="mb-0.5 text-lg font-extralight">{title}</h3>
-    <ul className="ml-0.5 list-inside list-[square] text-sm font-light">
+    <ul className="ml-0.5 list-inside list-[square] font-serif text-sm font-light">
       {items.map((item, i) => (
         <li key={i}>{item}</li>
       ))}

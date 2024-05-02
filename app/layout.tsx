@@ -55,7 +55,7 @@ export default function RootLayout({
             <main className="flex flex-1">{children}</main>
             <Footer />
             <Analytics />
-            <div className="fixed bottom-1 right-2 lg:bottom-4 lg:right-6">
+            <div className="fixed bottom-1 right-1 lg:bottom-4 lg:right-6">
               <ThemeToggle />
             </div>
           </div>
