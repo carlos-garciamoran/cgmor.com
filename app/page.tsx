@@ -23,7 +23,7 @@ export default function Home() {
         <Image
           alt="Me"
           src="/img/me.webp"
-          className="h-auto w-[4.5rem] rounded-full shadow-lg transition-all duration-300 ease-in sm:w-[6.5rem] md:w-36"
+          className="h-auto w-[4.5rem] rounded-br-[2.5rem] rounded-tl-[2.5rem] shadow-lg transition-all duration-300 ease-in sm:w-[6.5rem] md:w-36"
           width={300}
           height={300}
         />
@@ -35,8 +35,8 @@ export default function Home() {
             </p>
           </div>
           <p className="mt-3 text-sm font-extralight sm:mt-8 sm:text-base sm:tracking-wide">
-            I am a software <span className="font-medium">tinkerer</span> who
-            enjoys <span className="font-medium">design</span> &{' '}
+            I am a software engineer who enjoys{' '}
+            <span className="font-medium">design</span> &{' '}
             <span className="font-medium">building</span>.
           </p>
         </div>

@@ -155,6 +155,7 @@ export const projects: Project[] = [
   },
   {
     name: 'CNCPT',
+    // The Concept Project, "https://www.theconceptproject.org"
     description: 'Connecting media with social good',
     url: 'https://apps.apple.com/us/app/cncpt/id1662094973',
     tags: ['React Native', 'Typescript', 'Firebase'],

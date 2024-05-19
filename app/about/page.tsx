@@ -14,74 +14,75 @@ export default function About() {
   return (
     <div className="mx-auto flex w-full max-w-screen-sm cursor-default p-6 font-light transition-all duration-500 sm:pt-14 md:max-w-[810px] md:items-center md:py-0">
       <div className="flex flex-col gap-4 hyphens-auto text-justify text-sm transition-[border-width,border-color,padding] duration-500 sm:text-base md:p-12 lg:border lg:p-16">
-        <h2>TL;DR guy with a knack for designing and building from 0-1</h2>
-        <hr />
+        <p className="text-sm">
+          TL;DR guy with a knack for designing and building from 0-1
+        </p>
         <p>
-          I am a software engineer originally from Madrid, Spain. Since middle
-          school, I have been{' '}
+          I was born and raised in Madrid, Spain. In my early teens, I developed
+          a curiosity for computers. Since then, I have been{' '}
           <Link href="/projects" className="underline">
             tinkering
           </Link>{' '}
-          with computers and reading{' '}
+          with programming and reading{' '}
           <Link href="/muses" className="underline">
-            books
+            some books
           </Link>
-          . High school was boring, so I began learning programming and security
-          to satisfy my curiosity. OverTheWire, CTFs, and writing Python became
-          my go-to hobbies during late nights. I started using Linux and getting
-          familiarized with the CLI (Windows made it hard to break and fix
-          things).
+          . Philosophy piqued my interest first<sup>1</sup>. School became
+          boring for me rather quickly, so I started learning to code. I didn't
+          want to sit in a classroom. I wanted to make things. This is when I
+          began spending late nights<sup>2</sup> playing CTF challenges or
+          building random programs. I installed Linux and bricked my computer
+          often.
         </p>
         <p>
-          At 16, I received a scholarship to study abroad at UWC ISAK Japan.
-          Seeing how time-consuming and frustrating many of my school's
-          processes were, I built{' '}
-          <Link href="/projects#Matrix" className="underline">
-            Matrix
-          </Link>{' '}
-          —ISAK's first student information system. The web application handled
-          tasks like sign-in/sign-out, professor absences, and a newsletter.
+          At 16, I earned a scholarship to study at UWC ISAK Japan. This was a
+          turning point in my life. I met some of my best friends and started
+          getting my sh*t together<sup>3</sup>. I spent a fair amount of time
+          getting better at programming. Feeling frustrated at the campus
+          sign-out system, I built Matrix —a website to make it easier. This was
+          the first project I built that people used.
         </p>
         <p>
-          In 2020, I moved to the US to pursue a Computer Science degree at a
-          liberal arts school —Lewis & Clark College. In summer 2022, I interned
-          at LinkedIn as an SRE. I developed tooling for rebalancing traffic
-          between data centers during scheduled load tests.
-        </p>
-        <p>
-          During fall 2022, I traveled to 11 countries through the Semester at
-          Sea study abroad program. Throughout the voyage, I learned how to
-          develop mobile applications using React Native and TypeScript. To put
-          it into practice, I built the{' '}
+          In 2020, I moved to Portland, Oregon, where I earned a Computer
+          Science degree at Lewis & Clark College ('24). During my sophomore and
+          junior summers, I interned at{' '}
           <ExternalLink
-            href="https://apps.apple.com/us/app/cncpt/id1662094973"
-            title="CNCPT app"
-          />
-          , inspired by{' '}
-          <ExternalLink
-            href="https://www.theconceptproject.org"
-            title="The Concept Project"
+            href="https://linkedin.com/in/carlos-garcia-moran"
+            title="LinkedIn"
           />{' '}
-          —a platform created by a fellow voyager and friend.
-        </p>
-        <p>
-          Last summer, I lived in NYC while working at LinkedIn's NYENG org on
-          internal tooling to help developers identify and monitor incidents
-          faster and more easily. In my spare time, I'm building{' '}
-          <ExternalLink href="https://mobilecn.lol" title="mobilecn UI" />
-          . Inspired by shadcn/ui, we are crafting opinionated-yet-customizable
-          components for React Native (
+          as a site reliability & software engineer, respectively. After that, I
+          went on Semester at Sea where I traveled to 11 countries. I read
+          Hackers & Painters and fell in love with the ethos of building and
+          making things. Throughout the voyage, I developed an iOS app for a
+          non-profit. During my four years in college, I doubled down on
+          building side projects (like{' '}
           <ExternalLink
             href="https://github.com/Mobilecn-UI/nativecn-ui"
             title="nativecn-ui"
           />
-          ) and SwiftUI (
-          <ExternalLink
-            href="https://github.com/Mobilecn-UI/swiftcn-ui"
-            title="swiftcn-ui"
-          />
-          ).
+          ). However, my senior year was the most intense. I knew I wanted two
+          things: a) build for a living, and b) start my own thing or join a
+          startup.
         </p>
+        <p>
+          Currently, I live in NYC working at an early-stage startup as a
+          founding engineer. In my spare time, I am mostly working on a side
+          project.
+        </p>
+        <hr />
+        <div className="space-y-0.5 text-xs">
+          <p>
+            <sup>1</sup>: Nietzsche's Zarathustra made me think about my life.
+            Diogenes made me see how simple it is to live happily.
+          </p>
+          <p>
+            <sup>2</sup>: For worse or better, I started being terminally
+            online.
+          </p>
+          <p>
+            <sup>3</sup>: Sink or swim worked out well for me.
+          </p>
+        </div>
       </div>
     </div>
   );

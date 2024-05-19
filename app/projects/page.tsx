@@ -10,11 +10,12 @@ export const metadata: Metadata = {
 };
 
 // TODO: add dates to projects (also continued/discontinued)
+// TODO: enable links on description (MD?) -> link CNCPT to The Concept Project
 // DESIGN: on page load, fade in cards (Framer Motion)
 // IDEA: make border color a linear gradient
 export default function Projects() {
   return (
-    <div id="projects" className="size-full px-6 xl:px-0">
+    <div id="projects" className="size-full px-4 xl:px-0">
       <div className="grid flex-1 grid-cols-1 justify-center gap-2 p-4 transition-all duration-200 sm:p-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-1.5">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
@@ -34,7 +35,7 @@ function ProjectCard({ project }: { project: Project }) {
       target={isExternal ? '_blank' : '_self'}
       rel="noreferrer"
       className={clsx(
-        'project-card group flex cursor-default flex-col justify-center border border-neutral-900 bg-transparent p-6 shadow-md transition delay-75 duration-500 ease-in-out dark:border-neutral-300 sm:h-52 sm:p-8 sm:shadow-lg lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 xl:shadow-2xl 2xl:px-14 ',
+        'project-card group flex cursor-default flex-col justify-center border-[.5px] border-neutral-900 bg-transparent p-6 shadow-md transition delay-75 duration-500 ease-in-out dark:border-neutral-300 sm:h-52 sm:p-8 sm:shadow-lg lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 xl:shadow-2xl 2xl:px-14 ',
         {
           'hover:bg-slate-300 dark:hover:bg-slate-800 xl:order-1':
             name === 'nativecn-ui',
