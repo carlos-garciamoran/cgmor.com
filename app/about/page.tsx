@@ -8,15 +8,14 @@ export const metadata: Metadata = {
   description: 'Software | Design',
 };
 
-// TODO: add TL;DR
-// - past work
-// - current projects
-// DESIGN: try using close-up of J. Pollock's painting as background (repeat pattern)
-// DESIGN: make chronology with achievements/places (add years in left column or something)
+// DESIGN: use close-up of Pollock's painting as background (CSS repeat pattern)
+// DESIGN: timeline for school/work, places, events, etc. (years in left column)
 export default function About() {
   return (
     <div className="mx-auto flex w-full max-w-screen-sm cursor-default p-6 font-light transition-all duration-500 sm:pt-14 md:max-w-[810px] md:items-center md:py-0">
       <div className="flex flex-col gap-4 hyphens-auto text-justify text-sm transition-[border-width,border-color,padding] duration-500 sm:text-base md:p-12 lg:border lg:p-16">
+        <h2>TL;DR guy with a knack for designing and building from 0-1</h2>
+        <hr />
         <p>
           I am a software engineer originally from Madrid, Spain. Since middle
           school, I have been{' '}

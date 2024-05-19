@@ -9,11 +9,12 @@ export const metadata: Metadata = {
   description: 'Stuff I have built',
 };
 
-// TODO: on page load, fade in cards (Framer Motion?)
+// TODO: add dates to projects (also continued/discontinued)
+// DESIGN: on page load, fade in cards (Framer Motion)
 // IDEA: make border color a linear gradient
 export default function Projects() {
   return (
-    <div id="projects" className="size-full">
+    <div id="projects" className="size-full px-6 xl:px-0">
       <div className="grid flex-1 grid-cols-1 justify-center gap-2 p-4 transition-all duration-200 sm:p-3 md:grid-cols-2 xl:grid-cols-3 xl:gap-1.5">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />

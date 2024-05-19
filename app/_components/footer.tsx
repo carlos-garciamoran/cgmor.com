@@ -1,4 +1,5 @@
 import { ExternalLink } from './link';
+import { ThemeToggle } from './theme-toggle';
 
 export function Footer() {
   return (
@@ -12,6 +13,9 @@ export function Footer() {
         href="https://linkedin.com/in/carlos-garcia-moran"
         title="LinkedIn"
       />
+      <div className="fixed bottom-2 right-2 lg:bottom-4 lg:right-6">
+        <ThemeToggle />
+      </div>
     </footer>
   );
 }

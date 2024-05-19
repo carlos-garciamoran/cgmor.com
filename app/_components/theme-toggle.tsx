@@ -8,11 +8,11 @@ export function ThemeToggle() {
 
   return resolvedTheme === 'light' ? (
     <button aria-label="Toggle theme" onClick={() => setTheme('dark')}>
-      <MoonIcon className="size-4 sm:size-5" />
+      <MoonIcon className="size-4" />
     </button>
   ) : (
     <button aria-label="Toggle theme" onClick={() => setTheme('light')}>
-      <SunIcon className="size-4 sm:size-5" />
+      <SunIcon className="size-4" />
     </button>
   );
 }

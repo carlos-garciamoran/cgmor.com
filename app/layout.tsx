@@ -7,7 +7,6 @@ import './globals.css';
 import { Header } from './_components/header';
 import { Footer } from './_components/footer';
 import { ThemeProvider } from './_components/theme-provider';
-import { ThemeToggle } from './_components/theme-toggle';
 import { siteUrl } from './_lib/data';
 
 export const metadata: Metadata = {
@@ -55,9 +54,6 @@ export default function RootLayout({
             <main className="flex flex-1">{children}</main>
             <Footer />
             <Analytics />
-            <div className="fixed bottom-1 right-1 lg:bottom-4 lg:right-6">
-              <ThemeToggle />
-            </div>
           </div>
         </ThemeProvider>
       </body>

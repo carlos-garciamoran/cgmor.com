@@ -15,7 +15,7 @@
     --background: 0, 0%, 0%;
     --foreground: 0, 0%, 100%;
     --border: 0, 0%, 80%;
-    --gradient-start: 0 0% 7%;
+    --gradient-start: 0 0% 5%;
     --gradient-end: 0 0% 3%;
     --accent: 185, 60%, 33%;
   }
@@ -24,7 +24,7 @@
     border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground underline-offset-2;
   }
 
   #root {

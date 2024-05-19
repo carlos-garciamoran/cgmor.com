@@ -7,8 +7,9 @@ export const metadata: Metadata = {
 };
 
 /**
- * To-do:
- * - design an ad hoc shadow for the portrait
+ * To try:
+ * - iMessage UI -> timed messages
+ *
  *
  * Ideas:
  * - animate words and move them around randomly, then have them come back
@@ -22,13 +23,13 @@ export default function Home() {
         <Image
           alt="Me"
           src="/img/me.webp"
-          className="h-auto w-[4.7rem] rounded-full shadow-lg transition-all duration-300 ease-in sm:w-[6.5rem] md:w-36"
+          className="h-auto w-[4.5rem] rounded-full shadow-lg transition-all duration-300 ease-in sm:w-[6.5rem] md:w-36"
           width={300}
           height={300}
         />
         <div>
           <div className="-mt-1 text-4xl font-thin leading-tight tracking-tighter first-line:leading-none sm:text-5xl md:text-7xl">
-            <p>Hello, my name</p>
+            <p>Hi, my name</p>
             <p className="mt-px sm:mt-2 md:mt-3">
               is <span className="font-normal tracking-tight">Carlos</span>
             </p>

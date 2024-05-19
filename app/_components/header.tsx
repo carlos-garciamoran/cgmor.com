@@ -13,18 +13,21 @@ export function Header() {
   return (
     <header>
       <nav>
-        <ul className="flex justify-evenly divide-x border-b">
+        <ul className="flex justify-evenly sm:divide-x-[.33px] sm:border-b-[.33px]">
           {pages.map((page) => (
             <li
               key={page}
-              className="grow transition duration-300 hover:bg-foreground hover:text-background"
+              className="grow transition duration-300 sm:hover:bg-foreground sm:hover:text-background"
             >
               <Link
                 href={page === 'home' ? '/' : `/${page}`}
-                className={clsx('flex justify-center py-3', {
-                  'bg-foreground text-background no-underline':
-                    page === currentPage,
-                })}
+                className={clsx(
+                  'flex justify-center py-3 font-light tracking-wide hover:underline sm:hover:no-underline',
+                  {
+                    'underline sm:bg-foreground sm:text-background sm:no-underline':
+                      page === currentPage,
+                  }
+                )}
               >
                 {page}
               </Link>
