@@ -35,7 +35,7 @@ function ProjectCard({ project }: { project: Project }) {
       target={isExternal ? '_blank' : '_self'}
       rel="noreferrer"
       className={clsx(
-        'project-card animate-mutate-border group flex cursor-default flex-col justify-center from-neutral-200 to-neutral-50 bg-gradient-to-b rounded-md dark:from-[hsl(0,0%,5%)] dark:to-[hsl(0,0%,3%)] bg-transparent p-6 shadow-md transition duration-200 ease-in-out sm:h-52 sm:p-8 sm:shadow-lg lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 xl:shadow-2xl 2xl:px-14 ',
+        'project-card animate-mutate-border group flex cursor-default flex-col justify-center from-neutral-200 to-neutral-50 bg-gradient-to-b rounded-md dark:from-[hsl(0,0%,5%)] dark:to-[hsl(0,0%,3%)] bg-transparent p-6 transition duration-200 ease-in-out sm:h-52 sm:p-8 lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 2xl:px-14 ',
         {
           'hover:to-slate-300 dark:hover:to-slate-800 xl:order-1': name === 'nativecn-ui',
           'hover:to-orange-300 dark:hover:to-orange-600 xl:order-2': name === 'swiftcn-ui',

@@ -41,14 +41,14 @@
 
   @media (min-width: 640px) {
     #projects:hover .project-card:not(:hover) {
-      filter: blur(2px);
-      opacity: 0.7;
+      filter: blur(1px);
+      opacity: 0.6;
     }
 
     .project-card {
       transition:
-        filter 0.3s ease,
-        opacity 0.3s ease;
+        filter 0.15s ease,
+        opacity 0.15s ease;
     }
   }
 }
