@@ -1,9 +1,9 @@
-export const siteUrl = 'https://cgmor.com';
+export const siteUrl = 'https://cgmor.com'
 
 export type Book = {
-  title: string;
-  author: string;
-};
+  title: string
+  author: string
+}
 export const books: Record<string, Book[]> = {
   now: [
     { title: 'Jony Ive', author: 'Leander Kahney' },
@@ -80,7 +80,7 @@ export const books: Record<string, Book[]> = {
     },
     { title: 'Atomic Habits', author: 'James Clear' },
   ],
-};
+}
 
 export const films = {
   movies: [
@@ -108,20 +108,20 @@ export const films = {
     'House of Cards',
     'Succession',
   ],
-};
+}
 
 export type Project = {
-  name: string;
-  description: string;
-  url: string;
-  tags: string[];
-};
+  name: string
+  description: string
+  url: string
+  tags: string[]
+}
 export const projects: Project[] = [
   {
     name: 'stealth',
-    description: '...',
-    url: '#',
-    tags: ['?'],
+    description: 'working on something new...',
+    url: 'mailto:carlos@twilight.so?subject=site',
+    tags: [],
   },
   {
     name: 'nativecn-ui',
@@ -172,4 +172,4 @@ export const projects: Project[] = [
     url: 'https://github.com/carlos-garciamoran/matrix',
     tags: ['PHP', 'Laravel', 'Bootstrap'],
   },
-];
+]

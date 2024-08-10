@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
-import { Analytics } from '@vercel/analytics/react';
+import type { Metadata } from 'next'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
+import { Cormorant_Garamond } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
-import './globals.css';
-import { Header } from './_components/header';
-import { Footer } from './_components/footer';
-import { ThemeProvider } from './_components/theme-provider';
-import { siteUrl } from './_lib/data';
+import './globals.css'
+import { Header } from './_components/header'
+import { Footer } from './_components/footer'
+import { ThemeProvider } from './_components/theme-provider'
+import { siteUrl } from './_lib/data'
 
 export const metadata: Metadata = {
   title: {
@@ -30,26 +31,30 @@ export const metadata: Metadata = {
     ],
   },
   metadataBase: new URL(siteUrl),
-};
+}
 
 export const viewport = {
   themeColor: 'dark',
-};
+}
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+})
 
 // TODO: on mobile, position menu (<Header />) at the bottom of the screen
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body
+        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${cormorant.className}`}
+      >
         <ThemeProvider attribute="class">
-          <div
-            className="flex h-dvh flex-col sm:h-full sm:min-h-screen"
-            id="root"
-          >
+          <div className="flex h-dvh flex-col sm:h-full sm:min-h-screen" id="root">
             <Header />
             <main className="flex flex-1">{children}</main>
             <Footer />
@@ -58,5 +63,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

@@ -1,19 +1,14 @@
-import { Metadata } from 'next';
-import Image from 'next/image';
+import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Carlos García Morán',
   description: 'Software | Design',
-};
+}
 
 /**
- * To try:
- * - iMessage UI -> timed messages
- *
- *
- * Ideas:
- * - animate words and move them around randomly, then have them come back
- * - make underline animation on name, as if it was handwritten
+ * Idea: make underline animation on name, as if it was handwritten
+ * Idea: iMessage UI -> timed messages
  */
 
 export default function Home() {
@@ -23,7 +18,7 @@ export default function Home() {
         <Image
           alt="Me"
           src="/img/me.webp"
-          className="h-auto w-[4.5rem] rounded-br-[2.5rem] rounded-tl-[2.5rem] shadow-lg transition-all duration-300 ease-in sm:w-[6.5rem] md:w-36"
+          className="h-auto w-[4.5rem] rounded-[.5rem] shadow-lg transition-all duration-300 ease-in sm:w-[6.5rem] md:w-36"
           width={300}
           height={300}
         />
@@ -31,16 +26,15 @@ export default function Home() {
           <div className="-mt-1 text-4xl font-thin leading-tight tracking-tighter first-line:leading-none sm:text-5xl md:text-7xl">
             <p>Hi, my name</p>
             <p className="mt-px sm:mt-2 md:mt-3">
-              is <span className="font-normal tracking-tight">Carlos</span>
+              is <span className="font-bold tracking-tighter">Carlos</span>
             </p>
           </div>
           <p className="mt-3 text-sm font-extralight sm:mt-8 sm:text-base sm:tracking-wide">
-            I am a software engineer who enjoys{' '}
-            <span className="font-medium">design</span> &{' '}
+            I am a software engineer who enjoys <span className="font-medium">design</span> &{' '}
             <span className="font-medium">building</span>.
           </p>
         </div>
       </div>
     </div>
-  );
+  )
 }

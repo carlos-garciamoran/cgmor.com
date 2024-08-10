@@ -1,13 +1,12 @@
-import { type Book, books, films } from '@/app/_lib/data';
-import type { Metadata } from 'next';
+import { type Book, books, films } from '@/app/_lib/data'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Inspiration',
   description: 'Books | Movies',
-};
+}
 
-const titleClasses =
-  'font-black tracking-tight text-5xl sm:text-6xl uppercase mb-1 sm:mb-2 lg:mb-4';
+const titleClasses = 'font-black tracking-tight text-5xl sm:text-6xl uppercase mb-1 sm:mb-2 lg:mb-4'
 
 export default function Muses() {
   return (
@@ -17,16 +16,13 @@ export default function Muses() {
           A non-exhaustive list of works that have inspired me...
         </h2>
       </div>
-      <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 lg:gap-x-16">
+      <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-32">
         <div>
           <h2 className={titleClasses}>Books</h2>
           <div className="flex flex-col gap-y-3">
             <BookSection title="Currently..." items={books.now} />
             <BookSection title="Philosophy" items={books.philosophy} />
-            <BookSection
-              title="Meditation / Spirituality"
-              items={books.meditation}
-            />
+            <BookSection title="Meditation / Spirituality" items={books.meditation} />
             <BookSection title="Fiction" items={books.fiction} />
             <BookSection title="Startup / Building" items={books.startup} />
             <BookSection title="Engineering" items={books.engineering} />
@@ -43,35 +39,36 @@ export default function Muses() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 const BookSection = ({
   title,
   items: books,
 }: {
-  title: string;
-  items: Book[];
+  title: string
+  items: Book[]
 }) => (
   <div>
     <h3 className="mb-0.5 text-lg font-extralight tracking-wide">{title}</h3>
-    <ul className="ml-0.5 list-inside list-disc font-serif text-sm font-light">
-      {books.map((item, i) => (
-        <li key={i}>
-          <span className="italic">{item.title}</span>, {item.author}
+    <ul className="ml-0.5 space-y-0.5 list-inside list-disc font-cormorant text-[.9rem] font-normal">
+      {books.map((item) => (
+        <li key={item.title}>
+          <span className="font-light">{item.title}</span>,{' '}
+          <span className="font-light">{item.author}</span>
         </li>
       ))}
     </ul>
   </div>
-);
+)
 
 const FilmSection = ({ title, items }: { title: string; items: string[] }) => (
   <div>
     <h3 className="mb-0.5 text-lg font-extralight">{title}</h3>
-    <ul className="ml-0.5 list-inside list-[square] font-serif text-sm font-light">
-      {items.map((item, i) => (
-        <li key={i}>{item}</li>
+    <ul className="ml-0.5 list-inside list-[square] font-cormorant text-sm font-light">
+      {items.map((item) => (
+        <li key={item}>{item}</li>
       ))}
     </ul>
   </div>
-);
+)
