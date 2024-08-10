@@ -39,7 +39,7 @@
     );
   }
 
-  @media (min-width: 640px) {
+  /* @media (min-width: 640px) {
     #projects:hover .project-card:not(:hover) {
       filter: blur(1px);
       opacity: 0.6;
@@ -50,5 +50,5 @@
         filter 0.15s ease,
         opacity 0.15s ease;
     }
-  }
+  } */
 }
