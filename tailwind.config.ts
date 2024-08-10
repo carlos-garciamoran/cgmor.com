@@ -20,7 +20,7 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-geist-sans)'],
         mono: ['var(--font-geist-mono)'],
-        cormorant: ['Cormorant', 'serif'],
+        cormorant: ['Cormorant'],
       },
       keyframes: {
         'mutate-border': {

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
-import { Cormorant_Garamond } from 'next/font/google'
+import { Cormorant } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
 import './globals.css'
@@ -37,22 +37,20 @@ export const viewport = {
   themeColor: 'dark',
 }
 
-const cormorant = Cormorant_Garamond({
+const cormorant = Cormorant({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
 })
 
-// TODO: on mobile, position menu (<Header />) at the bottom of the screen
+// Idea (mobile): position menu (<Header />) at the bottom of the screen
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} ${cormorant.className}`}
-      >
+    <html className={cormorant.className} lang="en" suppressHydrationWarning>
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <ThemeProvider attribute="class">
           <div className="flex h-dvh flex-col sm:h-full sm:min-h-screen" id="root">
             <Header />

@@ -6,7 +6,8 @@ export const metadata: Metadata = {
   description: 'Books | Movies',
 }
 
-const titleClasses = 'font-black tracking-tight text-5xl sm:text-6xl uppercase mb-1 sm:mb-2 lg:mb-4'
+const titleClasses =
+  'font-black tracking-tight text-5xl sm:text-6xl md:text-7xl uppercase mb-1 sm:mb-2 lg:mb-4'
 
 export default function Muses() {
   return (
@@ -50,7 +51,7 @@ const BookSection = ({
   items: Book[]
 }) => (
   <div>
-    <h3 className="mb-0.5 text-lg font-extralight tracking-wide">{title}</h3>
+    <h3 className="mb-1 text-lg sm:text-2xl font-extralight">{title}</h3>
     <ul className="ml-0.5 space-y-0.5 list-inside list-disc font-cormorant text-[.9rem] font-normal">
       {books.map((item) => (
         <li key={item.title}>
@@ -64,7 +65,7 @@ const BookSection = ({
 
 const FilmSection = ({ title, items }: { title: string; items: string[] }) => (
   <div>
-    <h3 className="mb-0.5 text-lg font-extralight">{title}</h3>
+    <h3 className="mb-1 text-lg sm:text-2xl font-extralight">{title}</h3>
     <ul className="ml-0.5 list-inside list-[square] font-cormorant text-sm font-light">
       {items.map((item) => (
         <li key={item}>{item}</li>
