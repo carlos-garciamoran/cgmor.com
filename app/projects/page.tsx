@@ -35,16 +35,16 @@ function ProjectCard({ project }: { project: Project }) {
       target={isExternal ? '_blank' : '_self'}
       rel="noreferrer"
       className={clsx(
-        'project-card animate-mutate-border group flex cursor-default flex-col justify-center from-neutral-200 to-neutral-50 bg-gradient-to-b rounded-md dark:from-[hsl(0,0%,5%)] dark:to-[hsl(0,0%,3%)] bg-transparent p-6 transition duration-200 delay-75 ease-in-out sm:h-52 sm:p-8 lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 2xl:px-14 ',
+        'animate-mutate-border group flex cursor-default flex-col justify-center from-neutral-200 to-neutral-50 bg-gradient-to-b rounded-md dark:from-[hsl(0,0%,5%)] dark:to-[hsl(0,0%,3%)] bg-transparent p-6 transition duration-200 delay-75 ease-in-out sm:h-52 sm:p-8 lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 2xl:px-14 ',
         {
-          'hover:to-slate-300 dark:hover:to-slate-800 xl:order-1': name === 'nativecn-ui',
-          'hover:to-orange-300 dark:hover:to-orange-600 xl:order-2': name === 'swiftcn-ui',
+          'hover:to-slate-300 dark:hover:to-slate-700 xl:order-1': name === 'nativecn-ui',
+          'hover:to-orange-300 dark:hover:to-orange-500 xl:order-2': name === 'swiftcn-ui',
           'hover:to-indigo-300 dark:hover:to-indigo-700 xl:order-3': name === 'CoLive',
           'hover:to-yellow-300 dark:hover:to-yellow-500 xl:order-4': name === 'Hermes',
           'hover:to-neutral-100 dark:hover:to-neutral-800 xl:order-5': name === 'stealth',
           'hover:to-sky-300 dark:hover:to-sky-600 xl:order-6': name === 'TweetWidget',
           'hover:to-cyan-300 dark:hover:to-cyan-600 xl:order-7': name === 'CNCPT',
-          'hover:to-fuchsia-300 dark:hover:to-fuchsia-700 xl:order-8': name === 'Delfos',
+          'hover:to-fuchsia-300 dark:hover:to-fuchsia-600 xl:order-8': name === 'Delfos',
           'hover:to-emerald-300 dark:hover:to-emerald-600 xl:order-9': name === 'Matrix',
         },
       )}

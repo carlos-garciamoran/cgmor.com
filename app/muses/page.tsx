@@ -14,7 +14,7 @@ export default function Muses() {
     <div className="flex flex-col p-6 sm:py-10 lg:mx-auto lg:max-w-screen-xl xl:px-0">
       <div className="mb-4 flex min-h-8 border-l-2 border-neutral-700 dark:border-neutral-300">
         <h2 className="pl-2 text-base font-thin italic first-line:leading-none dark:border-neutral-300">
-          A non-exhaustive list of works that have inspired me...
+          Some works that have inspired me...
         </h2>
       </div>
       <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-2 gap-x-32">
@@ -51,12 +51,11 @@ const BookSection = ({
   items: Book[]
 }) => (
   <div>
-    <h3 className="mb-1 text-lg sm:text-2xl font-extralight">{title}</h3>
-    <ul className="ml-0.5 space-y-0.5 list-inside list-disc font-cormorant text-[.9rem] font-normal">
+    <SectionTitle title={title} />
+    <ul className="ml-0.5 space-y-0.5 list-inside list-disc font-cormorant text-[.9rem]">
       {books.map((item) => (
-        <li key={item.title}>
-          <span className="font-light">{item.title}</span>,{' '}
-          <span className="font-light">{item.author}</span>
+        <li className="font-light" key={item.title}>
+          <span>{item.title}</span>, <span>{item.author}</span>
         </li>
       ))}
     </ul>
@@ -65,11 +64,15 @@ const BookSection = ({
 
 const FilmSection = ({ title, items }: { title: string; items: string[] }) => (
   <div>
-    <h3 className="mb-1 text-lg sm:text-2xl font-extralight">{title}</h3>
+    <SectionTitle title={title} />
     <ul className="ml-0.5 list-inside list-[square] font-cormorant text-sm font-light">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
     </ul>
   </div>
+)
+
+const SectionTitle = ({ title }: { title: string }) => (
+  <h3 className="mb-1 text-lg sm:text-2xl font-extralight">{title}</h3>
 )

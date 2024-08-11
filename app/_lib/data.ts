@@ -7,12 +7,12 @@ export type Book = {
 export const books: Record<string, Book[]> = {
   now: [
     { title: 'Jony Ive', author: 'Leander Kahney' },
-    { title: 'The Creative Act', author: 'Rick Rubin' },
     { title: 'Thinking in Systems: A Primer', author: 'Donella H. Meadows' },
     {
       title: 'Zero: The Biography of a Dangerous Idea',
       author: 'Charles Seife',
     },
+    { title: 'The Black Swan', author: 'Nassim Nicholas Taleb' },
     { title: 'The Secret Garden', author: 'Frances Hodgson Burnett' },
   ],
   philosophy: [
@@ -32,6 +32,7 @@ export const books: Record<string, Book[]> = {
       title: 'Los Cuatro Acuerdos (Un libro de la sabiduría tolteca)',
       author: 'Don Miguel Ruiz',
     },
+    { title: 'Be Here Now', author: 'Ram Dass' },
     { title: 'Think on These Things', author: 'Jiddu Krishnamurti' },
     { title: 'The Unthered Soul', author: 'Michael A. Singer' },
   ],
@@ -74,6 +75,7 @@ export const books: Record<string, Book[]> = {
     { title: 'The Lessons of History', author: 'Will Durant, Ariel Durant' },
   ],
   misc: [
+    { title: 'The Creative Act', author: 'Rick Rubin' },
     {
       title: 'How to Win Friends and Influence People',
       author: 'Dale Carnegie',
@@ -84,29 +86,29 @@ export const books: Record<string, Book[]> = {
 
 export const films = {
   movies: [
-    'The Matrix',
-    'Fight Club',
-    'Shutter Island',
-    'Ex Machina',
     'Memento',
+    'Fight Club',
     'Interstellar',
-    'La grande bellezza',
-    'Mulholland Drive',
+    'The Matrix',
+    'Ex Machina',
     'The Big Short',
+    'Shutter Island',
     'Eyes Wide Shut',
     'The Tree of Life',
+    'Mulholland Drive',
+    'La grande bellezza',
   ],
   shows: [
     'Silo',
+    'Ozark',
+    'Mr. Robot',
+    'Succession',
+    'WeCrashed',
     'Black Mirror',
     'Westworld, S1',
-    'Mr. Robot',
-    'WeCrashed',
-    'The White Lotus',
-    'Ozark',
-    'True Detective, S1',
     'House of Cards',
-    'Succession',
+    'The White Lotus',
+    'True Detective, S1',
   ],
 }
 
@@ -133,7 +135,7 @@ export const projects: Project[] = [
     name: 'swiftcn-ui',
     description: 'Beautiful mobile UI components',
     url: 'https://github.com/Mobilecn-UI/swiftcn-ui',
-    tags: ['shadcn/ui', 'Swift', 'SwiftUI'],
+    tags: ['Swift', 'SwiftUI'],
   },
   {
     name: 'CoLive',
