@@ -1,13 +1,13 @@
-import clsx from 'clsx';
+import clsx from 'clsx'
 
 export function ExternalLink({
   href,
   title,
   alwaysUnderline = true,
 }: {
-  href: string;
-  title: string;
-  alwaysUnderline?: boolean;
+  href: string
+  title: string
+  alwaysUnderline?: boolean
 }) {
   return (
     <a
@@ -20,5 +20,5 @@ export function ExternalLink({
     >
       {title}
     </a>
-  );
+  )
 }

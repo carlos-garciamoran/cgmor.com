@@ -19,7 +19,7 @@ export function Header() {
               <Link
                 href={page === 'home' ? '/' : `/${page}`}
                 className={clsx(
-                  'flex justify-center underline-offset-4 py-3 font-light tracking-wide hover:underline sm:hover:no-underline',
+                  'flex justify-center py-3 font-light tracking-wide underline-offset-4 hover:underline sm:hover:no-underline',
                   {
                     'underline sm:bg-foreground sm:text-background sm:no-underline':
                       page === currentPage,
