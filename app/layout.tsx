@@ -5,9 +5,9 @@ import { Cormorant } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
 import './globals.css'
-import { Header } from './_components/header'
-import { Footer } from './_components/footer'
-import { ThemeProvider } from './_components/theme-provider'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
+import { ThemeProvider } from '@/components/theme-provider'
 import { siteUrl } from './_lib/data'
 
 export const metadata: Metadata = {

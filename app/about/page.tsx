@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-
-import { ExternalLink } from '@/app/_components/link'
+import Image from 'next/image'
+import { ExternalLink } from '@/components/link'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -13,16 +13,27 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <div className="mx-auto flex w-full max-w-[600px] cursor-default px-6 py-5 font-light transition-all duration-500 sm:pt-6 md:max-w-screen-sm md:items-center md:py-0">
-      <div className="flex flex-col gap-4 hyphens-auto text-justify text-sm transition-[padding] duration-500 sm:text-base md:border md:p-10">
-        <p className="text-sm">TL;DR obsessing over building things 0-1</p>
-        <p>
-          I was born and raised in Madrid, Spain. In my early teens, I developed a curiosity for
-          computers. Since then, I have been{' '}
-          <Link href="/projects" className="underline">
-            tinkering
-          </Link>{' '}
-          with software.
-        </p>
+      <div className="flex flex-col gap-4 hyphens-auto text-justify text-sm transition-[padding] duration-500 sm:text-[0.9rem]/[1.45rem] md:border md:p-10">
+        <article className="flex gap-4">
+          <Image
+            alt="Me"
+            src="/img/me.webp"
+            className="size-[93px] rounded-[0.1rem] shadow-lg"
+            width={200}
+            height={200}
+          />
+          <div className="flex flex-col gap-2">
+            <p className="text-sm">TL;DR obsessing over building things 0-1</p>
+            <p className="text-[0.9rem]">
+              I was born and raised in Madrid, Spain. In my early teens, I developed a curiosity for
+              computers. Since then, I have been{' '}
+              <Link href="/projects" className="underline">
+                tinkering
+              </Link>{' '}
+              with software.
+            </p>
+          </div>
+        </article>
         <p>
           Probably due to{' '}
           <Link href="/muses" className="underline">
