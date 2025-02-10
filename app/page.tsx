@@ -1,15 +1,10 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Carlos García Morán',
   description: 'Software | Design',
 }
 
-/**
- * Idea: make underline animation on name, as if it was handwritten
- * Idea: animate text rotation
- */
 export default function Home() {
   return (
     <div className="flex flex-1 grow cursor-default flex-col items-center justify-center px-4">

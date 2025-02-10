@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 }
 
 // DESIGN: use close-up of Pollock's painting as background (CSS repeat pattern)
-// DESIGN: timeline for school/work, places, events, etc. (years in left column)
 export default function About() {
   return (
     <div className="mx-auto flex w-full max-w-[600px] cursor-default px-6 py-5 font-light transition-all duration-500 sm:pt-6 md:max-w-screen-sm md:items-center md:py-0">
