@@ -15,11 +15,11 @@ export function ThemeToggle() {
   if (!mounted) return null
 
   return resolvedTheme === 'light' ? (
-    <button aria-label="Toggle theme" onClick={() => setTheme('dark')} type="button">
+    <button aria-label="Toggle theme" className="cursor-default" onClick={() => setTheme('dark')} type="button">
       <MoonIcon className="size-4" />
     </button>
   ) : (
-    <button aria-label="Toggle theme" onClick={() => setTheme('light')} type="button">
+    <button aria-label="Toggle theme" className="cursor-default" onClick={() => setTheme('light')} type="button">
       <SunIcon className="size-4" />
     </button>
   )

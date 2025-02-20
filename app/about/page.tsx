@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
+
 import { ExternalLink } from '@/components/link'
 
 export const metadata: Metadata = {
@@ -52,13 +53,12 @@ export default function About() {
         </p>
         <p>
           In 2020, I moved to the US and got my CS degree. I interned at LinkedIn as a sre and swe.
-          Throughout college, I built a few side projects (e.g.,{' '}
+          Throughout college, I built a few side projects like{' '}
           <ExternalLink href="https://github.com/Mobilecn-UI/nativecn-ui" title="nativecn-ui" />
-          ).
+          .
         </p>
         <p>
-          Currently, I live in NYC, where I work at an early-stage startup. In my spare time, I am
-          working on something new...
+          Currently, I live in NYC, where I work at an early-stage startup.
         </p>
         <hr />
         <div className="space-y-0.5 text-xs">
