@@ -1,7 +1,7 @@
 // TODO: move away from layout
 export default function OdaPage() {
   return (
-    <div className="flex size-full w-4/5 max-w-screen-sm flex-col items-center justify-center gap-4 p-3.5 sm:p-8">
+    <div className="flex size-full w-4/5 max-w-(--breakpoint-sm) flex-col items-center justify-center gap-4 p-3.5 sm:p-8">
       <iframe
         style={{ borderRadius: '12px' }}
         src="https://open.spotify.com/embed/track/5tJM4bUjJsgvvlqtsiKaMi?utm_source=generator"

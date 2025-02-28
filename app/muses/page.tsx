@@ -10,7 +10,7 @@ const titleClasses = 'font-black tracking-tight text-6xl sm:text-8xl uppercase m
 
 export default function Muses() {
   return (
-    <div className="flex flex-col px-6 py-5 sm:py-10 lg:mx-auto lg:max-w-screen-xl xl:px-0">
+    <div className="flex flex-col px-6 py-5 sm:py-10 lg:mx-auto lg:max-w-(--breakpoint-xl) xl:px-0">
       <div className="mb-4 flex min-h-8 border-neutral-700 border-l-2 dark:border-neutral-300">
         <h2 className="pl-2 font-thin text-base italic first-line:leading-none dark:border-neutral-300">
           Some works that have inspired me...

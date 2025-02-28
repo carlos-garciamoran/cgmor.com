@@ -1,34 +1,79 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: 0, 0%, 100%;
+  --foreground: 0, 0%, 0%;
+  --border: 0, 0%, 20%;
+  --gradient-start: 0 0% 93%;
+  --gradient-end: 0 0% 97%;
+  --accent: 185, 70%, 70%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 20%;
+}
+.dark {
+  --background: 0, 0%, 0%;
+  --foreground: 0, 0%, 100%;
+  --border: 0, 0%, 80%;
+  --gradient-start: 0 0% 5%;
+  --gradient-end: 0 0% 2%;
+  --accent: 185, 60%, 33%;
+  --secondary: 0 0% 11%;
+  --secondary-foreground: 0 0% 90%;
+}
+
+@theme {
+  --font-cormorant: var(--font-cormorant);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  
+  --animate-mutate-border: mutate-border 18s ease-in-out infinite;
+  --animate-mutate-border-tl: mutate-border-tl 18s ease-in-out infinite;
+
+  @keyframes mutate-border {
+    0% {
+      border-radius: 0;
+    }
+    40% {
+      border-radius: 50px;
+    }
+    60% {
+      border-radius: 50px;
+    }
+    100% {
+      border-radius: 0;
+    }
+  }
+  @keyframes mutate-border-tl {
+    0% {
+      border-top-left-radius: 0;
+    }
+    40% {
+      border-top-left-radius: 50px;
+    }
+    60% {
+      border-top-left-radius: 50px;
+    }
+    100% {
+      border-top-left-radius: 0;
+    }
+  }
+}
 
 @layer base {
-  :root {
-    --background: 0, 0%, 100%;
-    --foreground: 0, 0%, 0%;
-    --border: 0, 0%, 20%;
-    --gradient-start: 0 0% 93%;
-    --gradient-end: 0 0% 97%;
-    --accent: 185, 70%, 70%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 20%;
-  }
-  .dark {
-    --background: 0, 0%, 0%;
-    --foreground: 0, 0%, 100%;
-    --border: 0, 0%, 80%;
-    --gradient-start: 0 0% 5%;
-    --gradient-end: 0 0% 2%;
-    --accent: 185, 60%, 33%;
-    --secondary: 0 0% 11%;
-    --secondary-foreground: 0 0% 90%;
-  }
-
   * {
     border-color: hsl(var(--border));
   }
   body {
     @apply bg-background text-foreground underline-offset-2;
+    font-family: var(--font-geist-sans);
   }
 
   #root {

@@ -40,6 +40,7 @@ export const viewport = {
 const cormorant = Cormorant({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
+  variable: '--font-cormorant',
 })
 
 // Idea (mobile): position menu (<Header />) at the bottom of the screen
@@ -49,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html className={cormorant.className} lang="en" suppressHydrationWarning>
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}>
         <ThemeProvider attribute="class">
           <div className="flex h-dvh flex-col sm:h-full sm:min-h-screen" id="root">
             <Header />

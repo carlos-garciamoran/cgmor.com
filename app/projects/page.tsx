@@ -35,7 +35,7 @@ function ProjectCard({ project }: { project: Project }) {
       target={isExternal ? '_blank' : '_self'}
       rel="noreferrer"
       className={clsx(
-        'group flex animate-mutate-border cursor-default flex-col justify-center rounded-md bg-gradient-to-b bg-transparent from-neutral-200 to-neutral-50 p-6 transition delay-75 duration-200 ease-in-out sm:h-52 sm:p-8 lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 2xl:px-14 dark:from-[hsl(0,0%,5%)] dark:to-[hsl(0,0%,3%)] ',
+        'group flex animate-mutate-border cursor-default flex-col justify-center rounded-md bg-linear-to-b bg-transparent from-neutral-200 to-neutral-50 p-6 transition delay-75 duration-200 ease-in-out sm:h-52 sm:p-8 lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 2xl:px-14 dark:from-[hsl(0,0%,5%)] dark:to-[hsl(0,0%,3%)] ',
         {
           'hover:to-slate-300 dark:hover:to-slate-700 xl:order-1': name === 'nativecn-ui',
           'hover:to-orange-300 dark:hover:to-orange-500 xl:order-2': name === 'swiftcn-ui',
@@ -61,7 +61,7 @@ function ProjectCard({ project }: { project: Project }) {
         {tags.map((tag) => (
           <div
             key={tag}
-            className="flex items-center rounded-full bg-gradient-to-tr from-transparent to-neutral-100 px-2 py-1 text-center font-light font-mono sm:px-3 dark:to-neutral-700"
+            className="flex items-center rounded-full bg-linear-to-tr from-transparent to-neutral-100 px-2 py-1 text-center font-light font-mono sm:px-3 dark:to-neutral-700"
           >
             <span className="text-xs">{tag}</span>
           </div>
