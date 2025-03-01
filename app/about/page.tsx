@@ -18,7 +18,7 @@ export default function About() {
           <Image
             alt="Me"
             src="/img/me.webp"
-            className="size-[93px] rounded-[0.1rem] shadow-lg"
+            className="size-16 sm:size-[93px] rounded-[0.1rem] shadow-lg"
             width={200}
             height={200}
           />

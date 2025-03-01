@@ -15,18 +15,18 @@
 .dark {
   --background: 0, 0%, 0%;
   --foreground: 0, 0%, 100%;
-  --border: 0, 0%, 80%;
+  --border: 0, 0%, 40%;
   --gradient-start: 0 0% 5%;
   --gradient-end: 0 0% 2%;
   --accent: 185, 60%, 33%;
   --secondary: 0 0% 11%;
-  --secondary-foreground: 0 0% 90%;
+  --secondary-foreground: 0 0% 84%;
 }
 
 @theme {
   --font-cormorant: var(--font-cormorant);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-gm: var(--font-geist-mono);
   
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -83,17 +83,4 @@
       hsl(var(--gradient-end)) 20%
     );
   }
-
-  /* @media (min-width: 640px) {
-    #projects:hover .project-card:not(:hover) {
-      filter: blur(1px);
-      opacity: 0.6;
-    }
-
-    .project-card {
-      transition:
-        filter 0.15s ease,
-        opacity 0.15s ease;
-    }
-  } */
 }

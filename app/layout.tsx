@@ -8,6 +8,7 @@ import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { ThemeProvider } from '@/components/theme-provider'
+import { KeyboardShortcuts } from '@/components/keyboard-shortcuts'
 import { siteUrl } from './_lib/data'
 
 export const metadata: Metadata = {
@@ -52,10 +53,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}>
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex h-dvh flex-col sm:h-full sm:min-h-screen" id="root">
+            <KeyboardShortcuts />
             <Header />
-            <main className="flex flex-1">{children}</main>
+            <main className='flex flex-1 flex-col justify-center'>{children}</main>
             <Footer />
             <Analytics />
           </div>

@@ -3,23 +3,24 @@ import clsx from 'clsx'
 import { ExternalLinkIcon } from '@radix-ui/react-icons'
 
 import { projects, type Project } from '@/app/_lib/data'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Projects',
   description: 'Stuff I have built',
 }
 
-// TODO: add dates to projects (also continued/discontinued)
+// TODO: add dates to projects
 // TODO: enable links on description (MD?) -> link CNCPT to The Concept Project
-// DESIGN: on page load, fade in cards (Framer Motion)
-// IDEA: make border color a linear gradient
 export default function Projects() {
   return (
-    <div id="projects" className="size-full p-3.5">
-      <div className="grid flex-1 grid-cols-1 justify-center gap-2 transition-all duration-200 md:grid-cols-2 xl:grid-cols-3 xl:gap-1.5">
-        {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} />
-        ))}
+    <div id="projects" className="flex size-full flex-col items-center justify-center py-8 md:py-12">
+      <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 xl:px-0">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.name} project={project} />
+          ))}
+        </div>
       </div>
     </div>
   )
@@ -30,44 +31,21 @@ function ProjectCard({ project }: { project: Project }) {
   const isExternal = url !== '#'
 
   return (
-    <a
-      href={url}
-      target={isExternal ? '_blank' : '_self'}
-      rel="noreferrer"
-      className={clsx(
-        'group flex animate-mutate-border cursor-default flex-col justify-center rounded-md bg-linear-to-b bg-transparent from-neutral-200 to-neutral-50 p-6 transition delay-75 duration-200 ease-in-out sm:h-52 sm:p-8 lg:p-10 xl:h-[calc((100dvh-48px-68px-32px-6px)/3)] xl:px-12 2xl:px-14 dark:from-[hsl(0,0%,5%)] dark:to-[hsl(0,0%,3%)] ',
-        {
-          'hover:to-slate-300 dark:hover:to-slate-700 xl:order-1': name === 'nativecn-ui',
-          'hover:to-orange-300 dark:hover:to-orange-500 xl:order-2': name === 'swiftcn-ui',
-          'hover:to-indigo-300 dark:hover:to-indigo-700 xl:order-3': name === 'CoLive',
-          'hover:to-yellow-300 dark:hover:to-yellow-500 xl:order-4': name === 'Hermes',
-          'hover:to-neutral-100 dark:hover:to-neutral-800 xl:order-5': name === 'stealth',
-          'hover:to-sky-300 dark:hover:to-sky-600 xl:order-6': name === 'TweetWidget',
-          'hover:to-cyan-300 dark:hover:to-cyan-600 xl:order-7': name === 'CNCPT',
-          'hover:to-fuchsia-300 dark:hover:to-fuchsia-600 xl:order-8': name === 'Delfos',
-          'hover:to-emerald-300 dark:hover:to-emerald-600 xl:order-9': name === 'Matrix',
-        },
-      )}
-    >
-      <div className="flex items-start gap-2 sm:gap-3.5">
-        <h2 className="font-bold text-2xl decoration-2 underline-offset-4 group-hover:underline sm:text-3xl md:text-4xl">
-          {name}
-        </h2>
-        {isExternal && (
-          <ExternalLinkIcon className="mt-px size-4 stroke-[1.5] transition-all duration-200 sm:size-5" />
-        )}
+    <section className="border border-border p-4 hover:bg-secondary">
+      <div className="flex items-start gap-2">
+        <Link href={url} className={clsx('flex cursor-default items-start gap-2', isExternal && "hover:underline")} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
+          <h2 className="font-medium text-lg">{name}</h2>
+          {isExternal && <ExternalLinkIcon className="mt-px size-3.5 stroke-[1.5]" />}
+        </Link>
       </div>
-      <div className="mt-3.5 flex gap-x-1">
+      <div className="mt-2 flex flex-wrap gap-1">
         {tags.map((tag) => (
-          <div
-            key={tag}
-            className="flex items-center rounded-full bg-linear-to-tr from-transparent to-neutral-100 px-2 py-1 text-center font-light font-mono sm:px-3 dark:to-neutral-700"
-          >
-            <span className="text-xs">{tag}</span>
+          <div key={tag} className='flex items-center justify-center rounded-sm border border-border px-1.5 py-px'>
+            <span className="font-mono text-[10px]">{tag}</span>
           </div>
         ))}
       </div>
-      <p className="mt-4 font-light">{description}</p>
-    </a>
+      <p className="mt-3 font-light text-sm">{description}</p>
+    </section>
   )
 }
