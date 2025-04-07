@@ -6,6 +6,7 @@ export type Book = {
 }
 export const books: Record<string, Book[]> = {
   now: [
+    { title: 'Zen Mind, Beginner’s Mind', author: 'Shunryu Suzuki' },
     { title: 'Jony Ive', author: 'Leander Kahney' },
     { title: 'Thinking in Systems: A Primer', author: 'Donella H. Meadows' },
     {
@@ -88,10 +89,10 @@ export const films = {
   movies: [
     'Memento',
     'Fight Club',
-    'Interstellar',
     'The Matrix',
+    'Interstellar',
     'Ex Machina',
-    'The Big Short',
+    'Perfect Days',
     'Shutter Island',
     'Eyes Wide Shut',
     'The Tree of Life',
@@ -112,7 +113,7 @@ export const films = {
   ],
 }
 
-export type Project = {
+type Project = {
   name: string
   description: string
   url: string

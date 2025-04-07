@@ -57,7 +57,7 @@ export default function RootLayout({
           <div className="flex h-dvh flex-col sm:h-full sm:min-h-screen" id="root">
             <KeyboardShortcuts />
             <Header />
-            <main className='flex flex-1 flex-col justify-center'>{children}</main>
+            <main className="flex flex-1 flex-col sm:justify-center">{children}</main>
             <Footer />
             <Analytics />
           </div>

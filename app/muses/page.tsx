@@ -1,12 +1,11 @@
-import { type Book, books, films } from '@/app/_lib/data'
 import type { Metadata } from 'next'
+
+import { type Book, books, films } from '@/app/_lib/data'
 
 export const metadata: Metadata = {
   title: 'Inspiration',
   description: 'Books | Movies',
 }
-
-const titleClasses = 'font-black tracking-tight text-6xl sm:text-8xl uppercase mb-2 lg:mb-4'
 
 export default function Muses() {
   return (
@@ -18,8 +17,8 @@ export default function Muses() {
       </div>
       <div className="grid grid-cols-1 gap-x-36 gap-y-8 lg:grid-cols-2">
         <div>
-          <h2 className={titleClasses}>Books</h2>
-          <div className="flex flex-col gap-y-4">
+          <MusesTitle title="Books" />
+          <div className="flex flex-col gap-4">
             <BookSection title="Currently..." items={books.now} />
             <BookSection title="Philosophy" items={books.philosophy} />
             <BookSection title="Meditation / Spirituality" items={books.meditation} />
@@ -31,7 +30,7 @@ export default function Muses() {
           </div>
         </div>
         <div>
-          <h2 className={titleClasses}>Films</h2>
+          <MusesTitle title="Films" />
           <div className="flex flex-col gap-4 sm:w-full sm:flex-row sm:justify-between">
             <FilmSection title="Movies" items={films.movies} />
             <FilmSection title="Shows" items={films.shows} />
@@ -42,6 +41,15 @@ export default function Muses() {
   )
 }
 
+const MusesTitle = ({ title }: { title: string }) => (
+  <h2 className="mb-2 font-black text-6xl uppercase tracking-tight sm:text-8xl lg:mb-4">{title}</h2>
+)
+
+
+const SectionTitle = ({ title }: { title: string }) => (
+  <h3 className="mb-1 font-extralight text-lg sm:text-xl">{title}</h3>
+)
+
 const BookSection = ({
   title,
   items: books,
@@ -51,7 +59,7 @@ const BookSection = ({
 }) => (
   <div>
     <SectionTitle title={title} />
-    <ul className="ml-0.5 list-inside list-disc space-y-0.5 font-cormorant text-[.9rem]">
+    <ul className="ml-px list-inside list-disc space-y-0.5 font-cormorant text-[.95rem]">
       {books.map((item) => (
         <li className="font-light" key={item.title}>
           <span>{item.title}</span>, <span>{item.author}</span>
@@ -64,14 +72,10 @@ const BookSection = ({
 const FilmSection = ({ title, items }: { title: string; items: string[] }) => (
   <div>
     <SectionTitle title={title} />
-    <ul className="ml-0.5 list-inside list-[square] font-cormorant font-light text-sm">
+    <ul className="ml-px list-inside list-[square] font-cormorant font-light text-[.95rem]">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
     </ul>
   </div>
-)
-
-const SectionTitle = ({ title }: { title: string }) => (
-  <h3 className="mb-1 font-extralight text-lg sm:text-xl">{title}</h3>
 )

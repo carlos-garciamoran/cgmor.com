@@ -1,9 +1,9 @@
-import type { Metadata } from 'next'
-import clsx from 'clsx'
 import { ExternalLinkIcon } from '@radix-ui/react-icons'
-
-import { projects, type Project } from '@/app/_lib/data'
+import clsx from 'clsx'
+import type { Metadata } from 'next'
 import Link from 'next/link'
+
+import { projects } from '@/app/_lib/data'
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 export default function Projects() {
   return (
     <div id="projects" className="flex size-full flex-col items-center justify-center py-8 md:py-12">
-      <div className="mx-auto w-full max-w-(--breakpoint-xl) px-6 xl:px-0">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto w-full max-w-(--breakpoint-lg) px-6 xl:px-0">
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8'>
           {projects.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
@@ -26,7 +26,7 @@ export default function Projects() {
   )
 }
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project }: { project: typeof projects[number] }) {
   const { name, tags, description, url } = project
   const isExternal = url !== '#'
 
