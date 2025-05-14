@@ -54,13 +54,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex h-dvh flex-col sm:h-full sm:min-h-screen" id="root">
-            <KeyboardShortcuts />
+          <div
+            className="flex h-dvh max-w-[1000px] flex-col sm:mx-auto sm:h-full sm:min-h-screen xl:border-x"
+            id="root"
+          >
             <Header />
-            <main className="flex flex-1 flex-col sm:justify-center">{children}</main>
+            <main className="mx-auto flex flex-1 flex-col sm:justify-center sm:px-3.5 2xl:px-12">
+              {children}
+            </main>
             <Footer />
-            <Analytics />
           </div>
+          <KeyboardShortcuts />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
