@@ -6,7 +6,6 @@ export type Book = {
 }
 export const books: Record<string, Book[]> = {
   now: [
-    { title: 'Zen Mind, Beginner’s Mind', author: 'Shunryu Suzuki' },
     { title: 'Jony Ive', author: 'Leander Kahney' },
     { title: 'Thinking in Systems: A Primer', author: 'Donella H. Meadows' },
     {
@@ -28,6 +27,7 @@ export const books: Record<string, Book[]> = {
     { title: 'El mundo de Sofía', author: 'Jostein Gaarder' },
   ],
   meditation: [
+    { title: 'Zen Mind, Beginner’s Mind', author: 'Shunryu Suzuki' },
     { title: 'Biografía del silencio', author: "Pablo d'Ors" },
     {
       title: 'Los Cuatro Acuerdos (Un libro de la sabiduría tolteca)',
@@ -76,6 +76,7 @@ export const books: Record<string, Book[]> = {
     { title: 'The Lessons of History', author: 'Will Durant, Ariel Durant' },
   ],
   misc: [
+    { title: 'Nature', author: 'Ralph Waldo Emerson' },
     { title: 'The Creative Act', author: 'Rick Rubin' },
     {
       title: 'How to Win Friends and Influence People',

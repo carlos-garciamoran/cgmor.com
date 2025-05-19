@@ -8,19 +8,13 @@
   --border: oklch(0.32 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.32 0 0);
-
-  --gradient-start: 0 0% 93%;
-  --gradient-end: 0 0% 97%;
 }
 .dark {
-  --background: oklch(0 0 0);
+  --background: oklch(0.10 0 0);
   --foreground: oklch(1 0 0);
-  --border: oklch(55% 0.01 58);
+  --border: oklch(0.61 0 0);
   --secondary: oklch(0.23 0 0);
-  --secondary-foreground: oklch(0.88 0 0);
-
-  --gradient-start: 0 0% 5%;
-  --gradient-end: 0 0% 2%;
+  --secondary-foreground: oklch(0.95 0 0);
 }
 
 @theme {
@@ -74,13 +68,5 @@
   body {
     @apply bg-background text-foreground underline-offset-2;
     font-family: var(--font-geist-sans);
-  }
-
-  #root {
-    background: radial-gradient(
-      circle,
-      hsl(var(--gradient-start)) 10%,
-      hsl(var(--gradient-end)) 20%
-    );
   }
 }
