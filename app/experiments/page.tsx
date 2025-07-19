@@ -5,5 +5,5 @@ export default function Experiments() {
         <p>trippy border</p>
       </div>
     </div>
-  );
+  )
 }

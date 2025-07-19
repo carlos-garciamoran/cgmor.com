@@ -1,7 +1,20 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-  "organizeImports": {
-    "enabled": true
+  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              [":BUN:", ":NODE:", ":PACKAGE:"],
+              ":BLANK_LINE:",
+              ["**"]
+            ]
+          }
+        }
+      }
+    }
   },
   "formatter": {
     "indentStyle": "space",

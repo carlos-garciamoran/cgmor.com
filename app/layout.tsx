@@ -1,15 +1,15 @@
-import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
-import { Cormorant } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
+import { GeistMono } from 'geist/font/mono'
+import { GeistSans } from 'geist/font/sans'
+import type { Metadata } from 'next'
+import { Cormorant } from 'next/font/google'
 
-import './globals.css'
-import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import { ThemeProvider } from '@/components/theme-provider'
+import { Header } from '@/components/header'
 import { KeyboardShortcuts } from '@/components/keyboard-shortcuts'
+import { ThemeProvider } from '@/components/theme-provider'
 import { siteUrl } from './_lib/data'
+import './globals.css'
 
 export const metadata: Metadata = {
   title: {
@@ -45,11 +45,7 @@ const cormorant = Cormorant({
 })
 
 // Idea (mobile): position menu (<Header />) at the bottom of the screen
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}>
