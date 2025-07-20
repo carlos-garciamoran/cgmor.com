@@ -51,11 +51,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div
-            className="flex h-dvh max-w-[1000px] flex-col sm:mx-auto sm:h-full sm:min-h-screen xl:border-x-[.5px]"
+            className="flex h-dvh max-w-[1100px] flex-col sm:mx-auto sm:h-full sm:min-h-screen xl:border-x-[.5px]"
             id="root"
           >
             <Header />
-            <main className="mx-auto flex flex-1 flex-col sm:justify-center sm:px-3.5 2xl:px-12">
+            <main className="flex flex-1 flex-col sm:justify-center sm:px-3.5 xl:px-12">
               {children}
             </main>
             <Footer />

@@ -31,7 +31,7 @@ function ProjectCard({ project }: { project: typeof projects[number] }) {
   const isExternal = url !== '#'
 
   return (
-    <section className="border border-border p-4 hover:bg-secondary">
+    <section className="border-[.5px] border-border p-4 hover:bg-secondary">
       <div className="flex items-start gap-2">
         <Link href={url} className={clsx('flex cursor-default items-start gap-2', isExternal && "hover:underline")} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
           <h2 className="font-medium text-lg">{name}</h2>

@@ -8,6 +8,8 @@
   --border: oklch(0.32 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.32 0 0);
+  --muted: oklch(0.985 0 0 / 0.7);
+  --muted-foreground: oklch(0.32 0 0 / 0.7);
 }
 .dark {
   --background: oklch(0.10 0 0);
@@ -15,6 +17,8 @@
   --border: oklch(0.61 0 0);
   --secondary: oklch(0.23 0 0);
   --secondary-foreground: oklch(0.95 0 0);
+  --muted: oklch(0.18 0 0 / 0.7);
+  --muted-foreground: oklch(0.95 0 0 / 0.7);
 }
 
 @theme {
@@ -27,6 +31,8 @@
   --color-border: var(--border);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   
   --animate-mutate-border: mutate-border 18s ease-in-out infinite;
   --animate-mutate-border-tl: mutate-border-tl 18s ease-in-out infinite;

@@ -54,7 +54,7 @@ export default function About() {
         <p>
           In 2020, I moved to the US and got my CS degree. I interned at LinkedIn as a sre and swe.
           Throughout college, I built a few side projects like{' '}
-          <ExternalLink href="https://github.com/Mobilecn-UI/nativecn-ui" title="nativecn-ui" />.
+          <ExternalLink href="https://github.com/Mobilecn-UI/nativecn-ui">nativecn-ui</ExternalLink>.
         </p>
         <p>Currently, I live in NYC, where I work at an early-stage startup.</p>
         <hr />
