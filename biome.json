@@ -1,16 +1,12 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "assist": {
     "actions": {
       "source": {
         "organizeImports": {
           "level": "on",
           "options": {
-            "groups": [
-              [":BUN:", ":NODE:", ":PACKAGE:"],
-              ":BLANK_LINE:",
-              ["**"]
-            ]
+            "groups": [[":BUN:", ":NODE:", ":PACKAGE:"], ":BLANK_LINE:", ["**"]]
           }
         }
       }
@@ -41,6 +37,11 @@
       "jsxQuoteStyle": "double",
       "quoteStyle": "single",
       "semicolons": "asNeeded"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
     }
   }
 }
