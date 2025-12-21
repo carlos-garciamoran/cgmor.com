@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { Cormorant } from 'next/font/google'
 
 import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
+import { Nav } from '@/components/nav'
 import { KeyboardShortcuts } from '@/components/keyboard-shortcuts'
 import { ThemeProvider } from '@/components/theme-provider'
 import { siteUrl } from './_lib/data'
@@ -51,10 +51,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div
-            className="flex h-dvh max-w-[1100px] flex-col sm:mx-auto sm:h-full sm:min-h-screen xl:border-x-[.5px]"
+            className="flex h-dvh max-w-[1000px] flex-col sm:mx-auto sm:h-full sm:min-h-screen"
             id="root"
           >
-            <Header />
+            <header>
+              <nav className="text-sm">
+                <Nav />
+              </nav>
+            </header>
             <main className="flex flex-1 flex-col sm:justify-center sm:px-3.5 xl:px-12">
               {children}
             </main>

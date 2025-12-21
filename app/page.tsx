@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-1 grow cursor-default flex-col items-center justify-center px-4">
       <div className="font-thin first-line:leading-none">
-        <div className="text-3xl leading-tight tracking-tight">
+        <div className="text-2xl leading-tight tracking-tight">
           <p className="text-secondary-foreground">
             Hey, my name is{' '}
             <span className="font-normal text-foreground tracking-tighter">Carlos</span>
