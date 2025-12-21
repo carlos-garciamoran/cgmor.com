@@ -1,5 +1,4 @@
 import { ExternalLink } from './link'
-import { ThemeToggle } from './theme-toggle'
 
 export function Footer() {
   return (
@@ -22,9 +21,6 @@ export function Footer() {
       >
         LinkedIn
       </ExternalLink>
-      <div className="fixed right-[7px] bottom-2.5 lg:right-6 lg:bottom-4">
-        <ThemeToggle />
-      </div>
     </footer>
   )
 }

@@ -12,16 +12,15 @@ export function Nav() {
 
   // TODO: yellow for highlight
   return (
-    <ul className="flex justify-evenly">
+    <ul className="flex pt-1">
       {pages.map((page) => (
         <li key={page} className="grow transition duration-300 sm:hover:underline">
           <Link
             href={page === 'home' ? '/' : `/${page}`}
             className={clsx(
-              'flex cursor-default justify-center py-3 font-light tracking-wide underline-offset-4 hover:underline sm:hover:no-underline',
+              'flex cursor-default justify-center py-3 font-light capitalize tracking-wide underline-offset-4 hover:underline sm:hover:no-underline',
               {
-                'underline sm:bg-foreground sm:text-background sm:no-underline':
-                  page === currentPage,
+                'underline sm:text-yellow-400 sm:no-underline': page === currentPage,
               },
             )}
           >
