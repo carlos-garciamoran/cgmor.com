@@ -46,7 +46,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           {isExternal && <ExternalLinkIcon className="mt-px size-3.5 stroke-[1.5]" />}
         </Link>
       </div>
-      <div className="mt-2 flex flex-wrap gap-1">
+      <div className="mt-1.5 flex flex-wrap gap-1">
         {tags.map((tag) => (
           <div
             key={tag}

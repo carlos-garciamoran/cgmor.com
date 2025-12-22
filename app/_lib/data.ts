@@ -1,5 +1,3 @@
-export const siteUrl = 'https://cgmor.com'
-
 export type Book = {
   title: string
   author: string
@@ -122,12 +120,6 @@ type Project = {
 }
 export const projects: Project[] = [
   {
-    name: 'stealth',
-    description: 'working on something new...',
-    url: 'mailto:carlos@twilight.so?subject=site',
-    tags: [],
-  },
-  {
     name: 'nativecn-ui',
     description: 'shadcn/ui for React Native',
     url: 'https://github.com/Mobilecn-UI/nativecn-ui',
@@ -158,8 +150,8 @@ export const projects: Project[] = [
     tags: ['Swift', 'SwiftUI', 'Supabase'],
   },
   {
-    name: 'CNCPT',
     // The Concept Project, "https://www.theconceptproject.org"
+    name: 'CNCPT',
     description: 'Connecting media with social good',
     url: 'https://apps.apple.com/us/app/cncpt/id1662094973',
     tags: ['React Native', 'Typescript', 'Firebase'],

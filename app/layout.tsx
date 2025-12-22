@@ -5,10 +5,9 @@ import type { Metadata } from 'next'
 import { Cormorant } from 'next/font/google'
 
 import { Footer } from '@/components/footer'
-import { Nav } from '@/components/nav'
 import { KeyboardShortcuts } from '@/components/keyboard-shortcuts'
+import { Nav } from '@/components/nav'
 import { ThemeProvider } from '@/components/theme-provider'
-import { siteUrl } from './_lib/data'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -17,21 +16,6 @@ export const metadata: Metadata = {
     template: '%s - Carlos García Morán',
   },
   description: 'Software | Design | Reads',
-  openGraph: {
-    title: 'Carlos García Morán',
-    type: 'website',
-    locale: 'en_US',
-    url: siteUrl,
-    images: [
-      {
-        url: `${siteUrl}/img/og.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Carlos García Morán',
-      },
-    ],
-  },
-  metadataBase: new URL(siteUrl),
 }
 
 export const viewport = {
