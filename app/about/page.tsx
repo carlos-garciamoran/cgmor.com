@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 
-import { ExternalLink } from '@/components/link'
+import { ExternalLink, InternalLink } from '@/components/links'
 
 export const metadata: Metadata = {
   title: 'About',
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 // DESIGN: use close-up of Pollock's painting as background (CSS repeat pattern)
 export default function About() {
   return (
-    <div className="mx-auto flex w-full max-w-[570px] cursor-default px-6 py-5 font-light transition-all duration-500 sm:pt-6 md:items-center md:py-0">
+    <div className="mx-auto flex w-full max-w-[575px] cursor-default px-6 py-4 font-light transition-all duration-500 sm:pt-6 md:items-center md:py-0">
       <div className="flex flex-col gap-4 hyphens-auto text-justify text-sm transition-[padding] duration-500 sm:text-[0.95rem]/[1.45rem]">
         <article className="flex gap-4">
           <Image
@@ -24,24 +23,17 @@ export default function About() {
           />
           <div className="flex flex-col gap-2">
             <p className="font-extralight text-sm italic">
-              TL;DR obsessing over building things 0-1
+              TL;DR —obsessed over building things 0-1
             </p>
             <p className="text-[0.95rem]">
               I was born and raised in Madrid, Spain. In my early teens, I developed a curiosity for
               computers. Since then, I have been{' '}
-              <Link href="/projects" className="underline decoration-1 underline-offset-[3px]">
-                tinkering
-              </Link>{' '}
-              with software.
+              <InternalLink href="/projects">tinkering</InternalLink> with software.
             </p>
           </div>
         </article>
         <p>
-          Probably due to{' '}
-          <Link href="/muses" className="underline decoration-1 underline-offset-[3px]">
-            reading
-          </Link>{' '}
-          a bit of philosophy
+          Probably due to <InternalLink href="/muses">reading</InternalLink> a bit of philosophy
           <sup>1</sup>, school became as boring as dreadful. Luckily, I had the internet. I taught
           myself to code and began spending late nights
           <sup>2</sup> playing CTFs and hacking randomly. I fell down the computer security rabbit
@@ -59,7 +51,11 @@ export default function About() {
           <ExternalLink href="https://github.com/Mobilecn-UI/nativecn-ui">nativecn-ui</ExternalLink>
           .
         </p>
-        <p>Currently, I live in NYC, where I work at an early-stage startup.</p>
+        <p>
+          After graduating, I moved to New York and started working on{' '}
+          <ExternalLink href="https://hanoverpark.com">Hanover</ExternalLink>. Now, I'm building at
+          Polymarket.
+        </p>
         <hr />
         <div className="flex flex-col gap-0.5 text-xs">
           <p>

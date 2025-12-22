@@ -10,11 +10,6 @@ export const metadata: Metadata = {
 export default function Muses() {
   return (
     <div className="flex flex-col px-6 py-5 sm:py-10 lg:mx-auto lg:max-w-(--breakpoint-xl) xl:px-0">
-      {/* <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 z-0 hidden h-dvh w-px bg-neutral-300 dark:bg-neutral-700 sm:block"
-        style={{ transform: 'translateX(-0.5px)' }}
-      /> */}
       <div className="mb-4 flex min-h-8 border-neutral-700 border-l-2 dark:border-neutral-300">
         <h2 className="pl-2 font-thin text-base italic first-line:leading-none dark:border-neutral-300">
           Some works that have inspired me...
@@ -22,7 +17,7 @@ export default function Muses() {
       </div>
       <div className="grid grid-cols-1 gap-x-36 gap-y-8 lg:grid-cols-2">
         <div>
-          <MusesTitle title="Books" />
+          <PageHeader title="Books" />
           <div className="flex flex-col gap-4">
             <BookSection title="Currently..." items={books.now} />
             <BookSection title="Philosophy" items={books.philosophy} />
@@ -35,7 +30,7 @@ export default function Muses() {
           </div>
         </div>
         <div>
-          <MusesTitle title="Films" />
+          <PageHeader title="Films" />
           <div className="flex flex-col gap-4 sm:w-full sm:flex-row sm:justify-between">
             <FilmSection title="Movies" items={films.movies} />
             <FilmSection title="Shows" items={films.shows} />
@@ -46,8 +41,8 @@ export default function Muses() {
   )
 }
 
-const MusesTitle = ({ title }: { title: string }) => (
-  <h2 className="mb-2 font-black text-6xl uppercase tracking-tight sm:text-8xl lg:mb-4">{title}</h2>
+const PageHeader = ({ title }: { title: string }) => (
+  <h2 className="mb-2 font-black text-8xl uppercase tracking-tight lg:mb-4">{title}</h2>
 )
 
 const SectionTitle = ({ title }: { title: string }) => (

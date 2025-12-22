@@ -14,10 +14,7 @@ export const metadata: Metadata = {
 // TODO: enable links on description (MD?) -> link CNCPT to The Concept Project
 export default function Projects() {
   return (
-    <div
-      id="projects"
-      className="flex size-full flex-col items-center justify-center py-8 md:py-12"
-    >
+    <div id="projects" className="flex size-full flex-col items-center justify-center py-6">
       <div className="mx-auto w-full px-6 xl:px-0">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (

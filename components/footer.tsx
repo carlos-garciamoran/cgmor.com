@@ -1,4 +1,4 @@
-import { ExternalLink } from './link'
+import { ExternalLink } from './links'
 
 export function Footer() {
   return (
