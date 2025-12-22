@@ -7,12 +7,12 @@ import type { SpotifyNowPlayingData } from '@/app/_lib/spotify'
 
 interface SpotifyNowPlayingProps {
   hasLiveIndicator?: boolean
-  hasSpotifyIcon?: boolean
+  hasPlaceholder?: boolean
 }
 
 export function SpotifyNowPlaying({
   hasLiveIndicator = false,
-  hasSpotifyIcon = false,
+  hasPlaceholder = false,
 }: SpotifyNowPlayingProps) {
   const [nowPlaying, setNowPlaying] = useState<SpotifyNowPlayingData | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -38,11 +38,17 @@ export function SpotifyNowPlaying({
   }, [])
 
   if (isLoading) {
-    return <Skeleton />
+    if (hasPlaceholder) {
+      return <Skeleton />
+    }
+    return <div className="size-12" />
   }
 
   if (!nowPlaying?.isPlaying) {
-    return <NotPlaying />
+    if (hasPlaceholder) {
+      return <NotPlaying />
+    }
+    return <div className="size-12" />
   }
 
   return (
@@ -65,7 +71,6 @@ export function SpotifyNowPlaying({
         <p className="truncate font-medium text-foreground text-sm">{nowPlaying.title}</p>
         <p className="truncate text-muted-foreground text-xs">{nowPlaying.artist}</p>
       </div>
-      {hasSpotifyIcon && <SpotifyIcon className="size-6 shrink-0" />}
     </a>
   )
 }
@@ -88,9 +93,9 @@ function NotPlaying() {
       <div className="flex size-12 items-center justify-center rounded-md bg-muted">
         <SpotifyIcon className="size-8" />
       </div>
-      <div className="flex-1">
-        <p className="font-medium text-muted-foreground text-sm">Not playing</p>
-        <p className="text-muted-foreground/70 text-xs">Spotify</p>
+      <div className="flex-1 text-muted-foreground text-sm">
+        <p>Not playing</p>
+        <p>:(</p>
       </div>
     </div>
   )

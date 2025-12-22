@@ -17,7 +17,7 @@ export default function MusicPage() {
       {/* Barry can't curate */}
       {/* <Playlist playlistId="73d8XZr4SE9FsEfQ1cky9b" /> */}
       <div className="w-full max-w-sm">
-        <SpotifyNowPlaying />
+        <SpotifyNowPlaying hasPlaceholder />
       </div>
     </div>
   )
