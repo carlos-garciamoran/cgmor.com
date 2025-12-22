@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-const pages = ['home', 'about', 'projects', 'muses']
+const pages = ['about', 'projects', 'muses']
 
 export function Nav() {
   const pathname = usePathname()

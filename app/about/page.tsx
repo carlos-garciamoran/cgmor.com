@@ -12,18 +12,20 @@ export const metadata: Metadata = {
 // DESIGN: use close-up of Pollock's painting as background (CSS repeat pattern)
 export default function About() {
   return (
-    <div className="mx-auto flex w-full max-w-[560px] cursor-default px-6 py-5 font-light transition-all duration-500 sm:pt-6 md:items-center md:py-0">
+    <div className="mx-auto flex w-full max-w-[570px] cursor-default px-6 py-5 font-light transition-all duration-500 sm:pt-6 md:items-center md:py-0">
       <div className="flex flex-col gap-4 hyphens-auto text-justify text-sm transition-[padding] duration-500 sm:text-[0.95rem]/[1.45rem]">
         <article className="flex gap-4">
           <Image
             alt="Me"
             src="/img/me.webp"
-            className="size-16 rounded-[0.1rem] shadow-lg sm:size-[93px]"
+            className="hidden rounded-[0.1rem] shadow-lg sm:inline-block sm:size-[93px]"
             width={200}
             height={200}
           />
           <div className="flex flex-col gap-2">
-            <p className="font-extralight text-sm italic">TL;DR obsessing over building things 0-1</p>
+            <p className="font-extralight text-sm italic">
+              TL;DR obsessing over building things 0-1
+            </p>
             <p className="text-[0.95rem]">
               I was born and raised in Madrid, Spain. In my early teens, I developed a curiosity for
               computers. Since then, I have been{' '}
@@ -54,7 +56,8 @@ export default function About() {
         <p>
           In 2020, I moved to the US and got my CS degree. I interned at LinkedIn as a sre and swe.
           Throughout college, I built a few side projects like{' '}
-          <ExternalLink href="https://github.com/Mobilecn-UI/nativecn-ui">nativecn-ui</ExternalLink>.
+          <ExternalLink href="https://github.com/Mobilecn-UI/nativecn-ui">nativecn-ui</ExternalLink>
+          .
         </p>
         <p>Currently, I live in NYC, where I work at an early-stage startup.</p>
         <hr />
