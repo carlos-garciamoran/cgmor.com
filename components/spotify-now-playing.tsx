@@ -12,15 +12,20 @@ interface SpotifyNowPlayingProps {
 export function SpotifyNowPlaying({ hasPlaceholder = false }: SpotifyNowPlayingProps) {
   const [nowPlaying, setNowPlaying] = useState<SpotifyNowPlayingData | null>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [opacity, setOpacity] = useState(0)
 
   useEffect(() => {
     const fetchNowPlaying = async () => {
       try {
+        setOpacity(0)
         const response = await fetch('/api/now-playing')
         const data: SpotifyNowPlayingData = await response.json()
         setNowPlaying(data)
+        // Delay opacity change to allow for smooth transition
+        setTimeout(() => setOpacity(1), 50)
       } catch (error) {
         console.error('Error fetching now playing:', error)
+        setOpacity(1)
       } finally {
         setIsLoading(false)
       }
@@ -42,7 +47,7 @@ export function SpotifyNowPlaying({ hasPlaceholder = false }: SpotifyNowPlayingP
 
   if (!nowPlaying?.isPlaying) {
     if (hasPlaceholder) {
-      return <NotPlaying />
+      return <NotPlaying opacity={opacity} />
     }
     return <div className="size-12" />
   }
@@ -52,7 +57,8 @@ export function SpotifyNowPlaying({ hasPlaceholder = false }: SpotifyNowPlayingP
       href={nowPlaying.songUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 bg-card/50 backdrop-blur-sm transition-all hover:bg-card/70 light:hover:shadow-md"
+      style={{ opacity }}
+      className="flex items-center gap-3 bg-card/50 backdrop-blur-sm transition-opacity duration-900 ease-out hover:bg-card/70 light:hover:shadow-md"
     >
       {nowPlaying.albumImageUrl && (
         // biome-ignore lint/performance/noImgElement: spotify album art
@@ -82,9 +88,12 @@ function Skeleton() {
   )
 }
 
-function NotPlaying() {
+function NotPlaying({ opacity }: { opacity: number }) {
   return (
-    <div className="flex items-center gap-3 bg-card/50 backdrop-blur-sm">
+    <div
+      style={{ opacity }}
+      className="flex items-center gap-3 bg-card/50 backdrop-blur-sm transition-opacity duration-900 ease-out"
+    >
       <div className="flex size-12 items-center justify-center rounded-xs bg-muted">
         <SpotifyIcon className="size-8" />
       </div>
