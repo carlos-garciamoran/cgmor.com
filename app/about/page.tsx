@@ -17,15 +17,15 @@ export default function About() {
           <Image
             alt="Me"
             src="/img/me.webp"
-            className="hidden rounded-[0.1rem] shadow-lg sm:inline-block sm:size-[93px]"
+            className="hidden rounded-[.25rem] shadow-lg sm:inline-block sm:size-[95px]"
             width={200}
             height={200}
           />
           <div className="flex flex-col gap-2">
-            <p className="font-extralight text-sm italic">
+            <p className="font-extralight text-sm italic sm:leading-snug">
               TL;DR —obsessed over building things 0-1
             </p>
-            <p className="text-[0.95rem]">
+            <p>
               I was born and raised in Madrid, Spain. In my early teens, I developed a curiosity for
               computers. Since then, I have been{' '}
               <InternalLink href="/projects">tinkering</InternalLink> with software.
