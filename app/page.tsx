@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SpotifyNowPlaying } from '@/components/spotify-now-playing'
 
 export const metadata: Metadata = {
   title: 'Carlos García Morán',
@@ -19,6 +20,9 @@ export default function Home() {
           I'm into <span className="font-normal text-foreground">programming</span> &{' '}
           <span className="font-normal text-foreground">designing</span>
         </p>
+        <div className="mt-4">
+          <SpotifyNowPlaying />
+        </div>
       </div>
     </div>
   )

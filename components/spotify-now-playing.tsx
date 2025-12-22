@@ -1,10 +1,19 @@
 'use client'
 
-import type { SpotifyNowPlayingData } from '@/app/_lib/spotify'
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 
-export function SpotifyNowPlaying() {
+import type { SpotifyNowPlayingData } from '@/app/_lib/spotify'
+
+interface SpotifyNowPlayingProps {
+  hasLiveIndicator?: boolean
+  hasSpotifyIcon?: boolean
+}
+
+export function SpotifyNowPlaying({
+  hasLiveIndicator = false,
+  hasSpotifyIcon = false,
+}: SpotifyNowPlayingProps) {
   const [nowPlaying, setNowPlaying] = useState<SpotifyNowPlayingData | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
@@ -29,29 +38,11 @@ export function SpotifyNowPlaying() {
   }, [])
 
   if (isLoading) {
-    return (
-      <div className="flex items-center gap-3 rounded-lg border border-border bg-card/50 p-3 backdrop-blur-sm">
-        <div className="size-16 animate-pulse rounded-md bg-muted" />
-        <div className="flex-1 space-y-2">
-          <div className="h-4 w-32 animate-pulse rounded bg-muted" />
-          <div className="h-3 w-24 animate-pulse rounded bg-muted" />
-        </div>
-      </div>
-    )
+    return <Skeleton />
   }
 
   if (!nowPlaying?.isPlaying) {
-    return (
-      <div className="flex items-center gap-3 rounded-lg bg-card/50 p-3 backdrop-blur-sm">
-        <div className="flex size-16 items-center justify-center rounded-md bg-muted">
-          <SpotifyIcon className="size-8" />
-        </div>
-        <div className="flex-1">
-          <p className="font-medium text-muted-foreground text-sm">Not playing</p>
-          <p className="text-muted-foreground/70 text-xs">Spotify</p>
-        </div>
-      </div>
-    )
+    return <NotPlaying />
   }
 
   return (
@@ -59,33 +50,61 @@ export function SpotifyNowPlaying() {
       href={nowPlaying.songUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-3 rounded-lg border-[.5px] border-border bg-card/50 p-3 backdrop-blur-sm transition-all hover:bg-card/70 hover:shadow-md"
+      className="flex items-center gap-3 bg-card/50 backdrop-blur-sm transition-all hover:bg-card/70 light:hover:shadow-md"
     >
       {nowPlaying.albumImageUrl && (
         // biome-ignore lint/performance/noImgElement: spotify album art
         <img
           src={nowPlaying.albumImageUrl}
           alt={`${nowPlaying.album} album art`}
-          className="size-16 rounded-md object-cover shadow-sm"
+          className="size-12 rounded-md object-cover shadow-sm"
         />
       )}
       <div className="flex min-w-0 flex-1 flex-col gap-1">
-        <div className="flex items-center gap-2">
-          <div className="flex items-center gap-2">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-              <span className="relative inline-flex size-2 rounded-full bg-green-500" />
-            </span>
-            <span className="font-normal text-green-600 text-xs dark:text-green-400">
-              Now Playing
-            </span>
-          </div>
-        </div>
-        <p className="truncate font-semibold text-foreground text-sm">{nowPlaying.title}</p>
+        {hasLiveIndicator && <LiveIndicator />}
+        <p className="truncate font-medium text-foreground text-sm">{nowPlaying.title}</p>
         <p className="truncate text-muted-foreground text-xs">{nowPlaying.artist}</p>
       </div>
-      <SpotifyIcon className="size-6 shrink-0" />
+      {hasSpotifyIcon && <SpotifyIcon className="size-6 shrink-0" />}
     </a>
+  )
+}
+
+function Skeleton() {
+  return (
+    <div className="flex items-center gap-3 bg-card/50 backdrop-blur-sm">
+      <div className="size-12 animate-pulse rounded-md bg-muted" />
+      <div className="flex-1 space-y-2">
+        <div className="h-4 w-32 animate-pulse rounded bg-muted" />
+        <div className="h-3 w-24 animate-pulse rounded bg-muted" />
+      </div>
+    </div>
+  )
+}
+
+function NotPlaying() {
+  return (
+    <div className="flex items-center gap-3 bg-card/50 backdrop-blur-sm">
+      <div className="flex size-12 items-center justify-center rounded-md bg-muted">
+        <SpotifyIcon className="size-8" />
+      </div>
+      <div className="flex-1">
+        <p className="font-medium text-muted-foreground text-sm">Not playing</p>
+        <p className="text-muted-foreground/70 text-xs">Spotify</p>
+      </div>
+    </div>
+  )
+}
+
+function LiveIndicator() {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="relative flex size-2">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+        <span className="relative inline-flex size-2 rounded-full bg-green-500" />
+      </span>
+      <span className="font-normal text-green-600 text-xs dark:text-green-400">Now Playing</span>
+    </div>
   )
 }
 
