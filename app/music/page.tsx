@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { Playlist } from '@/components/playlist'
+import { SpotifyNowPlaying } from '@/components/spotify-now-playing'
 
 export const metadata: Metadata = {
   title: 'Music',
@@ -15,6 +16,9 @@ export default function MusicPage() {
       <Playlist playlistId="4jeYwv1Dj8YqB1fX2Aslgm" />
       {/* Barry can't curate */}
       {/* <Playlist playlistId="73d8XZr4SE9FsEfQ1cky9b" /> */}
+      <div className="w-full max-w-sm">
+        <SpotifyNowPlaying />
+      </div>
     </div>
   )
 }
