@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="flex h-dvh max-w-[1000px] flex-col sm:mx-auto sm:min-h-screen">
-            <header className="mx-auto w-full max-w-[512px]">
+            <header className="mx-auto w-full max-w-[700px]">
               <nav>
                 <Nav />
               </nav>

@@ -11,7 +11,7 @@ export function Nav() {
   const currentPage = pathname === '/' ? 'home' : pathname.split('/')[1]
 
   return (
-    <ul className="flex pt-1 text-sm">
+    <ul className="flex text-sm sm:pt-1">
       {pages.map((page) => (
         <li key={page} className="grow transition duration-300 sm:hover:underline">
           <Link

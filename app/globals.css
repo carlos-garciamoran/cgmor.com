@@ -23,6 +23,8 @@
 
 @theme {
   --font-cormorant: var(--font-cormorant);
+  --font-times: "Times New Roman", Times, serif;
+
   --font-sans: var(--font-geist-sans);
   --font-gm: var(--font-geist-mono);
 

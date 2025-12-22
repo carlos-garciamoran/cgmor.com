@@ -53,7 +53,7 @@ export default function About() {
         </p>
         <p>
           After graduating, I moved to New York and started working on{' '}
-          <ExternalLink href="https://hanoverpark.com">Hanover</ExternalLink>. Now, I'm building at
+          <ExternalLink href="https://hanoverpark.com">Hanover</ExternalLink>. Now, I'm building at{' '}
           <ExternalLink href="https://polymarket.com">Polymarket</ExternalLink>.
         </p>
         <hr />

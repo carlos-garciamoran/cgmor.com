@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function Muses() {
   return (
-    <div className="flex flex-col px-6 py-5 sm:py-10 lg:mx-auto lg:max-w-(--breakpoint-xl) xl:px-0">
-      <div className="mb-4 flex min-h-8 border-neutral-700 border-l-2 dark:border-neutral-300">
+    <div className="flex flex-col px-6 py-4 sm:py-12 lg:mx-auto lg:max-w-(--breakpoint-xl) xl:px-0">
+      <div className="mb-2 flex min-h-8 border-neutral-700 border-l-2 sm:mb-4 dark:border-neutral-300">
         <h2 className="pl-2 font-thin text-base italic first-line:leading-none dark:border-neutral-300">
           Some works that have inspired me...
         </h2>
@@ -42,17 +42,17 @@ export default function Muses() {
 }
 
 const PageHeader = ({ title }: { title: string }) => (
-  <h2 className="mb-2 font-black text-8xl uppercase tracking-tight lg:mb-4">{title}</h2>
+  <h2 className="mb-1.5 font-black text-8xl uppercase tracking-tighter lg:mb-4">{title}</h2>
 )
 
 const SectionTitle = ({ title }: { title: string }) => (
-  <h3 className="mb-1 font-extralight text-lg sm:text-xl">{title}</h3>
+  <h3 className="mb-1 font-extralight text-lg text-secondary-foreground sm:text-xl">{title}</h3>
 )
 
 const BookSection = ({ title, items: books }: { title: string; items: Book[] }) => (
   <div>
     <SectionTitle title={title} />
-    <ul className="ml-px list-inside list-disc space-y-0.5 font-cormorant text-[.95rem]">
+    <ul className="ml-px list-inside list-disc space-y-0.5 font-cormorant text-base">
       {books.map((item) => (
         <li className="font-light" key={item.title}>
           <span>{item.title}</span>, <span>{item.author}</span>
@@ -65,7 +65,7 @@ const BookSection = ({ title, items: books }: { title: string; items: Book[] }) 
 const FilmSection = ({ title, items }: { title: string; items: string[] }) => (
   <div>
     <SectionTitle title={title} />
-    <ul className="ml-px list-inside list-[square] font-cormorant font-light text-[.95rem]">
+    <ul className="ml-px list-inside list-[square] font-cormorant text-base">
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
