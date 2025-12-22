@@ -59,12 +59,12 @@ export function SpotifyNowPlaying({ hasPlaceholder = false }: SpotifyNowPlayingP
         <img
           src={nowPlaying.albumImageUrl}
           alt={`${nowPlaying.album} album art`}
-          className="size-12 rounded-sm object-cover shadow-sm"
+          className="size-12 rounded-xs object-cover shadow-sm"
         />
       )}
-      <div className="flex min-w-0 flex-1 flex-col gap-1">
-        <p className="truncate font-medium text-foreground text-sm">{nowPlaying.title}</p>
-        <p className="truncate text-muted-foreground text-xs">{nowPlaying.artist}</p>
+      <div className="flex min-w-0 flex-1 flex-col gap-0.5">
+        <p className="truncate font-light text-foreground text-sm">{nowPlaying.title}</p>
+        <p className="truncate font-light text-muted-foreground text-xs">{nowPlaying.artist}</p>
       </div>
     </a>
   )
@@ -73,7 +73,7 @@ export function SpotifyNowPlaying({ hasPlaceholder = false }: SpotifyNowPlayingP
 function Skeleton() {
   return (
     <div className="flex items-center gap-3 bg-card/50 backdrop-blur-sm">
-      <div className="size-12 animate-pulse rounded-sm bg-muted" />
+      <div className="size-12 animate-pulse rounded-xs bg-muted" />
       <div className="flex-1 space-y-2">
         <div className="h-4 w-32 animate-pulse rounded bg-muted" />
         <div className="h-3 w-24 animate-pulse rounded bg-muted" />
@@ -85,7 +85,7 @@ function Skeleton() {
 function NotPlaying() {
   return (
     <div className="flex items-center gap-3 bg-card/50 backdrop-blur-sm">
-      <div className="flex size-12 items-center justify-center rounded-sm bg-muted">
+      <div className="flex size-12 items-center justify-center rounded-xs bg-muted">
         <SpotifyIcon className="size-8" />
       </div>
       <div className="flex-1 text-muted-foreground text-sm">
