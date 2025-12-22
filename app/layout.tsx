@@ -50,16 +50,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className={`${GeistSans.variable} ${GeistMono.variable} ${cormorant.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div
-            className="flex h-dvh max-w-[1000px] flex-col sm:mx-auto sm:h-full sm:min-h-screen"
-            id="root"
-          >
-            <header>
-              <nav className="text-sm">
+          <div className="flex h-dvh max-w-[1000px] flex-col sm:mx-auto sm:min-h-screen">
+            <header className="mx-auto w-full max-w-[512px]">
+              <nav>
                 <Nav />
               </nav>
             </header>
-            <main className="flex flex-1 flex-col sm:justify-center sm:px-3.5 xl:px-12">
+            <main className="flex flex-1 flex-col sm:justify-center sm:px-3.5 xl:px-8">
               {children}
             </main>
             <Footer />

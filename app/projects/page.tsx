@@ -42,7 +42,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
           target={isExternal ? '_blank' : undefined}
           rel={isExternal ? 'noopener noreferrer' : undefined}
         >
-          <h2 className="font-medium text-lg">{name}</h2>
+          <h2 className="font-normal text-lg">{name}</h2>
           {isExternal && <ExternalLinkIcon className="mt-px size-3.5 stroke-[1.5]" />}
         </Link>
       </div>

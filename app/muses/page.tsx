@@ -50,18 +50,11 @@ const MusesTitle = ({ title }: { title: string }) => (
   <h2 className="mb-2 font-black text-6xl uppercase tracking-tight sm:text-8xl lg:mb-4">{title}</h2>
 )
 
-
 const SectionTitle = ({ title }: { title: string }) => (
   <h3 className="mb-1 font-extralight text-lg sm:text-xl">{title}</h3>
 )
 
-const BookSection = ({
-  title,
-  items: books,
-}: {
-  title: string
-  items: Book[]
-}) => (
+const BookSection = ({ title, items: books }: { title: string; items: Book[] }) => (
   <div>
     <SectionTitle title={title} />
     <ul className="ml-px list-inside list-disc space-y-0.5 font-cormorant text-[.95rem]">
