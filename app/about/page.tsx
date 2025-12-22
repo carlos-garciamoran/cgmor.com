@@ -37,7 +37,7 @@ export default function About() {
           <sup>1</sup>, school became as boring as dreadful. Luckily, I had the internet. I taught
           myself to code and began spending late nights
           <sup>2</sup> playing CTFs and hacking randomly. I fell down the computer security rabbit
-          hole, adopting Linux and bricking my computer often.
+          hole, adopting Linux, and bricking my computer often.
         </p>
         <p>
           At 16, I studied abroad at UWC ISAK Japan. I met some of my best friends and started
@@ -54,7 +54,7 @@ export default function About() {
         <p>
           After graduating, I moved to New York and started working on{' '}
           <ExternalLink href="https://hanoverpark.com">Hanover</ExternalLink>. Now, I'm building at
-          Polymarket.
+          <ExternalLink href="https://polymarket.com">Polymarket</ExternalLink>.
         </p>
         <hr />
         <div className="flex flex-col gap-0.5 text-xs">
