@@ -2,6 +2,7 @@ export type Book = {
   title: string
   author: string
 }
+
 export const books: Record<string, Book[]> = {
   now: [
     { title: 'Hunger', author: 'Knut Hamsun' },
@@ -76,6 +77,7 @@ export const books: Record<string, Book[]> = {
     { title: 'The Lessons of History', author: 'Will Durant, Ariel Durant' },
   ],
   misc: [
+    { title: 'Four Thousand Weeks: Time Management for Mortals', author: 'Oliver Burkeman' },
     { title: 'Nature', author: 'Ralph Waldo Emerson' },
     { title: 'The Creative Act', author: 'Rick Rubin' },
     {
