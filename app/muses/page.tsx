@@ -1,13 +1,17 @@
 import type { Metadata } from 'next'
 
-import { type Book, books, films } from '@/app/_lib/data'
+import { type BookItem, getMusesData } from '@/app/_lib/muses'
 
 export const metadata: Metadata = {
   title: 'Inspiration',
   description: 'Books | Movies',
 }
 
-export default function Muses() {
+export const dynamic = 'error'
+
+export default async function Muses() {
+  const { books, films } = await getMusesData()
+
   return (
     <div className="flex flex-col px-6 py-4 sm:py-12 lg:mx-auto lg:max-w-(--breakpoint-xl) xl:px-0">
       <div className="mb-2 flex min-h-8 border-neutral-700 border-l-2 sm:mb-4 dark:border-neutral-300">
@@ -19,21 +23,17 @@ export default function Muses() {
         <div>
           <PageHeader title="Books" />
           <div className="flex flex-col gap-4">
-            <BookSection title="Currently..." items={books.now} />
-            <BookSection title="Philosophy" items={books.philosophy} />
-            <BookSection title="Meditation / Spirituality" items={books.meditation} />
-            <BookSection title="Fiction" items={books.fiction} />
-            <BookSection title="Startup / Building" items={books.startup} />
-            <BookSection title="Engineering" items={books.engineering} />
-            <BookSection title="History" items={books.history} />
-            <BookSection title="Misc" items={books.misc} />
+            {books.map((category) => (
+              <BookSection key={category.id} title={category.title} items={category.items} />
+            ))}
           </div>
         </div>
         <div>
           <PageHeader title="Films" />
           <div className="flex flex-col gap-4 sm:w-full sm:flex-row sm:justify-between">
-            <FilmSection title="Movies" items={films.movies} />
-            <FilmSection title="Shows" items={films.shows} />
+            {films.map((category) => (
+              <FilmSection key={category.id} title={category.title} items={category.items} />
+            ))}
           </div>
         </div>
       </div>
@@ -49,12 +49,12 @@ const SectionTitle = ({ title }: { title: string }) => (
   <h3 className="mb-1 font-extralight text-lg text-secondary-foreground sm:text-xl">{title}</h3>
 )
 
-const BookSection = ({ title, items: books }: { title: string; items: Book[] }) => (
+const BookSection = ({ title, items: books }: { title: string; items: BookItem[] }) => (
   <div>
     <SectionTitle title={title} />
     <ul className="ml-px list-inside list-disc space-y-0.5 font-cormorant text-base">
       {books.map((item) => (
-        <li className="font-light" key={item.title}>
+        <li className="font-light" key={`${item.title}-${item.author}`}>
           <span>{item.title}</span>, <span>{item.author}</span>
         </li>
       ))}
