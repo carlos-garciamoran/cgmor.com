@@ -18,7 +18,12 @@ export function SpotifyNowPlaying({ hasPlaceholder = false }: SpotifyNowPlayingP
     const fetchNowPlaying = async () => {
       try {
         setOpacity(0)
-        const response = await fetch('/api/now-playing')
+        const response = await fetch('/api/now-playing', { cache: 'no-store' })
+
+        if (!response.ok) {
+          throw new Error(`Now-playing request failed (${response.status})`)
+        }
+
         const data: SpotifyNowPlayingData = await response.json()
         setNowPlaying(data)
         // Delay opacity change to allow for smooth transition
