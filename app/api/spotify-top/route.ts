@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server'
 
 import { getSpotifyTopItems, SpotifyApiError, type SpotifyTopItems } from '@/app/_lib/spotify'
 
-export const runtime = 'edge'
 export const dynamic = 'force-dynamic'
 
 export async function GET() {
